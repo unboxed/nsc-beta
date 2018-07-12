@@ -1,0 +1,44 @@
+{% extends "layout_unbranded.html" %}
+
+{% block header %}
+<div class="phe-header__container govuk-header__container govuk-width-container">
+  <div class="phe-header">
+    <img src="{{ asset_path }}images/phe_nsc_logo.jpg" class="phe-logo"></img>
+    <h1 class="phe-heading"></h1>
+    <div class="user-profile">
+      <p class="user-name">Adrian Byrtus</p>
+      <span class="avatar"></span>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block pageTitle %}
+  UK NSC
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <table class="govuk-table">
+    <caption class="govuk-table__caption">Your Reviews</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th class="govuk-table__header" scope="col">Name</th>
+        <th class="govuk-table__header" scope="col">Status</th>
+        <th class="govuk-table__header" scope="col">Conditions</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell "><a href="/v2/review-pre-consultation">Citrullinemia review 2019-2022</a></td>
+        <td class="govuk-table__cell"><span class="phe-nsc-tag">Pre-Consultation</span></td>
+        <td class="govuk-table__cell ">Citrullinemia</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <a href="/v2/new-review" role="button" class="govuk-button">Start New Review</a>
+</div>
+
+{% endblock %}

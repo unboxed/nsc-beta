@@ -1,0 +1,29 @@
+{% extends "layout_unbranded.html" %}
+
+{% block header %}
+<div class="phe-header__container govuk-header__container govuk-width-container">
+  <div class="phe-header">
+    <img src="{{ asset_path }}images/phe_nsc_logo.jpg" class="phe-logo"></img>
+    <h1 class="phe-heading"></h1>
+    <div class="user-profile">
+      <p class="user-name">Adrian Byrtus</p>
+      <span class="avatar"></span>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block pageTitle %}
+  UK NSC
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <h2 class="govuk-heading-m">Your reviews</h2>
+    <ul class="govuk-list govuk-list--bullet">
+    </ul>
+  <a href="/v2/new-review" role="button" class="govuk-button">Start New Review</a>
+</div>
+
+{% endblock %}

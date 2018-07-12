@@ -1,9 +1,12 @@
 $phe-nsc-green: #00B092;
 
+html {
+  font-family: Arial, sans-serif;
+}
+
 .phe-header {
   color: $phe-nsc-green;
-  font-family: Arial, sans-serif;
-  height: 150px;
+  height: 115px;
 }
 
 .phe-logo {
@@ -16,5 +19,61 @@ $phe-nsc-green: #00B092;
 }
 
 .phe-header__container.govuk-header__container {
-  border-bottom: none;
+  border-bottom: 1px solid grey;
 }
+
+.user-profile {
+  margin-top: 40px;
+  float: right;
+
+  .user-name {
+    float: left;
+    margin-right: 30px;
+    text-decoration: underline;
+  }
+
+  .avatar {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border-radius: 22px;
+    float: right;
+    background-image: url("/public/images/bust.jpeg");
+  }
+}
+
+.review-add-condition {
+  margin-top: 30px;
+}
+
+.phe-nsc-tag {
+  background-color: #d3d3d3;
+  border-radius: 8px;
+  padding: 6px 10px;
+
+  &.consultation {
+    background-color: #eea2ad;
+  }
+}
+
+.phe-review {
+  .phe-nsc-tag {
+    float: right;
+    margin-top: 16px;
+  }
+
+  h2 {
+    display: inline-block;
+  }
+ }
+
+ .nsc-external-review {
+   input { display: block; }
+ }
+
+ .consultation-banner {
+   padding: 10px;
+   margin: 10px 0;
+   background-color: #ffc0cb;
+ }

@@ -1,0 +1,93 @@
+{% extends "layout_unbranded.html" %}
+
+{% block header %}
+<div class="phe-header__container govuk-header__container govuk-width-container">
+  <div class="phe-header">
+    <img src="{{ asset_path }}images/phe_nsc_logo.jpg" class="phe-logo"></img>
+    <h1 class="phe-heading"></h1>
+    <div class="user-profile">
+      <p class="user-name">Adrian Byrtus</p>
+      <span class="avatar"></span>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block pageTitle %}
+  UK NSC
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div class="phe-review">
+    <h2><a href="/v2/new-review">Citrullinemia review 2019-2022</a></h2>
+    <span class="phe-nsc-tag">Pre-Consultation</span>
+  </div>
+
+  <div class="govuk-form-group nsc-external-review govuk-form-group--error">
+    <label class="govuk-label" for="file-input">
+      Upload external review document
+    </label>
+
+    <span id="dob-error" class="govuk-error-message">
+      Reviews must have at least one external document to go to consultation
+    </span>
+    <input type="file" id="file-input">
+    <a href="#" role="button" class="govuk-button review-add-condition">Add another external review document</a>
+  </div>
+
+  <div class="govuk-form-group  govuk-form-group--error">
+    <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+      <label class="govuk-label" for="">
+        Consultation end date
+      </label>
+      <span id="dob-hint" class="govuk-hint">
+        For example, 31 3 2022
+      </span>
+
+      <span id="dob-error" class="govuk-error-message">
+        Reviews must have a consultation end date to go to consultation
+      </span>
+      <div class="govuk-date-input" id="dob">
+        <div class="govuk-date-input__item govuk-date-input__item--day">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="dob-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input" id="dob-day" name="dob-day" type="number" pattern="[0-9]*" value="17">
+          </div>
+        </div>
+        <div class="govuk-date-input__item govuk-date-input__item--month">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="dob-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input" id="dob-month" name="dob-month" type="number" pattern="[0-9]*" value="10">
+          </div>
+        </div>
+        <div class="govuk-date-input__item govuk-date-input__item--year">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="dob-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" value="2018">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <div>
+    <p>Saving the review will update the latest external review documents on pages for the following conditions:</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="#" class="govuk-link">Citrullenaemia</a></li>
+    </ul>
+
+    <a href="/v2/index-with-review.html" role="button" class="govuk-button">Cancel</a>
+    <a href="/v2/index-with-review-consultation" role="button" class="govuk-button">Save and notify <strong>5</strong> stakeholders</a>
+  </div>
+</div>
+
+{% endblock %}
