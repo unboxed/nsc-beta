@@ -216,7 +216,7 @@ if (useDocumentation) {
   // Use Object.assign to ensure app.locals is cloned to prevent additions from
   // updating the original app.locals
   documentationApp.locals = Object.assign({}, app.locals)
-  documentationApp.locals.serviceName = 'Prototype Kit'
+  documentationApp.locals.serviceName = 'PHE NSC Alpha'
 
   // Create separate router for docs
   app.use('/docs', documentationApp)
