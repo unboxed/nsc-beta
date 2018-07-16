@@ -1,0 +1,112 @@
+{% extends "layout_unbranded.html" %}
+
+{% block header %}
+<div class="phe-header__container govuk-header__container govuk-width-container">
+  <div class="phe-header">
+    <img src="{{ asset_path }}images/phe_nsc_logo.jpg" class="phe-logo"></img>
+    <h1 class="phe-heading"></h1>
+    <div class="user-profile">
+      <p class="user-name">Adrian Byrtus</p>
+      <span class="avatar"></span>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block pageTitle %}
+  UK NSC
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <h2>New Review</h2>
+
+  <div class="govuk-form-group govuk-form-group--error">
+    <label class="govuk-label" for="review_name">
+      Review Name
+    </label>
+
+    <span id="email-hint" class="govuk-hint">
+      Internal Review Name
+    </span>
+
+    <span id="dob-error" class="govuk-error-message">
+      Reviews must have a name
+  </span>
+
+    <input class="govuk-input" id="review_name" name="email" type="text" aria-describedby="email-hint">
+  </div>
+
+  <div class="govuk-form-group govuk-form-group--error">
+    <label class="govuk-label" for="sort">
+      Select conditions under review
+    </label>
+
+    <span id="email-hint" class="govuk-hint">
+      Select conditions this review relates to
+    </span>
+
+    <span id="dob-error" class="govuk-error-message">
+      Reviews must have at least one condition they relate to
+    </span>
+
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="nope" selected></option>
+      <option value="abdominal_aortic_aneurysm">Abdominal Aortic Aneurysm</option>
+      <option value="updated">Alcohol Misuse</option>
+      <option value="views">Argininosuccinate lyase deficiency</option>
+      <option value="a">Citrullinaemia</option>
+      <option value="b">Homocystinuria</option>
+      <option value="cs">Tyrosinaemia type 1</option>
+      <option value="d">Phenylketonuria</option>
+      <option value="e">Vascular risk</option>
+      <option value="f">...</option>
+    </select>
+
+    <a href="#" role="button" class="govuk-button review-add-condition">Add another condition</a>
+  </div>
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+      <label class="govuk-label" for="">
+        Consultation start date
+      </label>
+      <span id="dob-hint" class="govuk-hint">
+        For example, 31 3 2022
+      </span>
+
+      <div class="govuk-date-input" id="dob">
+        <div class="govuk-date-input__item govuk-date-input__item--day">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="dob-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+          </div>
+        </div>
+        <div class="govuk-date-input__item govuk-date-input__item--month">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="dob-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+          </div>
+        </div>
+        <div class="govuk-date-input__item govuk-date-input__item--year">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="dob-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
+  <a href="#" role="button" class="govuk-button">Cancel</a>
+  <a href="/v2/index-with-review" role="button" class="govuk-button">Save</a>
+</div>
+
+{% endblock %}
