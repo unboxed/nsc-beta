@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/v3/index">Dashboard</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/v3/reviews">Reviews</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Diabetes</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        Diabetes
+      </h1>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Pre-consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="conditions-and-dates-completed">
+                Add conditions and dates
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                Completed
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="relevant-documents-completed">
+                Upload relevant documents
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="relevant-documents-completed">
+                Completed
+              </strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="external-review-completed">
+                Upload external review
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="external-review-completed">
+                Completed
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="consultation-dates-completed">
+                Add consultation dates
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="consultation-dates-completed">
+                Completed
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="consultation-dates-not-complete">
+                Collate comments
+              </a>
+              <strong class="govuk-tag-grey app-task-list__task-not-complete" id="consultation-dates-not-complete">
+                Not Complete
+              </strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Post-consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#">
+                Upload internal review
+              </a>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#">
+                Update recommendation
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <a href="/v3/reviews.html" role="button" class="govuk-button">Cancel</a>
+      <a href="/v3/ongoing-review" role="button" class="govuk-button">Save</a>
+    </div>
+  </div>
+{% endblock %}

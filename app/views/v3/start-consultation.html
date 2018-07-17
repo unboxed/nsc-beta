@@ -1,0 +1,107 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <div class="govuk-breadcrumbs">
+          <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+              <a class="govuk-breadcrumbs__link" href="/v3/index">Dashboard</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+              <a class="govuk-breadcrumbs__link" href="/v3/reviews">Reviews</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+              <a class="govuk-breadcrumbs__link" href="/v3/alcohol-misuse-1">Alcohol Misuse</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item" aria-current="page">Add dates and documents</li>
+          </ol>
+        </div>
+        <br>
+        <div class="govuk-width-container">
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="sort">
+              <h2 class="govuk-heading-l">Select conditions under review</h2>
+            </label>
+
+            <span id="email-hint" class="govuk-hint">
+              Select conditions this review relates to
+            </span>
+
+            <select class="govuk-select" id="sort" name="sort">
+              <option value="nope" selected></option>
+              <option value="abdominal_aortic_aneurysm">Abdominal Aortic Aneurysm</option>
+              <option value="updated">Alcohol Misuse</option>
+              <option value="views">Argininosuccinate lyase deficiency</option>
+              <option value="a">Citrullinaemia</option>
+              <option value="b">Homocystinuria</option>
+              <option value="cs">Tyrosinaemia type 1</option>
+              <option value="d">Phenylketonuria</option>
+              <option value="e">Vascular risk</option>
+              <option value="f">...</option>
+            </select>
+            <br>
+            <br>
+            <a href="#" role="button" class="govuk-button review-add-condition">Add another condition</a>
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="sort">
+              <h2 class="govuk-heading-l">Review name</h2>
+            </label>
+
+            <span id="email-hint" class="govuk-hint">
+              Internal Review Name
+            </span>
+
+            <input class="govuk-input" id="review_name" name="email" type="text" aria-describedby="email-hint">
+          </div>
+          <br>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+              <label class="govuk-label" for="sort">
+                <h2 class="govuk-heading-l">Expected consultation start date</h2>
+              </label>
+              <span id="dob-hint" class="govuk-hint">
+                For example, 31 3 2022
+              </span>
+              <div class="govuk-date-input" id="dob">
+                <div class="govuk-date-input__item govuk-date-input__item--day">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item govuk-date-input__item--month">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item govuk-date-input__item--year">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <br>
+          <br>
+          <a href="/v3/alcohol-misuse-1.html" role="button" class="govuk-button">Cancel</a>
+          <a href="/v3/alcohol-misuse-2" role="button" class="govuk-button">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
