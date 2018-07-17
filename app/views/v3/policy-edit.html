@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Alcohol Misuse
+      </h1>
+
+      <h3>Recommendation status</h3>
+      <p class="recommendation-status">Not Recommended</p>
+
+      <h3>Last review completed</h3>
+      <p class="last-review-date">August 2017</p>
+
+      <div class="govuk-form-group">
+        <h3>
+          Expected next review start date
+        </h3>
+        <div class="govuk-date-input" id="dob">
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="dob-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="number" pattern="[0-9]*" value="2020">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="important-downloads">
+        <h3>Important downloads</h3>
+
+        <p><a href="#">Recommendation statement</a></p>
+        <p><a href="#">Last external review - Review of screening for Alcohol Misuse Jan 2017</a></p>
+        <p><a href="#">Last evidence review summary</a></p>
+      </div>
+
+      <div class="govuk-form-group">
+        <h3>General Information</h3>
+        <span id="email-hint" class="govuk-hint">
+          Displayed at the top of the policy page
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint">##More about Alcohol Misuse
+
+Drinking a moderate amount of alcohol will not do you any physical or psychological harm. However, for some people, social drinking can lead to heavier drinking, which can cause serious health problems.
+
+[Read more about alcohol misuse on NHS Choices](https://www.nhs.uk/conditions/alcohol-misuse/)
+        </textarea>
+      </div>
+
+      <div class="govuk-form-group">
+        <h3>Detailed Information</h3>
+        <span id="email-hint" class="govuk-hint">
+          Displayed at the bottom of the policy page
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint">##Review History
+
+This condition has been reviewed in close collaboration with the Institute of Blah Blah at the University of Academia.
+        </textarea>
+      </div>
+
+    <a href="#" role="button" class="govuk-button back-button">
+      Cancel
+    </a>
+
+    <a href="/v3/policy-preview" role="button" class="govuk-button preview-button">
+      Preview
+    </a>
+
+    </div>
+
+
+
+
+{% endblock %}
