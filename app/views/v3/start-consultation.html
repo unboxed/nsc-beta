@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -16,7 +21,7 @@
             <li class="govuk-breadcrumbs__list-item">
               <a class="govuk-breadcrumbs__link" href="/v3/alcohol-misuse-1">Alcohol Misuse</a>
             </li>
-            <li class="govuk-breadcrumbs__list-item" aria-current="page">Add dates and documents</li>
+            <li class="govuk-breadcrumbs__list-item" aria-current="page">Dates and documents</li>
           </ol>
         </div>
         <br>
@@ -24,46 +29,22 @@
 
           <div class="govuk-form-group">
             <label class="govuk-label" for="sort">
-              <h2 class="govuk-heading-l">Select conditions under review</h2>
+              <h2 class="govuk-heading-l">Upload external review document <i class="icon icon-important"><p class="govuk-body-s hover-hint">This information is visible to the public</p></i></h2>
             </label>
 
             <span id="email-hint" class="govuk-hint">
-              Select conditions this review relates to
+              Upload the external review for consultation
             </span>
 
-            <select class="govuk-select" id="sort" name="sort">
-              <option value="nope" selected></option>
-              <option value="abdominal_aortic_aneurysm">Abdominal Aortic Aneurysm</option>
-              <option value="updated">Alcohol Misuse</option>
-              <option value="views">Argininosuccinate lyase deficiency</option>
-              <option value="a">Citrullinaemia</option>
-              <option value="b">Homocystinuria</option>
-              <option value="cs">Tyrosinaemia type 1</option>
-              <option value="d">Phenylketonuria</option>
-              <option value="e">Vascular risk</option>
-              <option value="f">...</option>
-            </select>
-            <br>
-            <br>
-            <a href="#" role="button" class="govuk-button review-add-condition">Add another condition</a>
+             <div class="govuk-form-group">
+              <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+            </div>
           </div>
-          <div class="govuk-form-group">
-            <label class="govuk-label" for="sort">
-              <h2 class="govuk-heading-l">Review name</h2>
-            </label>
-
-            <span id="email-hint" class="govuk-hint">
-              Internal Review Name
-            </span>
-
-            <input class="govuk-input" id="review_name" name="email" type="text" aria-describedby="email-hint">
-          </div>
-          <br>
 
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
               <label class="govuk-label" for="sort">
-                <h2 class="govuk-heading-l">Expected consultation start date</h2>
+                <h2 class="govuk-heading-l">Consultation end date <i class="icon icon-important"><p class="govuk-body-s hover-hint">This information is visible to the public</p></i></h2>
               </label>
               <span id="dob-hint" class="govuk-hint">
                 For example, 31 3 2022
@@ -96,10 +77,224 @@
               </div>
             </fieldset>
           </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="sort">
+              <h2 class="govuk-heading-l">NSC meeting date</h2>
+            </label>
+
+            <span id="email-hint" class="govuk-hint">
+              Select the NSC meeting date in which this consultation will be discussed
+            </span>
+
+            <div class="govuk-form-group">
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="published" selected>27th September 2018</option>
+                <option value="updated">6th March 2019</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="sort">
+              <h2 class="govuk-heading-l">Stakeholders</h2>
+            </label>
+
+            <span id="email-hint" class="govuk-hint">
+              These are the stakeholders that will be notified of the consultation opening
+            </span>
+
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="british" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
+                  Addaction
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+                  Addiction Recovery Foundation
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Al-Anon
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Alcohol Concern
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Alcohol Focus Scotland
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Alcoholics Anonymous
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  British Association for Study of the Liver
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  British Liver Nurses' Forum
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  The British Liver Trust
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  The British Psychological Society
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  British Society of Gastroenterology
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  British Society of Lifestyle Medicine
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Faculty of Public Health
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Institute of Alcohol Studies
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Mental Health Foundation
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Prostate UK
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Royal College of General Practitioners
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Royal College of Nursing
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Royal College of Physicians
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Royal College of Physicians and Surgeons of Glasgow
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Royal College of Physicians of Edinburgh
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Royal College of Psychiatrists
+                </label>
+              </div>
+            </div>
+
+          </div>
+          <br>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+              <label class="govuk-label" for="sort">
+                <h2 class="govuk-heading-l">Open this consultation automatically</h2>
+              </label>
+              <span id="dob-hint" class="govuk-hint">
+                This should only be filled in if you wish to open this consultation automatically on a pre-determined date
+              </span>
+              <div class="govuk-radios govuk-radios--inline">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                  Yes
+                </label>
+                </div>
+              </div>
+              <br>
+              <span id="dob-hint" class="govuk-hint">
+                On which date would you like this to be automatically opened?
+              </span>
+              <div class="govuk-date-input" id="dob">
+                <div class="govuk-date-input__item govuk-date-input__item--day">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item govuk-date-input__item--month">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item govuk-date-input__item--year">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="dob-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
+                  </div>
+                </div>
+              </div>
+              <br>
+            </fieldset>
+          </div>
           <br>
           <br>
           <a href="/v3/alcohol-misuse-1.html" role="button" class="govuk-button">Cancel</a>
-          <a href="/v3/alcohol-misuse-2" role="button" class="govuk-button">Save</a>
+          <a href="/v3/alcohol-misuse-2" role="button" class="govuk-button">Save and notify <strong>22</strong> stakeholders</a>
         </div>
       </div>
     </div>
