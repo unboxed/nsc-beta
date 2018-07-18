@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -16,15 +21,15 @@
             <li class="govuk-breadcrumbs__list-item">
               <a class="govuk-breadcrumbs__link" href="/v3/new-review">New review</a>
             </li>
-            <li class="govuk-breadcrumbs__list-item" aria-current="page">Add conditions and dates</li>
+            <li class="govuk-breadcrumbs__list-item" aria-current="page">Conditions and dates</li>
           </ol>
         </div>
         <br>
         <div class="govuk-width-container">
-
           <div class="govuk-form-group">
             <label class="govuk-label" for="sort">
-              <h2 class="govuk-heading-l">Select conditions under review</h2>
+              <h2 class="govuk-heading-l">Select conditions under review <i class="icon icon-important"><p class="govuk-body-s hover-hint">This information is visible to the public</p></i>
+              </h2>
             </label>
 
             <span id="email-hint" class="govuk-hint">
@@ -66,39 +71,16 @@
                 <h2 class="govuk-heading-l">Expected consultation start date</h2>
               </label>
               <span id="dob-hint" class="govuk-hint">
-                For example, 31 3 2022
+                For example, April to July 2019
               </span>
-              <div class="govuk-date-input" id="dob">
-                <div class="govuk-date-input__item govuk-date-input__item--day">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="dob-day">
-                      Day
-                    </label>
-                    <input class="govuk-input govuk-date-input__input" id="dob-day" name="dob-day" type="number" pattern="[0-9]*">
-                  </div>
-                </div>
-                <div class="govuk-date-input__item govuk-date-input__item--month">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="dob-month">
-                      Month
-                    </label>
-                    <input class="govuk-input govuk-date-input__input" id="dob-month" name="dob-month" type="number" pattern="[0-9]*">
-                  </div>
-                </div>
-                <div class="govuk-date-input__item govuk-date-input__item--year">
-                  <div class="govuk-form-group">
-                    <label class="govuk-label govuk-date-input__label" for="dob-year">
-                      Year
-                    </label>
-                    <input class="govuk-input govuk-date-input__input" id="dob-year" name="dob-year" type="number" pattern="[0-9]*">
-                  </div>
-                </div>
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint">
               </div>
             </fieldset>
           </div>
           <br>
           <br>
-          <a href="/v3/reviews.html" role="button" class="govuk-button">Cancel</a>
+          <a href="/v3/new-review.html" role="button" class="govuk-button">Cancel</a>
           <a href="/v3/alcohol-misuse" role="button" class="govuk-button">Save</a>
         </div>
       </div>
