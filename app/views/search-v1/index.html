@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Complete list of UK NSC recommendations
+      </h1>
+
+      <h2 class="govuk-heading-l">
+        Find a condition
+      </h2>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+        {% for policy in policies %}
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="https://legacyscreening.phe.org.uk/{{ policy.URL }}" target="_blank">{{ policy.Policy_full_name }}</a></td>
+          </tr>
+        {% else %}
+          <p>No Policies</p>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+{% endblock %}
