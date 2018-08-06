@@ -51,7 +51,7 @@
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="who_filter_{{who}}"
                        name="who_filter" type="radio" value="{{ who }}"
-                       onchange="document.getElementById('search').submit()" {{ "checked" if who_filter == who }}>
+                       onchange="document.getElementById('search').submit()" {{ "checked" if whoFilter == who }}>
                 <label class="govuk-label govuk-radios__label"
                        for="who_filter_{{who}}">
                   {{ who }}
@@ -77,7 +77,7 @@
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="status_filter_{{ status }}"
                        name="status_filter" type="radio" value="{{value}}"
-                       onchange="document.getElementById('search').submit()" {{ "checked" if status_filter == value }}>
+                       onchange="document.getElementById('search').submit()" {{ "checked" if statusFilter == value }}>
                 <label class="govuk-label govuk-radios__label"
                        for="status_filter_{{ status }}">
                   {{ status }}
