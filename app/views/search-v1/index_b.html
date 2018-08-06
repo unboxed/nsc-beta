@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Complete list of UK NSC recommendations
+      </h1>
+
+      <h2 class="govuk-heading-l">
+        Find a condition
+      </h2>
+
+
+      <form method="GET" id="search">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-heading-m" for="term">
+          </label>
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Search for conditions
+              </h1>
+            </legend>
+
+            <input class="govuk-input" id="term" name="term" type="text"
+                   value="{{ term }}" style="width: 80%">
+            <button type="submit" class="govuk-button">
+              Search
+            </button>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="who_filter_hint">
+            <span id="who_filter_hint" class="govuk-hint"></span>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Based on who the condition affects
+              </h1>
+            </legend>
+
+            <div class="govuk-radios govuk-radios--inline">
+              {% for who in ["Antenatal", "Newborn", "Child", "Adult",  "None" ] %}
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="who_filter_{{who}}"
+                       name="who_filter" type="radio" value="{{ who }}"
+                       onchange="document.getElementById('search').submit()" {{ "checked" if who_filter == who }}>
+                <label class="govuk-label govuk-radios__label"
+                       for="who_filter_{{who}}">
+                  {{ who }}
+                </label>
+              </div>
+              {% endfor %}
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="status_filter_hint">
+            <span id="status_filter_hint" class="govuk-hint"></span>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h1 class="govuk-fieldset__heading">
+                Based on the current recommendation status
+              </h1>
+            </legend>
+
+            <div class="govuk-radios govuk-radios--inline">
+              {% for status, value in {"Yes": "Yes", "No": "No,Nice,Nsc", "None": "None" } %}
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="status_filter_{{ status }}"
+                       name="status_filter" type="radio" value="{{value}}"
+                       onchange="document.getElementById('search').submit()" {{ "checked" if status_filter == value }}>
+                <label class="govuk-label govuk-radios__label"
+                       for="status_filter_{{ status }}">
+                  {{ status }}
+                </label>
+              </div>
+              {% endfor %}
+            </div>
+          </fieldset>
+        </div>
+
+
+      </form>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+        {% for policy in policies %}
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><a href="https://legacyscreening.phe.org.uk/{{ policy.URL }}" target="_blank">{{ policy.Condition }}</a></td>
+            <td class="govuk-table__cell">{{ policy.Type }}</td>
+            <td class="govuk-table__cell">{{ policy.Recommendation }}</td>
+          </tr>
+        {% else %}
+          <p>No Policies</p>
+        {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+{% endblock %}
