@@ -14,10 +14,10 @@ router.get('/', function (req, res) {
 router.get('/search_a', function (req, res) {
   let policies = search.filter(req.query)
   res.render('search-v1/index_a', {
-    service_name_override: ' ',
+    serviceNameOverride: ' ',
     policies: policies,
-    who_filter: req.query.who_filter || 'None',
-    status_filter: req.query.status_filter || 'None',
+    whoFilter: req.query.who_filter || 'None',
+    statusFilter: req.query.status_filter || 'None',
     term: req.query.term
   })
 })
@@ -25,10 +25,22 @@ router.get('/search_a', function (req, res) {
 router.get('/search_b', function (req, res) {
   let policies = search.filter(req.query)
   res.render('search-v1/index_b', {
-    service_name_override: ' ',
+    serviceNameOverride: ' ',
     policies: policies,
-    who_filter: req.query.who_filter || 'None',
-    status_filter: req.query.status_filter || 'None',
+    whoFilter: req.query.who_filter || 'None',
+    statusFilter: req.query.status_filter || 'None',
+    term: req.query.term
+  })
+})
+
+router.get('/search_c', function (req, res) {
+  var search_c = require('./search_c')
+  let policies = search_c.filter(req.query)
+  res.render('search-v1/index_a', {
+    serviceNameOverride: ' ',
+    policies: policies,
+    whoFilter: req.query.who_filter || 'None',
+    statusFilter: req.query.status_filter || 'None',
     term: req.query.term
   })
 })
