@@ -25,8 +25,9 @@
           </ol>
         </div>
         <br>
+
         <div class="govuk-width-container">
-          <div class="govuk-form-group">
+          <div class="govuk-form-group govuk-form-group--error">
             <label class="govuk-label" for="sort">
               <h2 class="govuk-heading-l">Select conditions under review <i class="icon icon-important"><p class="govuk-body-s hover-hint">This information is visible to the public</p></i>
               </h2>
@@ -35,7 +36,9 @@
             <span id="email-hint" class="govuk-hint">
               Select conditions this review relates to
             </span>
-
+            <span id="national-insurance-number-error" class="govuk-error-message">
+              A review must have a condition attached to it
+            </span>
             <select class="govuk-select" id="sort" name="sort">
               <option value="nope" selected></option>
               <option value="abdominal_aortic_aneurysm">Abdominal Aortic Aneurysm</option>
@@ -61,7 +64,7 @@
               This will be produced automatically unless filled in specifically
             </span>
 
-            <input class="govuk-input" id="review_name" name="email" type="text" aria-describedby="email-hint" placeholder="SMA review 2018">
+            <input class="govuk-input" id="review_name" name="email" type="text" aria-describedby="email-hint" placeholder="SMA review 2019">
           </div>
           <br>
 
@@ -81,7 +84,7 @@
           <br>
           <br>
           <a href="/v4/new-review.html" role="button" class="govuk-button">Cancel</a>
-          <a href="/v4/add-dates-errors.html" role="button" class="govuk-button">Save</a>
+          <a href="/v4/sma" role="button" class="govuk-button">Save</a>
         </div>
       </div>
     </div>
