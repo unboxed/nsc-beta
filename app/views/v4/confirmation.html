@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <div class="govuk-breadcrumbs">
+          <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+              <a class="govuk-breadcrumbs__link" href="/v4/index">Dashboard</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+              <a class="govuk-breadcrumbs__link" href="/v4/reviews">Reviews</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+              <a class="govuk-breadcrumbs__link" href="/v4/sma-1">SMA</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item" aria-current="page">
+              <a class="govuk-breadcrumbs__link" href="/v4/start-consultation">Dates and documents</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item" aria-current="page">Confirm</li>
+          </ol>
+        </div>
+        <br>
+        <div class="govuk-width-container">
+          <h2 class="govuk-heading-l">Are you sure you want to open the consultation?</h2>
+          <span id="email-hint" class="govuk-hint">
+            Opening the consultation will update the policy page and notify 10 stakeholders by email
+          </span>
+          <a href="/v4/start-consultation.html" role="button" class="govuk-button">Cancel</a>
+          <a href="/v4/sma-2.html" role="button" class="govuk-button">Open the consultation</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
