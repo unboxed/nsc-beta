@@ -4,11 +4,6 @@ html {
   font-family: Arial, sans-serif;
 }
 
-body {
-  height: 100% !important;
-  width: 100% !important;
-}
-
 .phe-header {
   color: $phe-nsc-green;
   height: 115px;
@@ -183,8 +178,12 @@ body {
 }
 
 .grey-line {
-  padding-bottom: 10px;
+  padding-bottom: 50px;
   border-bottom: 1px solid rgba(150,150,150,0.8);
+}
+
+.margined {
+  margin-top: 50px;
 }
 
 * {box-sizing:border-box}
@@ -204,11 +203,11 @@ body {
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
+  margin-top: 45px;
   padding: 16px;
-  color: white;
+  color: black;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 25px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
 }
@@ -220,6 +219,7 @@ body {
 
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
+  color: white;
 }
 
 .text {
