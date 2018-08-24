@@ -8,24 +8,34 @@
 {% block content %}
 
 <div class="govuk-width-container">
+  <!-- <img src="{{ asset_path }}images/phe_nsc_logo.jpg" alt="UK NSC logo" style="height: 42px; border-left: 3px solid #00B092; padding-left: 7px;"> -->
   <div class="govuk-breadcrumbs">
     <ol class="govuk-breadcrumbs__list">
       <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Complete list of UK NSC recommendations</a>
+        <img src="{{ asset_path }}images/nsc-logo.png" alt="UK NSC logo" style="height: 42px; position: relative; bottom:23px">
+        <a class="govuk-breadcrumbs__link" href="#" style="position: relative; bottom: 26px">
+          UK National Screening Committee
+        </a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="#">Recommendations</a>
       </li>
       <li class="govuk-breadcrumbs__list-item" aria-current="page">Spinal Muscular Atrophy</li>
     </ol>
   </div>
 
+
   <main class="govuk-main-wrapper">
 
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h1 class="govuk-heading-xl">Spinal Muscular Atrophy (SMA)</h1>
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">Spinal Muscular Atrophy (SMA) <span id="type-tag">Adult</span></h1>
+      </div>
 
+      <div class="govuk-grid-column-two-thirds">
         <h2 class="govuk-heading-l">Recommendation</h2>
-        <p class="govuk-body govuk-!-font-weight-bold" id="not-recommended">
-          Screening is not currently recommended for this condition
+        <p class="govuk-body govuk-!-font-weight-bold">
+          <span id="not-recommended">Screening is not currently recommended for this condition</span>
         </p>
 
         <h2 class="govuk-heading-l">More about SMA</h2>
@@ -41,19 +51,28 @@
 
         <h2 class="govuk-heading-l">Downloads</h2>
         <div class="govuk-inset-text">
-          <a class="govuk-link" href="#">Recommendation statement</a>
-          <p>This is a plain english summary of the UK NSC's current recommendation for this condition</p>
+          <p>
+            <a class="govuk-link" href="#">Recommendation statement</a>
+            <br>
+            This is a plain english summary of the UK NSC's current recommendation for this condition
+          </p>
         </div>
         <div class="govuk-inset-text">
-          <a class="govuk-link" href="#">Last evidence review</a>
-          <p>This is the previous evidence review conducted to investigate whether the condition should be screened or not</p>
+          <p>
+            <a class="govuk-link" href="#">Last evidence review</a>
+            <br>
+            This is the previous evidence review conducted to investigate whether the condition should be screened or not
+          </p>
         </div>
         <div class="govuk-inset-text">
-          <a class="govuk-link" href="#">Last evidence review summary</a>
-          <p>This is the most recent evidence review plus consultation responses</p>
+          <p>
+            <a class="govuk-link" href="#">Last evidence review summary</a>
+            <br>
+            This is the most recent evidence review plus consultation responses
+          </p>
         </div>
 
-        <h2 class="govuk-heading-l">Organisations interested in this recommendation</h2>
+        <h2 class="govuk-heading-l">Organisations interested in SMA</h2>
         <p class="govuk-body">
           These organisations have expressed interest in this recommendation and may submit responses to evidence reviews.
         </p>
