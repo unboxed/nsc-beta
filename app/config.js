@@ -4,7 +4,7 @@
 
 module.exports = {
   // Service name used in header. Eg: 'Renew your passport'
-  serviceName: 'NSC Admin Dashboard',
+  serviceName: ' ',
 
   // Default port that prototype runs on
   port: '3000',

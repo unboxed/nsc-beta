@@ -272,7 +272,14 @@ html {
 }
 
 #not-recommended {
-  border: 2px solid #b10e1e;
+  border: 3px solid #b10e1e;
   color: #b10e1e;
   padding: 10px;
+}
+
+#type-tag {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 28px;
 }
