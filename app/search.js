@@ -8,22 +8,24 @@ exports.filter = function (query) {
       return (n1 === n2 ? 0 : (n1 < n2 ? -1 : 1))
     }
   )
+
   if (query.term && query.term.trim() !== '') {
     let term = query.term.toLowerCase()
+
     policies = policies.filter((policy) => {
       return policy.Condition.toLowerCase().indexOf(term) >= 0
     })
   }
 
-  if (query.whoFilter && query.whoFilter !== 'None') {
+  if (query.who_filter && query.who_filter !== 'None') {
     policies = policies.filter((policy) => {
-      return query.whoFilter.split(',').includes(policy.Type)
+      return query.who_filter.split(',').includes(policy.Type)
     })
   }
 
-  if (query.statusFilter && query.statusFilter !== 'None') {
+  if (query.status_filter && query.status_filter !== 'None') {
     policies = policies.filter((policy) => {
-      return query.statusFilter.split(',').includes(policy.Recommendation_filter)
+      return query.status_filter.split(',').includes(policy.Recommendation_filter)
     })
   }
 
