@@ -14,7 +14,6 @@ router.get('/', function (req, res) {
 router.get('/search_a', function (req, res) {
   let policies = search.filter(req.query)
   res.render('search-v1/index_a', {
-    serviceNameOverride: ' ',
     policies: policies,
     whoFilter: req.query.who_filter || 'None',
     statusFilter: req.query.status_filter || 'None',
@@ -24,8 +23,8 @@ router.get('/search_a', function (req, res) {
 
 router.get('/search_b', function (req, res) {
   let policies = search.filter(req.query)
+
   res.render('search-v1/index_b', {
-    serviceNameOverride: ' ',
     policies: policies,
     whoFilter: req.query.who_filter || 'None',
     statusFilter: req.query.status_filter || 'None',
@@ -37,7 +36,6 @@ router.get('/search_c', function (req, res) {
   var search_c = require('./search_c')
   let policies = search_c.filter(req.query)
   res.render('search-v1/index_a', {
-    serviceNameOverride: ' ',
     policies: policies,
     whoFilter: req.query.who_filter || 'None',
     statusFilter: req.query.status_filter || 'None',

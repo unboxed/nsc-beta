@@ -12,21 +12,16 @@
         Complete list of UK NSC recommendations
       </h1>
 
-      <h2 class="govuk-heading-l">
-        Find a condition
-      </h2>
-
-
       <form method="GET" id="search">
 
         <div class="govuk-form-group">
-          <label class="govuk-label govuk-heading-m" for="term">
-          </label>
           <fieldset class="govuk-fieldset">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h1 class="govuk-fieldset__heading">
-                Search for conditions
-              </h1>
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <label for="term">
+              <h2 class="govuk-fieldset__heading">
+                Find a condition
+              </h2>
+              </label>
             </legend>
 
             <input class="govuk-input" id="term" name="term" type="text"
@@ -38,12 +33,11 @@
         </div>
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="who_filter_hint">
-            <span id="who_filter_hint" class="govuk-hint"></span>
+          <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h1 class="govuk-fieldset__heading">
+              <h2 class="govuk-fieldset__heading">
                 Based on who the condition affects
-              </h1>
+              </h2>
             </legend>
 
             <div class="govuk-radios govuk-radios--inline">
@@ -59,17 +53,15 @@
               </div>
               {% endfor %}
             </div>
-
           </fieldset>
         </div>
 
         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" aria-describedby="status_filter_hint">
-            <span id="status_filter_hint" class="govuk-hint"></span>
+          <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-              <h1 class="govuk-fieldset__heading">
+              <h2 class="govuk-fieldset__heading">
                 Based on the current recommendation status
-              </h1>
+              </h2>
             </legend>
 
             <div class="govuk-radios govuk-radios--inline">
@@ -87,21 +79,26 @@
             </div>
           </fieldset>
         </div>
-
-
       </form>
 
       <table class="govuk-table">
-        <tbody class="govuk-table__body">
-        {% for policy in policies %}
+        <thead class="govuk-table__head">
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><a href="https://legacyscreening.phe.org.uk/{{ policy.URL }}" target="_blank">{{ policy.Condition }}</a></td>
-            <td class="govuk-table__cell">{{ policy.Type }}</td>
-            <td class="govuk-table__cell">{{ policy.Recommendation }}</td>
+            <th class="govuk-table__header" scope="col">Condition</th>
+            <th class="govuk-table__header" scope="col">Affects</th>
+            <th class="govuk-table__header" scope="col">Recommendation</th>
           </tr>
-        {% else %}
-          <p>No Policies</p>
-        {% endfor %}
+        </thead>
+        <tbody class="govuk-table__body">
+          {% for policy in policies %}
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><a href="/SMA-prototype/sma" target="_blank">{{ policy.Condition }}</a></td>
+              <td class="govuk-table__cell">{{ policy.Type }}</td>
+              <td class="govuk-table__cell">{{ policy.Recommendation }}</td>
+            </tr>
+          {% else %}
+            <p>No Policies</p>
+          {% endfor %}
         </tbody>
       </table>
     </div>
