@@ -35,7 +35,7 @@ exports.data = [
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2012/13",
-    "Recommendation": "Not recommended, clinical practice guidelines covered by NICE",
+    "Recommendation": "Not recommended",
     "Recommendation_filter": "Nice",
     "": null
   },
@@ -45,7 +45,7 @@ exports.data = [
     "Type": "Antenatal",
     "Last reviewcompleted": "Mar 2017",
     "Next reviewdue to start": "2019/20",
-    "Recommendation": "Not recommended, clinical practice guidelines covered by NICE",
+    "Recommendation": "Not recommended",
     "Recommendation_filter": "Nice",
     "": "  "
   },
@@ -55,7 +55,7 @@ exports.data = [
     "Type": "Adult",
     "Last reviewcompleted": "Jul 2014",
     "Next reviewdue to start": "2017/18",
-    "Recommendation": "Not recommended, clinical practice guidelines covered by NICE",
+    "Recommendation": "Not recommended",
     "Recommendation_filter": "Nice",
     "": null
   },
@@ -115,7 +115,7 @@ exports.data = [
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2012/13",
-    "Recommendation": "Not recommended, clinical practice guidelines covered by NICE",
+    "Recommendation": "Not recommended",
     "Recommendation_filter": "Nice",
     "": null
   },
@@ -485,7 +485,7 @@ exports.data = [
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2013/14",
-    "Recommendation": "Not recommended, clinical practice guidelines covered by NICE",
+    "Recommendation": "Not recommended",
     "Recommendation_filter": "Nice",
     "": null
   },
@@ -625,7 +625,7 @@ exports.data = [
     "Type": "Adult",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2013/14",
-    "Recommendation": "Not recommended, risk management guidance covered by UK NSC",
+    "Recommendation": "Not recommended",
     "Recommendation_filter": "Nsc",
     "": null
   },
@@ -815,7 +815,7 @@ exports.data = [
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2014",
     "Next reviewdue to start": "2017/18",
-    "Recommendation": "Not recommended, clinical practice guidelines covered by NICE ",
+    "Recommendation": "Not recommended",
     "": null
   },
   {
@@ -834,7 +834,7 @@ exports.data = [
     "Type": "Antenatal",
     "Last reviewcompleted": "Dec 2013",
     "Next reviewdue to start": "2016/17",
-    "Recommendation": "Not recommended, clinical practice guidelines covered by NICE ",
+    "Recommendation": "Not recommended",
     "": null
   },
   {
@@ -843,7 +843,7 @@ exports.data = [
     "Type": "Antenatal",
     "Last reviewcompleted": "Dec 2011",
     "Next reviewdue to start": "2014/15",
-    "Recommendation": "Not recommended, clinical practice guidelines covered by NICE",
+    "Recommendation": "Not recommended",
     "Recommendation_filter": "Nice",
     "": null
   },
@@ -853,7 +853,7 @@ exports.data = [
     "Type": "Antenatal",
     "Last reviewcompleted": "Dec 2011",
     "Next reviewdue to start": "2014/15",
-    "Recommendation": "Not recommended, clinical practice guidelines covered by NICE",
+    "Recommendation": "Not recommended",
     "Recommendation_filter": "Nice",
     "": null
   },
@@ -883,7 +883,7 @@ exports.data = [
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2013/14",
-    "Recommendation": "Not recommended, clinical practice guidelines covered by NICE",
+    "Recommendation": "Not recommended",
     "Recommendation_filter": "Nice",
     "": null
   },
@@ -1063,7 +1063,7 @@ exports.data = [
     "Type": "Adult",
     "Last reviewcompleted": "Jan 2007",
     "Next reviewdue to start": "2013/14",
-    "Recommendation": "Not recommended, risk management guidance covered by UK NSC",
+    "Recommendation": "Not recommended",
     "Recommendation_filter": "Nsc",
     "": null
   },
