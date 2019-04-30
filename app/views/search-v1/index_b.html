@@ -92,7 +92,11 @@
         <tbody class="govuk-table__body">
           {% for policy in policies %}
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><a href="/SMA-prototype/sma">{{ policy.Condition }}</a></td>
+              {% if policy.Condition === "SMA" %}
+                <td class="govuk-table__cell"><a href="/SMA-prototype/sma">{{ policy.Condition }}</a></td>
+              {% else %}
+                <td class="govuk-table__cell"><a href="#">{{ policy.Condition }}</a></td>
+              {% endif %}
               <td class="govuk-table__cell">{{ policy.Type }}</td>
               <td class="govuk-table__cell">{{ policy.Recommendation }}</td>
             </tr>

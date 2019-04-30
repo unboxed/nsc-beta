@@ -1,7 +1,7 @@
 exports.data = [
   {
     "URL": "aaa",
-    "Condition": "Abdominal Aortic Aneurysm ",
+    "Condition": "Abdominal Aortic Aneurysm",
     "Type": "Adult",
     "Last reviewcompleted": "Aug 2017",
     "Next reviewdue to start": "2020/21",
@@ -11,7 +11,7 @@ exports.data = [
   },
   {
     "URL": "alcohol",
-    "Condition": "Alcohol Misuse ",
+    "Condition": "Alcohol Misuse",
     "Type": "Adult",
     "Last reviewcompleted": "Mar 2017",
     "Next reviewdue to start": "2019/20",
@@ -21,7 +21,7 @@ exports.data = [
   },
   {
     "URL": "aminoacidmetabolism",
-    "Condition": "Amino acid metabolism disorders ",
+    "Condition": "Amino acid metabolism disorders",
     "Type": "Newborn",
     "Last reviewcompleted": "Mar 2015",
     "Next reviewdue to start": "2017/18",
@@ -31,7 +31,7 @@ exports.data = [
   },
   {
     "URL": "anaemia",
-    "Condition": "Anaemia ",
+    "Condition": "Anaemia",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2012/13",
@@ -41,7 +41,7 @@ exports.data = [
   },
   {
     "URL": "asymptomaticbacteriuria",
-    "Condition": "Asymptomatic bacteriuria ",
+    "Condition": "Asymptomatic bacteriuria",
     "Type": "Antenatal",
     "Last reviewcompleted": "Mar 2017",
     "Next reviewdue to start": "2019/20",
@@ -51,7 +51,7 @@ exports.data = [
   },
   {
     "URL": "atrialfibrillation",
-    "Condition": "Atrial Fibrillation ",
+    "Condition": "Atrial Fibrillation",
     "Type": "Adult",
     "Last reviewcompleted": "Jul 2014",
     "Next reviewdue to start": "2017/18",
@@ -61,7 +61,7 @@ exports.data = [
   },
   {
     "URL": "autism",
-    "Condition": "Autism ",
+    "Condition": "Autism",
     "Type": "Child",
     "Last reviewcompleted": "Nov 2012",
     "Next reviewdue to start": "2015/16",
@@ -71,7 +71,7 @@ exports.data = [
   },
   {
     "URL": "bacterialvaginosis",
-    "Condition": "Bacterial vaginosis ",
+    "Condition": "Bacterial vaginosis",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jan 2015",
     "Next reviewdue to start": "2017/18",
@@ -81,7 +81,7 @@ exports.data = [
   },
   {
     "URL": "biliaryatresia",
-    "Condition": "Biliary atresia ",
+    "Condition": "Biliary atresia",
     "Type": "Newborn",
     "Last reviewcompleted": "Dec 2017",
     "Next reviewdue to start": "2020/21",
@@ -91,7 +91,7 @@ exports.data = [
   },
   {
     "URL": "biotinidasedeficiency",
-    "Condition": "Biotinidase deficiency ",
+    "Condition": "Biotinidase deficiency",
     "Type": "Newborn",
     "Last reviewcompleted": "Apr 2018",
     "Next reviewdue to start": "2021/22",
@@ -101,7 +101,7 @@ exports.data = [
   },
   {
     "URL": "bladdercancer",
-    "Condition": "Bladder Cancer ",
+    "Condition": "Bladder Cancer",
     "Type": "Adult",
     "Last reviewcompleted": "Jun 2015",
     "Next reviewdue to start": "2018/19",
@@ -111,7 +111,7 @@ exports.data = [
   },
   {
     "URL": "alloantibody",
-    "Condition": "Blood group & RhD status and red cell alloantibodies ",
+    "Condition": "Blood group & RhD status and red cell alloantibodies",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2012/13",
@@ -121,7 +121,7 @@ exports.data = [
   },
   {
     "URL": "bowelcancer",
-    "Condition": "Bowel Cancer ",
+    "Condition": "Bowel Cancer",
     "Type": "Adult",
     "Last reviewcompleted": "Jan 2016",
     "Next reviewdue to start": "2018/19",
@@ -131,7 +131,7 @@ exports.data = [
   },
   {
     "URL": "breastcancer",
-    "Condition": "Breast Cancer ",
+    "Condition": "Breast Cancer",
     "Type": "Adult",
     "Last reviewcompleted": "Oct 2012",
     "Next reviewdue to start": "n/a",
@@ -141,7 +141,7 @@ exports.data = [
   },
   {
     "URL": "cervicalcancer",
-    "Condition": "Cervical Cancer ",
+    "Condition": "Cervical Cancer",
     "Type": "Adult",
     "Last reviewcompleted": "Jan 2016",
     "Next reviewdue to start": "2018/19",
@@ -151,7 +151,7 @@ exports.data = [
   },
   {
     "URL": "chlamydia-adult",
-    "Condition": "Chlamydia (adult) ",
+    "Condition": "Chlamydia (adult)",
     "Type": "Adult",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2009/10",
@@ -161,7 +161,7 @@ exports.data = [
   },
   {
     "URL": "chlamydia-pregnancy",
-    "Condition": "Chlamydia (pregnancy) ",
+    "Condition": "Chlamydia (pregnancy)",
     "Type": "Antenatal",
     "Last reviewcompleted": "Apr 2018",
     "Next reviewdue to start": "2021/22",
@@ -171,7 +171,7 @@ exports.data = [
   },
   {
     "URL": "coeliacdisease",
-    "Condition": "Coeliac Disease ",
+    "Condition": "Coeliac Disease",
     "Type": "Adult",
     "Last reviewcompleted": "May 2014",
     "Next reviewdue to start": "2017/18",
@@ -181,7 +181,7 @@ exports.data = [
   },
   {
     "URL": "congenitaladrenalhyperplasia",
-    "Condition": "Congenital adrenal hyperplasia ",
+    "Condition": "Congenital adrenal hyperplasia",
     "Type": "Newborn",
     "Last reviewcompleted": "Jan 2016",
     "Next reviewdue to start": "2018/19",
@@ -191,7 +191,7 @@ exports.data = [
   },
   {
     "URL": "congenitalcataracts",
-    "Condition": "Congenital cataracts ",
+    "Condition": "Congenital cataracts",
     "Type": "Newborn",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "n/a",
@@ -201,7 +201,7 @@ exports.data = [
   },
   {
     "URL": "congenitalheartdisease",
-    "Condition": "Congenital heart disease ",
+    "Condition": "Congenital heart disease",
     "Type": "Newborn",
     "Last reviewcompleted": "May 2014",
     "Next reviewdue to start": "n/a",
@@ -211,7 +211,7 @@ exports.data = [
   },
   {
     "URL": "congenitalhypothyroidism",
-    "Condition": "Congenital hypothyroidism ",
+    "Condition": "Congenital hypothyroidism",
     "Type": "Newborn",
     "Last reviewcompleted": "Feb 2009",
     "Next reviewdue to start": "2012/13",
@@ -221,7 +221,7 @@ exports.data = [
   },
   {
     "URL": "copd",
-    "Condition": "COPD ",
+    "Condition": "COPD",
     "Type": "Adult",
     "Last reviewcompleted": "Dec 2013",
     "Next reviewdue to start": "2016/17",
@@ -231,7 +231,7 @@ exports.data = [
   },
   {
     "URL": "cryptorchidism",
-    "Condition": "Cryptorchidism ",
+    "Condition": "Cryptorchidism",
     "Type": "Newborn",
     "Last reviewcompleted": "n/a",
     "Next reviewdue to start": "n/a",
@@ -241,7 +241,7 @@ exports.data = [
   },
   {
     "URL": "cysticfibrosis-newborn",
-    "Condition": "Cystic fibrosis (newborn) ",
+    "Condition": "Cystic fibrosis (newborn)",
     "Type": "Newborn",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "n/a",
@@ -251,7 +251,7 @@ exports.data = [
   },
   {
     "URL": "cysticfibrosis-pregnancy",
-    "Condition": "Cystic Fibrosis (pregnancy) ",
+    "Condition": "Cystic Fibrosis (pregnancy)",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2009/10",
@@ -261,7 +261,7 @@ exports.data = [
   },
   {
     "URL": "cytomegalovirus",
-    "Condition": "Cytomegalovirus ",
+    "Condition": "Cytomegalovirus",
     "Type": "Antenatal",
     "Last reviewcompleted": "Dec 2017",
     "Next reviewdue to start": "2020/21",
@@ -271,7 +271,7 @@ exports.data = [
   },
   {
     "URL": "dementia",
-    "Condition": "Dementia ",
+    "Condition": "Dementia",
     "Type": "Adult",
     "Last reviewcompleted": "Jan 2015",
     "Next reviewdue to start": "2018/19",
@@ -281,7 +281,7 @@ exports.data = [
   },
   {
     "URL": "dental",
-    "Condition": "Dental Disease ",
+    "Condition": "Dental Disease",
     "Type": "Child",
     "Last reviewcompleted": "May 2014",
     "Next reviewdue to start": "2017/18",
@@ -291,7 +291,7 @@ exports.data = [
   },
   {
     "URL": "depression",
-    "Condition": "Depression ",
+    "Condition": "Depression",
     "Type": "Adult",
     "Last reviewcompleted": "Jun 2015",
     "Next reviewdue to start": "2018/19",
@@ -301,7 +301,7 @@ exports.data = [
   },
   {
     "URL": "developmentbehaviour",
-    "Condition": "Development & Behaviour ",
+    "Condition": "Development & Behaviour",
     "Type": "Child",
     "Last reviewcompleted": "May 2005",
     "Next reviewdue to start": "2013/14",
@@ -311,7 +311,7 @@ exports.data = [
   },
   {
     "URL": "hipdislocation",
-    "Condition": "Developmental dislocation of the hip ",
+    "Condition": "Developmental dislocation of the hip",
     "Type": "Newborn",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "n/a",
@@ -321,7 +321,7 @@ exports.data = [
   },
   {
     "URL": "diabetes",
-    "Condition": "Diabetes ",
+    "Condition": "Diabetes",
     "Type": "Adult",
     "Last reviewcompleted": "Jul 2014",
     "Next reviewdue to start": "2017/18",
@@ -331,7 +331,7 @@ exports.data = [
   },
   {
     "URL": "diabeticretinopathy",
-    "Condition": "Diabetic Retinopathy ",
+    "Condition": "Diabetic Retinopathy",
     "Type": "Adult",
     "Last reviewcompleted": "Jan 2016",
     "Next reviewdue to start": "2018/19",
@@ -341,7 +341,7 @@ exports.data = [
   },
   {
     "URL": "domesticviolence",
-    "Condition": "Domestic Violence ",
+    "Condition": "Domestic Violence",
     "Type": "Adult",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2009/10",
@@ -351,7 +351,7 @@ exports.data = [
   },
   {
     "URL": "domesticviolence-pregnancy",
-    "Condition": "Domestic violence (pregnancy) ",
+    "Condition": "Domestic violence (pregnancy)",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2012/13",
@@ -361,7 +361,7 @@ exports.data = [
   },
   {
     "URL": "downs",
-    "Condition": "Down's syndrome ",
+    "Condition": "Down's syndrome",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jan 2016",
     "Next reviewdue to start": "2018/19",
@@ -371,7 +371,7 @@ exports.data = [
   },
   {
     "URL": "musculardystrophy",
-    "Condition": "Duchenne muscular dystrophy ",
+    "Condition": "Duchenne muscular dystrophy",
     "Type": "Newborn",
     "Last reviewcompleted": "Nov 2016",
     "Next reviewdue to start": "2019/20",
@@ -381,7 +381,7 @@ exports.data = [
   },
   {
     "URL": "familialhypercholesterolaemia-adult",
-    "Condition": "Familial Hypercholesterolaemia (adult) ",
+    "Condition": "Familial Hypercholesterolaemia (adult)",
     "Type": "Adult",
     "Last reviewcompleted": "Dec 2011",
     "Next reviewdue to start": "2014/15",
@@ -391,7 +391,7 @@ exports.data = [
   },
   {
     "URL": "familialhypercholesterolaemia-child",
-    "Condition": "Familial Hypercholesterolaemia (child) ",
+    "Condition": "Familial Hypercholesterolaemia (child)",
     "Type": "Child",
     "Last reviewcompleted": "Mar 2016",
     "Next reviewdue to start": "2018/19",
@@ -401,7 +401,7 @@ exports.data = [
   },
   {
     "URL": "fattyacidoxidation",
-    "Condition": "Fatty-acid oxidation disorders ",
+    "Condition": "Fatty-acid oxidation disorders",
     "Type": "Newborn",
     "Last reviewcompleted": "Jun 2015",
     "Next reviewdue to start": "2018/19",
@@ -411,7 +411,7 @@ exports.data = [
   },
   {
     "URL": "fetalanomalies",
-    "Condition": "Fetal anomalies ",
+    "Condition": "Fetal anomalies",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jan 2016",
     "Next reviewdue to start": "2018/19",
@@ -421,7 +421,7 @@ exports.data = [
   },
   {
     "URL": "thrombocytopenia",
-    "Condition": "FMAIT ",
+    "Condition": "FMAIT",
     "Type": "Antenatal and newborn",
     "Last reviewcompleted": "Mar 2017",
     "Next reviewdue to start": "2019/20",
@@ -431,7 +431,7 @@ exports.data = [
   },
   {
     "URL": "fragilex",
-    "Condition": "Fragile X ",
+    "Condition": "Fragile X",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2015",
     "Next reviewdue to start": "2018/19",
@@ -441,7 +441,7 @@ exports.data = [
   },
   {
     "URL": "ga1",
-    "Condition": "GA1 ",
+    "Condition": "GA1",
     "Type": "Newborn",
     "Last reviewcompleted": "May 2014",
     "Next reviewdue to start": "2017/18",
@@ -451,7 +451,7 @@ exports.data = [
   },
   {
     "URL": "galactosemia",
-    "Condition": "Galactosaemia ",
+    "Condition": "Galactosaemia",
     "Type": "Newborn",
     "Last reviewcompleted": "Jun 2015",
     "Next reviewdue to start": "2018/19",
@@ -461,7 +461,7 @@ exports.data = [
   },
   {
     "URL": "gauchers",
-    "Condition": "Gaucher disease ",
+    "Condition": "Gaucher disease",
     "Type": "Newborn",
     "Last reviewcompleted": "Jan 2015",
     "Next reviewdue to start": "2017/18",
@@ -471,7 +471,7 @@ exports.data = [
   },
   {
     "URL": "genitalherpes",
-    "Condition": "Genital Herpes ",
+    "Condition": "Genital Herpes",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2013/14",
@@ -481,7 +481,7 @@ exports.data = [
   },
   {
     "URL": "gestational-diabetes",
-    "Condition": "Gestational diabetes ",
+    "Condition": "Gestational diabetes",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2013/14",
@@ -491,7 +491,7 @@ exports.data = [
   },
   {
     "URL": "glaucoma",
-    "Condition": "Glaucoma ",
+    "Condition": "Glaucoma",
     "Type": "Adult",
     "Last reviewcompleted": "Jan 2016",
     "Next reviewdue to start": "2018/19",
@@ -501,7 +501,7 @@ exports.data = [
   },
   {
     "URL": "groupbstreptococcus",
-    "Condition": "Group B Streptococcus ",
+    "Condition": "Group B Streptococcus",
     "Type": "Antenatal",
     "Last reviewcompleted": "Mar 2017",
     "Next reviewdue to start": "2019/20",
@@ -511,7 +511,7 @@ exports.data = [
   },
   {
     "URL": "growth",
-    "Condition": "Growth ",
+    "Condition": "Growth",
     "Type": "Child",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2012/13",
@@ -521,7 +521,7 @@ exports.data = [
   },
   {
     "URL": "haemochromatosis",
-    "Condition": "Haemochromatosis ",
+    "Condition": "Haemochromatosis",
     "Type": "Adult",
     "Last reviewcompleted": "Nov 2016",
     "Next reviewdue to start": "2019/20",
@@ -531,7 +531,7 @@ exports.data = [
   },
   {
     "URL": "hcu",
-    "Condition": "HCU ",
+    "Condition": "HCU",
     "Type": "Newborn",
     "Last reviewcompleted": "May 2014",
     "Next reviewdue to start": "2017/18",
@@ -541,7 +541,7 @@ exports.data = [
   },
   {
     "URL": "hearing-child",
-    "Condition": "Hearing (child) ",
+    "Condition": "Hearing (child)",
     "Type": "Child",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2015/16",
@@ -551,7 +551,7 @@ exports.data = [
   },
   {
     "URL": "hearing-newborn",
-    "Condition": "Hearing (newborn) ",
+    "Condition": "Hearing (newborn)",
     "Type": "Newborn",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "n/a",
@@ -561,7 +561,7 @@ exports.data = [
   },
   {
     "URL": "hearing-adult",
-    "Condition": "Hearing Loss (adult) ",
+    "Condition": "Hearing Loss (adult)",
     "Type": "Adult",
     "Last reviewcompleted": "Jan 2016",
     "Next reviewdue to start": "2019/20",
@@ -571,7 +571,7 @@ exports.data = [
   },
   {
     "URL": "hepatitisb",
-    "Condition": "Hepatitis B ",
+    "Condition": "Hepatitis B",
     "Type": "Antenatal",
     "Last reviewcompleted": "Apr 2018",
     "Next reviewdue to start": "2021/22",
@@ -581,7 +581,7 @@ exports.data = [
   },
   {
     "URL": "hepatitis-ethnic",
-    "Condition": "Hepatitis B and C among ethnic minorities ",
+    "Condition": "Hepatitis B and C among ethnic minorities",
     "Type": "Adult",
     "Last reviewcompleted": "Apr 2011",
     "Next reviewdue to start": "2014/15",
@@ -591,7 +591,7 @@ exports.data = [
   },
   {
     "URL": "hepatitisc-pregnancy",
-    "Condition": "Hepatitis C (pregnancy) ",
+    "Condition": "Hepatitis C (pregnancy)",
     "Type": "Antenatal",
     "Last reviewcompleted": "Dec 2011",
     "Next reviewdue to start": "2014/15",
@@ -601,7 +601,7 @@ exports.data = [
   },
   {
     "URL": "htlv",
-    "Condition": "HTLV ",
+    "Condition": "HTLV",
     "Type": "Antenatal",
     "Last reviewcompleted": "Dec 2017",
     "Next reviewdue to start": "2020/21",
@@ -611,7 +611,7 @@ exports.data = [
   },
   {
     "URL": "hiv",
-    "Condition": "Human immunodeficiency virus ",
+    "Condition": "Human immunodeficiency virus",
     "Type": "Antenatal",
     "Last reviewcompleted": "Apr 2018",
     "Next reviewdue to start": "2021/22",
@@ -621,7 +621,7 @@ exports.data = [
   },
   {
     "URL": "hypertension-adult",
-    "Condition": "Hypertension (adult) ",
+    "Condition": "Hypertension (adult)",
     "Type": "Adult",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2013/14",
@@ -631,7 +631,7 @@ exports.data = [
   },
   {
     "URL": "hypertension-child",
-    "Condition": "Hypertension (child) ",
+    "Condition": "Hypertension (child)",
     "Type": "Child",
     "Last reviewcompleted": "Dec 2011",
     "Next reviewdue to start": "2014/15",
@@ -641,7 +641,7 @@ exports.data = [
   },
   {
     "URL": "irondeficiency",
-    "Condition": "Iron Deficiency Anaemia ",
+    "Condition": "Iron Deficiency Anaemia",
     "Type": "Child",
     "Last reviewcompleted": "Dec 2017",
     "Next reviewdue to start": "2020/21",
@@ -651,7 +651,7 @@ exports.data = [
   },
   {
     "URL": "iva",
-    "Condition": "IVA ",
+    "Condition": "IVA",
     "Type": "Newborn",
     "Last reviewcompleted": "May 2014",
     "Next reviewdue to start": "2017/18",
@@ -661,7 +661,7 @@ exports.data = [
   },
   {
     "URL": "kernicterus",
-    "Condition": "Kernicterus ",
+    "Condition": "Kernicterus",
     "Type": "Newborn",
     "Last reviewcompleted": "Aug 2016",
     "Next reviewdue to start": "2019/20",
@@ -671,7 +671,7 @@ exports.data = [
   },
   {
     "URL": "kidneydisease",
-    "Condition": "Kidney disease ",
+    "Condition": "Kidney disease",
     "Type": "Adult",
     "Last reviewcompleted": "Apr 2011",
     "Next reviewdue to start": "2014/15",
@@ -681,7 +681,7 @@ exports.data = [
   },
   {
     "URL": "lchadd",
-    "Condition": "LCHADD ",
+    "Condition": "LCHADD",
     "Type": "Newborn",
     "Last reviewcompleted": "May 2014",
     "Next reviewdue to start": "2017/18",
@@ -691,7 +691,7 @@ exports.data = [
   },
   {
     "URL": "leadpoisoning",
-    "Condition": "Lead Poisoning ",
+    "Condition": "Lead Poisoning",
     "Type": "Child",
     "Last reviewcompleted": "Apr 2018",
     "Next reviewdue to start": "2021/22",
@@ -701,7 +701,7 @@ exports.data = [
   },
   {
     "URL": "lungcancer",
-    "Condition": "Lung cancer ",
+    "Condition": "Lung cancer",
     "Type": "Adult",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2015/16",
@@ -711,7 +711,7 @@ exports.data = [
   },
   {
     "URL": "mcadd",
-    "Condition": "MCADD ",
+    "Condition": "MCADD",
     "Type": "Newborn",
     "Last reviewcompleted": "Feb 2007",
     "Next reviewdue to start": "2015/16",
@@ -721,7 +721,7 @@ exports.data = [
   },
   {
     "URL": "mps1",
-    "Condition": "MPS1 ",
+    "Condition": "MPS1",
     "Type": "Newborn",
     "Last reviewcompleted": "Jan 2016",
     "Next reviewdue to start": "2018/19",
@@ -731,7 +731,7 @@ exports.data = [
   },
   {
     "URL": "msud",
-    "Condition": "MSUD ",
+    "Condition": "MSUD",
     "Type": "Newborn",
     "Last reviewcompleted": "May 2014",
     "Next reviewdue to start": "2017/18",
@@ -741,7 +741,7 @@ exports.data = [
   },
   {
     "URL": "neuraltubedefect",
-    "Condition": "Neural tube defect ",
+    "Condition": "Neural tube defect",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "n/a",
@@ -751,7 +751,7 @@ exports.data = [
   },
   {
     "URL": "neuroblastoma",
-    "Condition": "Neuroblastoma ",
+    "Condition": "Neuroblastoma",
     "Type": "Child",
     "Last reviewcompleted": "Jan 2016",
     "Next reviewdue to start": "2018/19",
@@ -761,7 +761,7 @@ exports.data = [
   },
   {
     "URL": "obesity",
-    "Condition": "Obesity ",
+    "Condition": "Obesity",
     "Type": "Child",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2013/14",
@@ -771,7 +771,7 @@ exports.data = [
   },
   {
     "URL": "oralcancer",
-    "Condition": "Oral Cancer ",
+    "Condition": "Oral Cancer",
     "Type": "Adult",
     "Last reviewcompleted": "Jan 2016",
     "Next reviewdue to start": "2018/19",
@@ -781,7 +781,7 @@ exports.data = [
   },
   {
     "URL": "organicacidmetabolism",
-    "Condition": "Organic acid oxidation disorders ",
+    "Condition": "Organic acid oxidation disorders",
     "Type": "Newborn",
     "Last reviewcompleted": "Mar 2016",
     "Next reviewdue to start": "2018/19",
@@ -791,7 +791,7 @@ exports.data = [
   },
   {
     "URL": "osteoporosis",
-    "Condition": "Osteoporosis ",
+    "Condition": "Osteoporosis",
     "Type": "Adult",
     "Last reviewcompleted": "Apr 2013",
     "Next reviewdue to start": "2016/17",
@@ -801,7 +801,7 @@ exports.data = [
   },
   {
     "URL": "ovariancancer",
-    "Condition": "Ovarian cancer ",
+    "Condition": "Ovarian cancer",
     "Type": "Adult",
     "Last reviewcompleted": "Jul 2017",
     "Next reviewdue to start": "2020/21",
@@ -811,7 +811,7 @@ exports.data = [
   },
   {
     "URL": "parvovirus",
-    "Condition": "Parvovirus ",
+    "Condition": "Parvovirus",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2014",
     "Next reviewdue to start": "2017/18",
@@ -820,7 +820,7 @@ exports.data = [
   },
   {
     "URL": "pku",
-    "Condition": "PKU ",
+    "Condition": "PKU",
     "Type": "Newborn",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "n/a",
@@ -830,7 +830,7 @@ exports.data = [
   },
   {
     "URL": "placentapraevia",
-    "Condition": "Placenta praevia ",
+    "Condition": "Placenta praevia",
     "Type": "Antenatal",
     "Last reviewcompleted": "Dec 2013",
     "Next reviewdue to start": "2016/17",
@@ -839,7 +839,7 @@ exports.data = [
   },
   {
     "URL": "postnataldepression",
-    "Condition": "Postnatal depression ",
+    "Condition": "Postnatal depression",
     "Type": "Antenatal",
     "Last reviewcompleted": "Dec 2011",
     "Next reviewdue to start": "2014/15",
@@ -849,7 +849,7 @@ exports.data = [
   },
   {
     "URL": "pre-eclampsia",
-    "Condition": "Pre-eclampsia ",
+    "Condition": "Pre-eclampsia",
     "Type": "Antenatal",
     "Last reviewcompleted": "Dec 2011",
     "Next reviewdue to start": "2014/15",
@@ -859,7 +859,7 @@ exports.data = [
   },
   {
     "URL": "pretermlabour",
-    "Condition": "Preterm labour ",
+    "Condition": "Preterm labour",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jan 2015",
     "Next reviewdue to start": "2017/18",
@@ -869,7 +869,7 @@ exports.data = [
   },
   {
     "URL": "prostatecancer",
-    "Condition": "Prostate Cancer ",
+    "Condition": "Prostate Cancer",
     "Type": "Adult",
     "Last reviewcompleted": "Jan 2016",
     "Next reviewdue to start": "2019/20",
@@ -879,7 +879,7 @@ exports.data = [
   },
   {
     "URL": "psychiatricillness",
-    "Condition": "Psychiatric illness ",
+    "Condition": "Psychiatric illness",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2013/14",
@@ -889,7 +889,7 @@ exports.data = [
   },
   {
     "URL": "rubellasusceptibility",
-    "Condition": "Rubella susceptibility ",
+    "Condition": "Rubella susceptibility",
     "Type": "Antenatal",
     "Last reviewcompleted": "May 2012",
     "Next reviewdue to start": "n/a",
@@ -899,7 +899,7 @@ exports.data = [
   },
   {
     "URL": "scid",
-    "Condition": "SCID ",
+    "Condition": "SCID",
     "Type": "Newborn",
     "Last reviewcompleted": "Dec 2017",
     "Next reviewdue to start": "2020/21",
@@ -909,7 +909,7 @@ exports.data = [
   },
   {
     "URL": "scoliosis",
-    "Condition": "Scoliosis ",
+    "Condition": "Scoliosis",
     "Type": "Child",
     "Last reviewcompleted": "Aug 2016",
     "Next reviewdue to start": "2019/20",
@@ -919,7 +919,7 @@ exports.data = [
   },
   {
     "URL": "sicklecellthalassaemia",
-    "Condition": "Sickle cell and Thalassaemia ",
+    "Condition": "Sickle cell and Thalassaemia",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "n/a",
@@ -929,7 +929,7 @@ exports.data = [
   },
   {
     "URL": "sicklecelldisease",
-    "Condition": "Sickle Cell Disease (newborn) ",
+    "Condition": "Sickle Cell Disease (newborn)",
     "Type": "Newborn",
     "Last reviewcompleted": "Jul 2006",
     "Next reviewdue to start": "2014/15",
@@ -939,7 +939,7 @@ exports.data = [
   },
   {
     "URL": "sma",
-    "Condition": "SMA ",
+    "Condition": "SMA",
     "Type": "Antenatal",
     "Last reviewcompleted": "Dec 2013",
     "Next reviewdue to start": "2016/17",
@@ -949,7 +949,7 @@ exports.data = [
   },
   {
     "URL": "speechlanguage",
-    "Condition": "Speech & Language Delay ",
+    "Condition": "Speech & Language Delay",
     "Type": "Child",
     "Last reviewcompleted": "n/a",
     "Next reviewdue to start": "2009/10",
@@ -959,7 +959,7 @@ exports.data = [
   },
   {
     "URL": "stomachcancer",
-    "Condition": "Stomach cancer ",
+    "Condition": "Stomach cancer",
     "Type": "Adult",
     "Last reviewcompleted": "Mar 2016",
     "Next reviewdue to start": "2018/19",
@@ -969,7 +969,7 @@ exports.data = [
   },
   {
     "URL": "suddencardiacdeath",
-    "Condition": "Sudden Cardiac Death ",
+    "Condition": "Sudden Cardiac Death",
     "Type": "Adult",
     "Last reviewcompleted": "Jul 2015",
     "Next reviewdue to start": "2018/19",
@@ -979,7 +979,7 @@ exports.data = [
   },
   {
     "URL": "syphilis",
-    "Condition": "Syphilis ",
+    "Condition": "Syphilis",
     "Type": "Antenatal",
     "Last reviewcompleted": "Apr 2018",
     "Next reviewdue to start": "2021/22",
@@ -989,7 +989,7 @@ exports.data = [
   },
   {
     "URL": "t18andt13",
-    "Condition": "T18 and T13 ",
+    "Condition": "T18 and T13",
     "Type": "Antenatal",
     "Last reviewcompleted": "Jan 2016",
     "Next reviewdue to start": "2018/19",
@@ -999,7 +999,7 @@ exports.data = [
   },
   {
     "URL": "thrombophilia",
-    "Condition": "Thrombophilia ",
+    "Condition": "Thrombophilia",
     "Type": "All age",
     "Last reviewcompleted": "Aug 2017",
     "Next reviewdue to start": "2020/21",
@@ -1009,7 +1009,7 @@ exports.data = [
   },
   {
     "URL": "thyroid",
-    "Condition": "Thyroid disease ",
+    "Condition": "Thyroid disease",
     "Type": "Adult",
     "Last reviewcompleted": "Apr 2018",
     "Next reviewdue to start": "2021/22",
@@ -1019,7 +1019,7 @@ exports.data = [
   },
   {
     "URL": "toxoplasmosis",
-    "Condition": "Toxoplasmosis ",
+    "Condition": "Toxoplasmosis",
     "Type": "Antenatal",
     "Last reviewcompleted": "Aug 2016",
     "Next reviewdue to start": "2019/20",
@@ -1029,7 +1029,7 @@ exports.data = [
   },
   {
     "URL": "tyrosinaemia",
-    "Condition": "Tyrosinaemia ",
+    "Condition": "Tyrosinaemia",
     "Type": "Newborn",
     "Last reviewcompleted": "Jul 2017",
     "Next reviewdue to start": "2020/21",
@@ -1039,7 +1039,7 @@ exports.data = [
   },
   {
     "URL": "varicella",
-    "Condition": "Varicella susceptibility ",
+    "Condition": "Varicella susceptibility",
     "Type": "Antenatal",
     "Last reviewcompleted": "Mar 2016",
     "Next reviewdue to start": "2018/19",
@@ -1049,7 +1049,7 @@ exports.data = [
   },
   {
     "URL": "vasapraevia",
-    "Condition": "Vasa praevia ",
+    "Condition": "Vasa praevia",
     "Type": "Antenatal",
     "Last reviewcompleted": "Aug 2017",
     "Next reviewdue to start": "2020/21",
@@ -1059,7 +1059,7 @@ exports.data = [
   },
   {
     "URL": "vascularrisk",
-    "Condition": "Vascular risk ",
+    "Condition": "Vascular risk",
     "Type": "Adult",
     "Last reviewcompleted": "Jan 2007",
     "Next reviewdue to start": "2013/14",
@@ -1069,7 +1069,7 @@ exports.data = [
   },
   {
     "URL": "vision-child",
-    "Condition": "Vision Defects ",
+    "Condition": "Vision Defects",
     "Type": "Child",
     "Last reviewcompleted": "Dec 2013",
     "Next reviewdue to start": "2016/17",
