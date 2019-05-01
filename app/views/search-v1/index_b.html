@@ -26,9 +26,10 @@
 
             <input class="govuk-input" id="term" name="term" type="text"
                    value="{{ term }}" style="width: 80%">
-            <button type="submit" class="govuk-button">
+            <button type="submit" class="govuk-button search-b-button">
               Search
             </button>
+            <a href="/search_b?term=&who_filter=None&status_filter=None" class="govuk-link govuk-link--no-visited-state">Clear search</a>
           </fieldset>
         </div>
 
@@ -40,7 +41,7 @@
               </h2>
             </legend>
 
-            <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios govuk-radios">
               {% for who in ["Antenatal", "Newborn", "Child", "Adult",  "None" ] %}
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="who_filter_{{who}}"
@@ -64,7 +65,7 @@
               </h2>
             </legend>
 
-            <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios govuk-radios">
               {% for status, value in {"Yes": "Yes", "No": "No,Nice,Nsc", "None": "None" } %}
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="status_filter_{{ status }}"
@@ -86,15 +87,26 @@
           <tr class="govuk-table__row">
             <th class="govuk-table__header" scope="col">Condition</th>
             <th class="govuk-table__header" scope="col">Affects</th>
-            <th class="govuk-table__header" scope="col">Recommendation</th>
+            <th class="govuk-table__header" scope="col">Systematic Population Screening</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
           {% for policy in policies %}
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><a href="/SMA-prototype/sma" target="_blank">{{ policy.Condition }}</a></td>
+              {% if policy.Recommendation === "Recommended" %}
+                {% set status_class = "status__recommended" %}
+              {% else %}
+                {% set status_class = "status__not-recommended" %}
+              {% endif %}
+
+              {% if policy.Condition === "SMA" %}
+                <td class="govuk-table__cell"><a href="/SMA-prototype/sma">{{ policy.Condition }}</a></td>
+              {% else %}
+                <td class="govuk-table__cell"><a href="#">{{ policy.Condition }}</a></td>
+              {% endif %}
+
               <td class="govuk-table__cell">{{ policy.Type }}</td>
-              <td class="govuk-table__cell">{{ policy.Recommendation }}</td>
+              <td class="govuk-table__cell "><span class="{{status_class}}">{{ policy.Recommendation }}</span></td>
             </tr>
           {% else %}
             <p>No Policies</p>

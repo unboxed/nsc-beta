@@ -283,3 +283,26 @@ html {
   padding: 5px 15px;
   font-size: 28px;
 }
+
+.status__recommended,
+.status__not-recommended
+{
+  border: 2px solid;
+  padding: 6px 8px;
+  border-radius: 5px;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+.status__recommended {
+  border-color: rgb(0, 130, 59);
+}
+
+.status__not-recommended {
+  border-color: red;
+}
+
+.search-b-button {
+  margin-bottom: 8px !important;
+}
