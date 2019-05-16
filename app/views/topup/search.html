@@ -101,6 +101,8 @@
 
               {% if policy.Condition === "SMA" %}
                 <td class="govuk-table__cell"><a href="/topup/sma.html">{{ policy.Condition }}</a></td>
+              {% elif policy.Condition === "Atrial Fibrillation" %}
+                <td class="govuk-table__cell"><a href="/topup/af-in-consultation.html">{{ policy.Condition }}</a></td>
               {% else %}
                 <td class="govuk-table__cell"><a href="#">{{ policy.Condition }}</a></td>
               {% endif %}
