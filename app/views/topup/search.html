@@ -41,7 +41,7 @@
               </h2>
             </legend>
 
-            <div class="govuk-radios govuk-radios">
+            <div class="govuk-radios govuk-radios--small">
               {% for who in ["Antenatal", "Newborn", "Child", "Adult",  "None" ] %}
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="who_filter_{{who}}"
@@ -65,7 +65,7 @@
               </h2>
             </legend>
 
-            <div class="govuk-radios govuk-radios">
+            <div class="govuk-radios govuk-radios--small">
               {% for status, value in {"Yes": "Yes", "No": "No,Nice,Nsc", "None": "None" } %}
               <div class="govuk-radios__item">
                 <input class="govuk-radios__input" id="status_filter_{{ status }}"
