@@ -939,7 +939,7 @@ exports.data = [
   },
   {
     "URL": "sma",
-    "Condition": "SMA",
+    "Condition": "Spinal Muscular Atrophy",
     "Type": "Antenatal",
     "Last reviewcompleted": "Dec 2013",
     "Next reviewdue to start": "2016/17",
