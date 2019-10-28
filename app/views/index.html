@@ -1,11 +1,65 @@
-{% extends "layout_unbranded_home.html" %}
+{% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
+  Example without branding
 {% endblock %}
 
 {% block content %}
 
-  <p class="govuk-body-l">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+  <h1 class="govuk-heading-xl">
+    NSC Beta prototype
+  </h1>
+  <p class="govuk-body-m">
+    This prototype is for testing and may differ from what we are going to build. For more information about this prototype please email: megan.rodger@phe.gov.uk
   </p>
+  <p class="govuk-body-m">Current prototype is for <b>Sprint 0</b>. This is a design review bringing the components inline with gov.uk design system <b><a href="v5-s0/admin-view/index">access prototype for admin</a></b> and <b><a href="v5-s0/public-view/homepage">prototype for the public</a></b></p>
+
+  <h2 class="govuk-heading-m">
+    Prototype versions
+    </h2>
+
+    <table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Prototype version</th>
+      <th scope="col" class="govuk-table__header govuk-table__header">Date or sprint</th>
+      <th scope="col" class="govuk-table__header govuk-table__header">What testing</th>
+      <th scope="col" class="govuk-table__header govuk-table__header">Link to research</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="layout_unbranded_home">V4</a></th>
+      <td class="govuk-table__cell govuk-table__cell">-</td>
+      <td class="govuk-table__cell govuk-table__cell">Post alpha top up research integrated into the prototype both admin and public</td>
+      <td class="govuk-table__cell govuk-table__cell">-</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/v3/index">V3</a></th>
+      <td class="govuk-table__cell govuk-table__cell">-</td>
+      <td class="govuk-table__cell govuk-table__cell">-</td>
+      <td class="govuk-table__cell govuk-table__cell">-</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/v2/index">V2</a></th>
+      <td class="govuk-table__cell govuk-table__cell">-</td>
+      <td class="govuk-table__cell govuk-table__cell">-</td>
+      <td class="govuk-table__cell govuk-table__cell">-</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="">V1</a></th>
+      <td class="govuk-table__cell govuk-table__cell">-</td>
+      <td class="govuk-table__cell govuk-table__cell">-</td>
+      <td class="govuk-table__cell govuk-table__cell">-</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+    </div>
+    </div>
 
 {% endblock %}

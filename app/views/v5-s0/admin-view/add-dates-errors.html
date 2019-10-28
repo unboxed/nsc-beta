@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <div class="govuk-breadcrumbs">
+          <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+              <a class="govuk-breadcrumbs__link" href="/v4/index">Dashboard</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+              <a class="govuk-breadcrumbs__link" href="/v4/reviews">Reviews</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item">
+              <a class="govuk-breadcrumbs__link" href="/v4/new-review">New review</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item" aria-current="page">Conditions and dates</li>
+          </ol>
+        </div>
+        <br>
+
+        <div class="govuk-width-container">
+          <div class="govuk-form-group govuk-form-group--error">
+            <label class="govuk-label" for="sort">
+              <h2 class="govuk-heading-l">Select conditions under review
+              </h2>
+            </label>
+
+            <span id="email-hint" class="govuk-hint">
+              Select conditions this review relates to
+            </span>
+            <span id="national-insurance-number-error" class="govuk-error-message">
+              A review must have a condition attached to it
+            </span>
+            <select class="govuk-select" id="sort" name="sort">
+              <option value="nope" selected></option>
+              <option value="abdominal_aortic_aneurysm">Abdominal Aortic Aneurysm</option>
+              <option value="updated">Alcohol Misuse</option>
+              <option value="views">Argininosuccinate lyase deficiency</option>
+              <option value="a">Citrullinaemia</option>
+              <option value="b">Spinal Muscular Atrophy (SMA)</option>
+              <option value="cs">Tyrosinaemia type 1</option>
+              <option value="d">Phenylketonuria</option>
+              <option value="e">Vascular risk</option>
+              <option value="f">...</option>
+            </select>
+            <br>
+            <br>
+            <a href="#" role="button" class="govuk-button review-add-condition">Add another condition</a>
+          </div>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="sort">
+              <h2 class="govuk-heading-l">Internal review name</h2>
+            </label>
+
+            <span id="email-hint" class="govuk-hint">
+              This will be produced automatically unless filled in specifically
+            </span>
+
+            <input class="govuk-input" id="review_name" name="email" type="text" aria-describedby="email-hint" placeholder="SMA review 2019">
+          </div>
+          <br>
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="dob-hint" role="group">
+              <label class="govuk-label" for="sort">
+                <h2 class="govuk-heading-l">Expected consultation start date</h2>
+              </label>
+              <span id="dob-hint" class="govuk-hint">
+                For example, April to July 2019
+              </span>
+              <div class="govuk-form-group">
+                <input class="govuk-input govuk-input--width-10" id="national-insurance-number" name="national-insurance-number" type="text" aria-describedby="national-insurance-number-hint">
+              </div>
+            </fieldset>
+          </div>
+          <br>
+          <br>
+          <a href="/v4/new-review.html" role="button" class="govuk-button">Cancel</a>
+          <a href="/v4/sma" role="button" class="govuk-button">Save</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

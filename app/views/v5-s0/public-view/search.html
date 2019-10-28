@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Complete list of UK NSC recommendations
+      </h1>
+
+      <form method="GET" id="search">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <label for="term">
+              <h2 class="govuk-fieldset__heading">
+                Find a condition
+              </h2>
+              </label>
+            </legend>
+
+            <input class="govuk-input" id="term" name="term" type="text"
+                   value="{{ term }}" style="width: 80%">
+            <button type="submit" class="govuk-button search-b-button">
+              Search
+            </button>
+            <a href="/search?term=&who_filter=None&status_filter=None" class="govuk-link govuk-link--no-visited-state">Clear search</a>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Based on who the condition affects
+              </h2>
+            </legend>
+
+            <div class="govuk-radios govuk-radios--small">
+              {% for who in ["Antenatal", "Newborn", "Child", "Adult",  "None" ] %}
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="who_filter_{{who}}"
+                       name="who_filter" type="radio" value="{{ who }}"
+                       onchange="document.getElementById('search').submit()" {{ "checked" if whoFilter == who }}>
+                <label class="govuk-label govuk-radios__label"
+                       for="who_filter_{{who}}">
+                  {{ who }}
+                </label>
+              </div>
+              {% endfor %}
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-fieldset__heading">
+                Based on the current recommendation status
+              </h2>
+            </legend>
+
+            <div class="govuk-radios govuk-radios--small">
+              {% for status, value in {"Yes": "Yes", "No": "No,Nice,Nsc", "None": "None" } %}
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="status_filter_{{ status }}"
+                       name="status_filter" type="radio" value="{{value}}"
+                       onchange="document.getElementById('search').submit()" {{ "checked" if statusFilter == value }}>
+                <label class="govuk-label govuk-radios__label"
+                       for="status_filter_{{ status }}">
+                  {{ status }}
+                </label>
+              </div>
+              {% endfor %}
+            </div>
+          </fieldset>
+        </div>
+      </form>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Condition</th>
+            <th class="govuk-table__header" scope="col">Affects</th>
+            <th class="govuk-table__header" scope="col">Systematic Population Screening</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          {% for policy in policies %}
+            <tr class="govuk-table__row">
+              {% if policy.Recommendation === "Recommended" %}
+                {% set status_class = "status__recommended" %}
+              {% else %}
+                {% set status_class = "status__not-recommended" %}
+              {% endif %}
+
+              {% if policy.Condition === "Spinal Muscular Atrophy" %}
+                <td class="govuk-table__cell"><a href="/topup/sma.html">{{ policy.Condition }}</a></td>
+              {% elif policy.Condition === "Atrial Fibrillation" %}
+                <td class="govuk-table__cell"><a href="/topup/af-in-consultation.html">{{ policy.Condition }}</a></td>
+              {% else %}
+                <td class="govuk-table__cell"><a href="#">{{ policy.Condition }}</a></td>
+              {% endif %}
+
+              <td class="govuk-table__cell">{{ policy.Type }}</td>
+              <td class="govuk-table__cell "><span class="{{status_class}}">{{ policy.Recommendation }}</span></td>
+            </tr>
+          {% else %}
+            <p>No Policies</p>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/v4/index">Dashboard</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/v4/reviews">Reviews</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/v4/sma-2">SMA</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Documents and recommendation</li>
+        </ol>
+      </div>
+      <h2 class="govuk-heading-l">
+        Upload evidence review summary
+      </h2>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+
+      <h2 class="govuk-heading-l">
+        Update recommendation
+      </h2>
+      <span id="email-hint" class="govuk-hint">
+        Update the recommendation status for this condition
+      </span>
+      <div class="govuk-form-group">
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published">Recommended</option>
+          <option value="updated" selected>Not recommended</option>
+        </select>
+      </div>
+      <br>
+      <span id="email-hint" class="govuk-hint">
+        The next review for this condition will be due to start in 2021 to 2022
+      </span>
+
+      <a href="/v4/sma-2" role="button" class="govuk-button">Cancel</a>
+      <a href="/v4/sma-3" role="button" class="govuk-button">Save</a>
+    </div>
+  </div>
+{% endblock %}

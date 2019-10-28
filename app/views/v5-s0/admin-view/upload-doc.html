@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/v4/index">Dashboard</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/v4/reviews">Reviews</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/v4/sma">SMA</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Relevant documents</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        Relevant documents
+      </h1>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <span id="changed-name-hint" class="govuk-hint">
+            Would you like this file to be available for download on the policy page for SMA?
+          </span>
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="changed-name-1" name="changed-name" type="checkbox" value="yes">
+              <label class="govuk-label govuk-checkboxes__label" for="changed-name-1">
+                Available for download
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <a href="#" role="button" class="govuk-button review-add-condition">Add another document</a>
+      <br>
+      <br>
+      <a href="/v4/sma.html" role="button" class="govuk-button">Cancel</a>
+      <a href="/v4/sma-1" role="button" class="govuk-button">Save</a>
+    </div>
+  </div>
+{% endblock %}

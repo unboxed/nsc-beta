@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/v4/index">Dashboard</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="/v4/reviews">Reviews</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">SMA</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl">
+        Spinal Muscular Atrophy (SMA)
+      </h1>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Pre-consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="/v4/add-dates" aria-describedby="conditions-and-dates-completed">
+                Conditions and dates
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="/v4/upload-doc" aria-describedby="relevant-documents-completed">
+                Relevant documents
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" aria-describedby="external-review-completed">
+                Dates and documents
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Post-consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="#" style="width: 50%">
+                Documents and recommendation
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <a href="/v4/reviews.html" role="button" class="govuk-button">Back to reviews</a>
+    </div>
+  </div>
+
+{% endblock %}

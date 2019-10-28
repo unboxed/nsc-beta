@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Admin Dashboard
+      </h1>
+
+      <h2 class="govuk-heading-l">
+        Reviews
+      </h2>
+      <p class="govuk-body">
+        Use this section to:
+        <ul class="govuk-list govuk-list--bullet">
+          <li>See current and upcoming reviews</li>
+          <li>Start and manage reviews</li>
+          <li>Start and manage consultations</li>
+        </ul>
+      </p>
+      <a href="/v4/reviews" role="button" class="govuk-button govuk-button--start">
+        Start
+      </a>
+
+      <h2 class="govuk-heading-l">
+        Stakeholders
+      </h2>
+      <p class="govuk-body">
+        Use this section to:
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Add and edit stakeholders</li>
+          <li>Add and edit stakeholder contacts</li>
+        </ul>
+      </p>
+      <a href="#" role="button" class="govuk-button govuk-button--start">
+        Start
+      </a>
+
+      <h2 class="govuk-heading-l">
+        Policy pages
+      </h2>
+      <p class="govuk-body">
+        Use this section to:
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Edit policy pages</li>
+          <li>Add a new policy page</li>
+          <li>Deactivate a policy page</li>
+        </ul>
+      </p>
+      <a href="/v4/policy-index" role="button" class="govuk-button govuk-button--start">
+        Start
+      </a>
+    </div>
+  </div>
+
+{% endblock %}
