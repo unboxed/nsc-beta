@@ -7,36 +7,14 @@
 
 {% block content %}
 
-<div class="govuk-width-container">
-  <!-- <img src="{{ asset_path }}images/phe_nsc_logo.jpg" alt="UK NSC logo" style="height: 42px; border-left: 3px solid #00B092; padding-left: 7px;"> -->
-  <div class="govuk-breadcrumbs">
-    <ol class="govuk-breadcrumbs__list">
-      <li class="govuk-breadcrumbs__list-item">
-        <img src="{{ asset_path }}images/nsc-logo.png" alt="UK NSC logo" style="height: 42px; position: relative; bottom:23px">
-        <a class="govuk-breadcrumbs__link" href="#" style="position: relative; bottom: 26px">
-          UK National Screening Committee
-        </a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item">
-        <a class="govuk-breadcrumbs__link" href="#">Recommendations</a>
-      </li>
-      <li class="govuk-breadcrumbs__list-item" aria-current="page">Spinal Muscular Atrophy</li>
-    </ol>
-  </div>
-
-
-  <main class="govuk-main-wrapper">
-
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-        <h1 class="govuk-heading-xl">
-            <span class="govuk-caption-xl">Adult screening programme</span>
-              Spinal Muscular Atrophy (SMA)
-          </h1>
-      </div>
-
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">Recommendation</h2>
+          <a href="search" class="govuk-back-link">Back</a>
+        <h1 class="govuk-heading-xl">
+            <span class="govuk-caption-l">Adult screening programme</span>
+              Spinal Muscular Atrophy (SMA)
+
+        <h2 class="govuk-heading-m">Recommendation</h2>
         <p class="govuk-body govuk-!-font-weight-bold recommendation-badge">
           <span id="not-recommended">Screening is not currently recommended for this condition</span>
         </p>
@@ -57,11 +35,11 @@
          <li>this evidence review did not find information on the effectiveness of nusinersen in children without symptoms, and there is no evidence on the long term effects of this drug</li>
         </ul>
 
-        <h2 class="govuk-heading-l">Review cycle</h2>
+        <h2 class="govuk-heading-m">Review cycle</h2>
         <p class="govuk-body">Last review completed: 2016</p>
         <p class="govuk-body">Next review estimated to be completed: 2019 to 2020</p>
 
-        <h2 class="govuk-heading-l">More about Spinal Muscular Atrophy</h2>
+        <h2 class="govuk-heading-m">More about Spinal Muscular Atrophy</h2>
         <p class="govuk-body">
           Spinal muscular atrophy (SMA) is a genetic disease that causes muscle weakness and a progressive loss of movement. There is no cure but therapy and support are available to help manage the condition.
         </p>
@@ -70,58 +48,66 @@
           <a href="#" class="govuk-link">Read more on NHS UK</a>
         </p>
 
-        <h2 class="govuk-heading-l">Supporting documents</h2>
-        <div class="govuk-inset-text">
-          <p>
-            <a class="govuk-link" href="#">Last evidence review</a>
-            <br>
-            This is the previous evidence review conducted to investigate whether the condition should be screened or not
-          </p>
-        </div>
-        <div class="govuk-inset-text">
-          <p>
-            <a class="govuk-link" href="#">Last evidence review summary</a>
-            <br>
-            This is the most recent evidence review plus consultation responses
-          </p>
-        </div>
+        <h2 class="govuk-heading-m">Supporting documents</h2>
+        <a class="govuk-link" href="#" style="font-size: 20px;">Last evidence review</a>
+        <p class="govuk-body-m">
+        This is the previous evidence review conducted to investigate whether the condition should be screened or not
+        </p>
 
-        <h2 class="govuk-heading-l">Organisations interested in Spinal Muscular Atrophy</h2>
+
+        <a class="govuk-link" href="#" style="font-size: 20px;">Last evidence review summary</a>
+        <br>
+        <p class="govuk-body-m">This is the most recent evidence review plus consultation responses
+        </p>
+
+
+        <h2 class="govuk-heading-m">Organisations interested in Spinal Muscular Atrophy</h2>
         <p class="govuk-body">
           These organisations have expressed interest in this recommendation and may submit responses to evidence reviews.
         </p>
-        <ul class="govuk-list">
-          <li>
-            <a class="govuk-link" href="#">The British Society for Human Genetics</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="#">Faculty of Public Health</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="#">Muscular Dystrophy Campaign</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="#">Royal College of General Practitioners</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="#">Royal College of Paediatrics and Child Health</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="#">Royal College of Physicians</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="#">Royal College of Physicians and Surgeons of Glasgow</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="#">Royal College of Physicians of Edinburgh</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="#">SMA Trust</a>
-          </li>
-          <li>
-            <a class="govuk-link" href="#">Spinal Muscular Atrophy Support UK</a>
-          </li>
-        </ul>
+
+        <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      List of organisations
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <ul class="govuk-list">
+      <li>
+        <a class="govuk-link" href="#">The British Society for Human Genetics</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Faculty of Public Health</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Muscular Dystrophy Campaign</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Royal College of General Practitioners</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Royal College of Paediatrics and Child Health</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Royal College of Physicians</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Royal College of Physicians and Surgeons of Glasgow</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Royal College of Physicians of Edinburgh</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">SMA Trust</a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">Spinal Muscular Atrophy Support UK</a>
+      </li>
+    </ul>
+  </div>
+</details>
+
         <p class="govuk-body">
           The stakeholder groups will be involved when the recommendation is next reviewed. If you think your organisation should be added, please <a class="govuk-link" href="#">contact us</a>. More information for stakeholders can be found in appendix C of the <a class="govuk-link" href="#">UK NSC evidence review process</a>.
         </p>

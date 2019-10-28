@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <a href="consultation" class="govuk-back-link">Back</a>
+
+  <h1 class="govuk-heading-l">
+      <span class="govuk-caption-l">Atrial Fibrillation</span>
+        Submit your consultation comments
+    </h1>
+
+      <h2>About you</h2>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="name">
+          Name
+        </label>
+        <input class="govuk-input" id="name" name="email" type="text" aria-describedby="email-hint">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="email">
+          Email
+        </label>
+        <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="organisation">
+          Organisation (if appropriate)
+        </label>
+        <input class="govuk-input" id="organisation" name="email" type="text" aria-describedby="email-hint">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="role">
+          Role (if appropriate)
+        </label>
+        <input class="govuk-input" id="role" name="email" type="text" aria-describedby="email-hint">
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <label class="govuk-label" for="role">
+            Do you consent to your name being published on the UK NSC website alongside your response?
+          </label>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                Yes
+              </label> </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no" checked>
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  No
+                </label> </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          Which evidence summary is your feedback for?
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published" selected>Screening in adults up to age 45</option>
+          <option value="updated">Screening in adults over age 45</option>
+        </select>
+      </div>
+
+      <h2>Consultation comments</h2>
+
+      <p>You can input your feedback directly into the box below or upload it as a document.</p>
+
+
+      {# <div class="govuk-form-group"> #}
+      {#   <label class="govuk-label" for="role"> #}
+      {#     Page or section number/reference #}
+      {#   </label> #}
+      {#   <input class="govuk-input" id="role" name="email" type="text" aria-describedby="email-hint"> #}
+      {# </div> #}
+      {#  #}
+      {# <div class="govuk-form-group"> #}
+      {#   <label class="govuk-label" for="role"> #}
+      {#     Text or issue to which comments relate #}
+      {#   </label> #}
+      {#   <input class="govuk-input" id="role" name="email" type="text" aria-describedby="email-hint"> #}
+      {# </div> #}
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="file-input">
+          <b>Consultation comments</b>
+        </label>
+        <span id="email-hint" class="govuk-hint">
+          If your comments relate to specific review sections or page numbers, please indicate this in the text. e.g [page 3, paragraph 2] ...
+        </span>
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+      <a href="form-submitted" role="button" class="govuk-button">Send consultation feedback</a>
+  </div>
+
+{% endblock %}
