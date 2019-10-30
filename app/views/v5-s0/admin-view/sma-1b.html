@@ -7,21 +7,10 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-breadcrumbs">
-        <ol class="govuk-breadcrumbs__list">
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/v4/index">Dashboard</a>
-          </li>
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="/v4/reviews">Reviews</a>
-          </li>
-          <li class="govuk-breadcrumbs__list-item" aria-current="page">SMA</li>
-        </ol>
-      </div>
-
-      <h1 class="govuk-heading-xl">
-        Spinal Muscular Atrophy (SMA)
-      </h1>
+        <a href="reviews" class="govuk-back-link" >Back to all reviews</a>
+        <h1 class="govuk-heading-l">
+          Review for xxx
+        </h1>
 
       <ol class="app-task-list">
         <li>
@@ -53,8 +42,32 @@
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
-              <a class="app-task-list__task-name" href="/v4/start-consultation" aria-describedby="external-review-completed">
-                Dates and documents
+              <a class="app-task-list__task-name" href="upload-review-doc" aria-describedby="external-review-completed">
+                Upload external review document
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="start-consultation" aria-describedby="external-review-completed">
+                Confirm dates of consultation
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="confirm-stakeholders" aria-describedby="external-review-completed">
+                Confirm stakeholders to be notified
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="open-consultation" aria-describedby="external-review-completed">
+                Open consultation
               </a>
               <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
                 ✓
@@ -68,14 +81,13 @@
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
-              <a class="app-task-list__task-name" href="/v4/post-consultation" style="width: 50%">
+              <a class="app-task-list__task-name" href="post-consultation" style="width: 50%">
                 Documents and recommendation
               </a>
             </li>
           </ul>
         </li>
       </ol>
-      <a href="/v4/reviews.html" role="button" class="govuk-button">Back to reviews</a>
     </div>
   </div>
 
