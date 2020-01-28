@@ -55,4 +55,19 @@ router.get('/search_c', function (req, res) {
   })
 })
 
+
+router.get('/v5-s0/admin-view/new-review-start', function (req, res) {
+for (var a in req.query) req.session[a] = req.query[a];
+res.render('v5-s0/admin-view/new-review-start');
+});
+
+router.get('/v5-s0/admin-view/new-review', function (req, res) {
+for (var a in req.query) req.session[a] = req.query[a];
+res.render('v5-s0/admin-view/new-review', {
+
+'review_name' : req.session.review_name,
+
+})
+});
+
 module.exports = router
