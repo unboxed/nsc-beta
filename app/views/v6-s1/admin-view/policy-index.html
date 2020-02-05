@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+
+    <a href="#" role="button" class="govuk-button new-policy-button">
+      New policy page
+    </a>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Policy pages
+      </h1>
+
+      <div class="govuk-form-group">
+        <div class="policy-search-bar">
+          <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint">
+          <span class="search-button"></span>
+        </div>
+      </div>
+      <div class="govuk-heading-s">All policy pages (conditions 1 - 20)</div>
+      <ul class="govuk-list govuk-list--bullet">
+        <a href="#" style="line-height: 30px;">Abdominal Aortic Aneurysm</a></br>
+        <a href="/v5-s0/admin-view/policy-view" style="line-height: 30px;">Alcohol Misuse</a></br>
+        <a href="#" style="line-height: 30px;">Amino acid metabolism disorders</a></br>
+        <a href="#" style="line-height: 30px;">Anaemia</a></br>
+        <a href="#" style="line-height: 30px;">Anal Cancer</a></br>
+        <a href="#" style="line-height: 30px;">Asymptomatic bacteriuria</a></br>
+        <a href="#" style="line-height: 30px;">Atrial Fibrillation</a></br>
+        <a href="#" style="line-height: 30px;">Autism</a></br>
+        <a href="#" style="line-height: 30px;">Biliary atresia</a></br>
+        <a href="#" style="line-height: 30px;">Biotinidase deficiency</a></br>
+        <a href="#" style="line-height: 30px;">Bladder Cancer</a></br>
+        <a href="#" style="line-height: 30px;">Blood group & RhD status and red cell alloantibodies</a></br>
+        <a href="#" style="line-height: 30px;">Bowel Cancer</a></br>
+        <a href="#" style="line-height: 30px;">Breast Cancer</a></br>
+        <a href="#" style="line-height: 30px;">Canavan's disease</a></br>
+        <a href="#" style="line-height: 30px;">Cervical Cancer</a></br>
+        <a href="#" style="line-height: 30px;">Chlamydia (adult)</a></br>
+        <a href="#" style="line-height: 30px;">Chlamydia (pregnancy)</a></br>
+        <a href="#" style="line-height: 30px;">Chronic Kidney Disease</a></br>
+        <a href="#" style="line-height: 30px;">COPD</a></br>
+      </ul>
+      <nav role="navigation" aria-label="Pagination">
+        <div class="pagination__summary">Showing 1 &ndash; 20 of 190 results</div>
+        <ul class="pagination">
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+          <li class="pagination__item"><a class="pagination__link current" href="#0" aria-label="Page 1">1</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-current="true" aria-label="Page 3, current page">3</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 5">5</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="sma-1" class="govuk-back-link" >Back</a>
+
+        <h1 class="govuk-heading-1">Confirm dates of consultation</h1>
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Consultation end date
+      </h1>
+    </legend>
+    <span id="passport-issued-hint" class="govuk-hint">
+      The consultation will be closed automatically 3 months from when it is opened unless a different date is specified
+    </span>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+</br>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="sort">
+              <h2 class="govuk-heading-m">NSC meeting date</h2>
+            </label>
+
+            <span id="email-hint" class="govuk-hint">
+              Select the NSC meeting date in which this consultation will be discussed
+            </span>
+
+            <div class="govuk-form-group">
+              <select class="govuk-select" id="sort" name="sort">
+                <option value="published" selected>27th September 2020</option>
+                <option value="updated">6th March 2020</option>
+              </select>
+            </div>
+          </div>
+          </br>
+
+          <a href="sma-10-dates-set" role="button" class="govuk-button">Save and continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

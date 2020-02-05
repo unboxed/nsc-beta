@@ -1,0 +1,92 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="sma-10-dates-set" class="govuk-back-link" >Back</a>
+
+        <h1 class="govuk-heading-1">Confirm stakeholders to be notified of consultation opening</h1>
+          <div class="govuk-form-group">
+
+
+            <span id="email-hint" class="govuk-hint">
+              Deselect any stakeholders that are not to be notified
+            </span>
+
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="british" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
+                  The British Society for Human Genetics
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-2" name="nationality" type="checkbox" value="irish" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-2">
+                  Faculty of Public Health
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-3" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-3">
+                  Muscular Dystrophy Campaign
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-4" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-4">
+                  Royal College of General Practitioners
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-5" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-5">
+                  Royal College of Paediatrics and Child Health
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-6" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-6">
+                  Royal College of Physicians
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-7" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-7">
+                  Royal College of Physicians and Surgeons of Glasgow
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-8" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-8">
+                  Royal College of Physicians of Edinburgh
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-9" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-9">
+                  SMA Trust
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-10" name="nationality" type="checkbox" value="other" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-10">
+                  Spinal Muscular Atrophy Support UK
+                </label>
+              </div>
+            </div>
+          </div>
+          <br>
+
+          <a href="sma-10-stakeholders-set" role="button" class="govuk-button">Save and continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

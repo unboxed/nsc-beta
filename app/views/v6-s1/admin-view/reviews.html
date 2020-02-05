@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <a href="index" class="govuk-back-link" >Back</a>
+      <h1 class="govuk-heading-l" style="margin-bottom: 0px;">
+        Reviews
+      </h1>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="start-review" style="margin-top: 60px;">
+        <a href="new-review-start" role="button" class="govuk-button">
+          Create a new review
+        </a>
+        </div>
+        </div>
+        </div>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+
+      <br>
+      <br>
+
+      <h2 class="govuk-heading-m">
+        Reviews in progress
+      </h2>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col" style="width: 180px;">Name</th>
+            <th class="govuk-table__header" scope="col" style="width: 180px;">Status</th>
+            <th class="govuk-table__header" scope="col">Conditions</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell "><a href="/v4/ongoing-review">Diabetes review 2018-2019</a></td>
+            <td class="govuk-table__cell">Pre-Consultation</td>
+            <td class="govuk-table__cell ">
+              <ul>
+                <li>Diabetes</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell "><a href="#">Amino acid metabolism disorders review 2018-2019</a></td>
+            <td class="govuk-table__cell">Consultation</td>
+            <td class="govuk-table__cell ">
+              <ul>
+                <li>Argininosuccinate lyase deficiency</li>
+                <li>Citrullinaemia</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="govuk-heading-m">
+        Reviews scheduled to start this year
+      </h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Condition</th>
+            <th class="govuk-table__header" scope="col">Due</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell ">Autism</td>
+            <td class="govuk-table__cell ">Overdue</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell ">Galactosaemia</td>
+            <td class="govuk-table__cell ">1 month</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell ">Genital Herpes</td>
+            <td class="govuk-table__cell ">2 months</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell ">Haemochromatosis</td>
+            <td class="govuk-table__cell ">6 months</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+
+    </div>
+
+
+  </div>
+{% endblock %}

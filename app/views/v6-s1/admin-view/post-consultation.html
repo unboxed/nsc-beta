@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="sma-1b" class="govuk-back-link" >Back</a>
+        <h1 class="govuk-heading-l">Update recommendation for SMA 2020 review</h1>
+      <h2 class="govuk-heading-m">
+        Upload evidence review summary
+      </h2>
+      <div class="govuk-form-group">
+
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+
+      <h2 class="govuk-heading-m">
+        Upload plain english evidence summary
+      </h2>
+      <div class="govuk-form-group">
+
+    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+  </div>
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+            What is the recommendation decision?
+            </h1>
+          </legend>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Recommended
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                Not recommended
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+      <p class="govuk-body"> The next review for this condition will be due to start in 2021 to 2022</p>
+
+      <a href="sma-3" role="button" class="govuk-button">Save and continue</a>
+    </div>
+  </div>
+{% endblock %}

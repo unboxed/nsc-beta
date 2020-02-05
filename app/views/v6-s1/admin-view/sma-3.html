@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <a href="reviews" class="govuk-back-link" >Back to all reviews</a>
+    <h1 class="govuk-heading-l">
+      SMA 2020 review
+    </h1>
+      <span id="email-hint" class="govuk-hint">
+        The Spinal Muscular Atrophy 2020 review is complete.
+        <br>
+        This page can be accessed at any time for reference or editing.
+        <br>
+        To see the final changes go to the <a href="/topup/sma">Spinal Muscular Atrophy policy page</a>.
+      </span>
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Pre-consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+
+                Add relevant documents
+
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+                Upload external review document
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+                Confirm dates of consultation
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+            Confirm stakeholders to be notified
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+                Open consultation
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Post-consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+                Documents and recommendation
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <a href=""  class="govuk-link">Edit review information</a>
+    </div>
+  </div>
+
+{% endblock %}

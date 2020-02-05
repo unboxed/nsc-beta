@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <form action="new-review" method="post" class="form">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+  <a href="reviews" class="govuk-back-link" >Back</a>
+      <h1 class="govuk-heading-l">
+        Create a new review
+      </h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+          <h2 class="govuk-heading-m">Select conditions under review
+          </h2>
+        </label>
+
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="nope" selected></option>
+          <option value="abdominal_aortic_aneurysm">Abdominal Aortic Aneurysm</option>
+          <option value="updated">Alcohol Misuse</option>
+          <option value="views">Argininosuccinate lyase deficiency</option>
+          <option value="a">Citrullinaemia</option>
+          <option value="b">Spinal Muscular Atrophy (SMA)</option>
+          <option value="cs">Tyrosinaemia type 1</option>
+          <option value="d">Phenylketonuria</option>
+          <option value="e">Vascular risk</option>
+          <option value="f">...</option>
+        </select>
+        <br>
+        <br>
+        <a href="#" class="govuk-link" style="font-size:19px;">Add another condition</a>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="review_name">
+          <h2 class="govuk-heading-m">Internal review name</h2>
+        </label>
+
+        <span id="email-hint" class="govuk-hint">
+          This will be produced automatically unless filled in specifically
+        </span>
+
+        <input class="govuk-input" id="review_name" name="review_name" type="text" aria-describedby="email-hint" placeholder="SMA review 2018">
+      </div>
+
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Expected consultation start date
+      </h1>
+    </legend>
+    <span id="passport-issued-hint" class="govuk-hint">
+      For example, 12 11 2007
+    </span>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+</br>
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+    </div>
+  </div>
+  </form>
+
+{% endblock %}
