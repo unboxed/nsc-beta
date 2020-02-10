@@ -6,15 +6,15 @@
 
 {% block content %}
 
-<form action="check-stakeholders" method="post" novalidate>
+<form action="confirm-stakeholders-added" method="post" novalidate>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-    <a href="stakeholder-index" class="govuk-back-link" >Back</a>
+    <a href="" class="govuk-back-link" >Back</a>
 
     <fieldset class="govuk-fieldset">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <h1 class="govuk-fieldset__heading">
-          New stakeholder details
+          Add a stakeholder to SMA review
         </h1>
       </legend>
 
@@ -45,8 +45,7 @@
     Condition interested in:
   </label>
   <select class="govuk-select" id="sort" name="sort">
-    <option value="published">Condition number 1</option>
-    <option value="updated" selected>Condition number 2</option>
+    <option value="updated" selected>Spinal Muscolar Atrophy</option>
     <option value="views">Condition number 3</option>
     <option value="comments">Condition number 4</option>
   </select>
@@ -76,6 +75,9 @@
       <a href="govuk-link" style="margin-top: 0px;">add another name of contact</a>
 </br></br></br>
     </fieldset>
+    <p class="govuk-body">This stakeholder will be added to the list of stakeholders interested in SMA</p>
+
+
     <button class="govuk-button" data-module="govuk-button">
       Save and continue
     </button>
