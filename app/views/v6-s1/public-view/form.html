@@ -1,7 +1,9 @@
 {% extends "layout.html" %}
+{% from "character-count/macro.njk" import govukCharacterCount %}
+
+
 
 {% block content %}
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
   <a href="consultation" class="govuk-back-link">Back</a>
@@ -71,36 +73,29 @@
         </select>
       </div>
 
-      <h2>Consultation comments</h2>
-
-      <p>You can input your feedback directly into the box below or upload it as a document.</p>
 
 
-      {# <div class="govuk-form-group"> #}
-      {#   <label class="govuk-label" for="role"> #}
-      {#     Page or section number/reference #}
-      {#   </label> #}
-      {#   <input class="govuk-input" id="role" name="email" type="text" aria-describedby="email-hint"> #}
-      {# </div> #}
-      {#  #}
-      {# <div class="govuk-form-group"> #}
-      {#   <label class="govuk-label" for="role"> #}
-      {#     Text or issue to which comments relate #}
-      {#   </label> #}
-      {#   <input class="govuk-input" id="role" name="email" type="text" aria-describedby="email-hint"> #}
-      {# </div> #}
+      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="with-hint">
+            <h2>Consultation comments</h2>
+          </label>
+          <p>You can input your feedback directly into the box below <strong>or</strong> download and complete the <a href="https://legacyscreening.phe.org.uk/policydb_download.php?doc=920" class="govuk-link">response form</a>, and email it to <a href="mailto:screening.evidence@nhs.net?subject=feedback" class="govuk-link">screening.evidence@nhs.net</a></p>
+          <span id="with-hint-hint" class="govuk-hint">
+            If your comments relate to specific review sections or page numbers, please indicate this in the text. e.g [page 3, paragraph 2] ...
+          </span>
+    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+  </div>
 
-      <div class="govuk-form-group">
-        <label class="govuk-label" for="file-input">
-          <b>Consultation comments</b>
-        </label>
-        <span id="email-hint" class="govuk-hint">
-          If your comments relate to specific review sections or page numbers, please indicate this in the text. e.g [page 3, paragraph 2] ...
-        </span>
-        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint"></textarea>
-      </div>
+  <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+    You can enter up to 200 characters
+  </span>
 
+</div>
       <a href="form-submitted" role="button" class="govuk-button">Send consultation feedback</a>
   </div>
+  </div>
+
+
 
 {% endblock %}
