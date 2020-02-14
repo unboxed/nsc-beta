@@ -1,6 +1,20 @@
 {% extends "layout.html" %}
 {% from "character-count/macro.njk" import govukCharacterCount %}
 
+{% from "character-count/macro.njk" import govukCharacterCount %}
+
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 200,
+  label: {
+    text: "If your comments relate to specific review sections or page numbers, please indicate this in the text. e.g [page 3, paragraph 2] ...
+"
+  },
+  hint: {
+    text: ""
+  }
+}) }}
 
 
 {% block content %}
@@ -73,29 +87,27 @@
         </select>
       </div>
 
-
-
-      <div class="govuk-character-count" data-module="govuk-character-count" data-maxlength="200">
+      <div class="govuk-character-count" data-module="character-count" data-maxlength="200">
         <div class="govuk-form-group">
           <label class="govuk-label" for="with-hint">
             <h2>Consultation comments</h2>
           </label>
           <p>You can input your feedback directly into the box below <strong>or</strong> download and complete the <a href="https://legacyscreening.phe.org.uk/policydb_download.php?doc=920" class="govuk-link">response form</a>, and email it to <a href="mailto:screening.evidence@nhs.net?subject=feedback" class="govuk-link">screening.evidence@nhs.net</a></p>
-          <span id="with-hint-hint" class="govuk-hint">
-            If your comments relate to specific review sections or page numbers, please indicate this in the text. e.g [page 3, paragraph 2] ...
-          </span>
-    <textarea class="govuk-textarea govuk-js-character-count" id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-info with-hint-hint"></textarea>
+
+      <label class="govuk-label" for="with-hint">
+        If your comments relate to specific review sections or page numbers, please indicate this in the text. e.g [page 3, paragraph 2] ...
+      </label>
+      <span id="with-hint-hint" class="govuk-hint">
+      </span>
+      <textarea class="govuk-textarea js-character-count " id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-hint"></textarea>
+    </div>
+
+    <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+      You can enter up to 200 characters
+    </span>
   </div>
 
-  <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
-    You can enter up to 200 characters
-  </span>
-
-</div>
-      <a href="form-submitted" role="button" class="govuk-button">Send consultation feedback</a>
-  </div>
-  </div>
-
+  <a href="form-submitted" role="button" class="govuk-button">Send consultation feedback</a>
 
 
 {% endblock %}

@@ -1,9 +1,16 @@
-// Public
 
+
+
+// Public
+.work-please{
+  color: green;
+  background: #005EA5;
+  size: 20px;
+}
 
 @mixin label ($label-background: #DEE0E2, $label-border: #CBCBCB, $label-text: #0B0C0C) {
     background: $label-background;
-    color: #FFFFFF;
+    color: #FFF;
     display: inline-block;
     line-height: 1;
     padding: 4px 5px 3px 5px;
@@ -13,6 +20,7 @@
     font-size: 1rem;
     font-weight: normal;
 }
+
 .label {
     @include label(#6F777B, #0B0C0C)
 }
@@ -37,3 +45,4 @@
   .label, .label--white, .label--blue, .label--red {
     font-size: .85rem;
   }
+}
