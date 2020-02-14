@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% from "components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Cancel review",
+  classes: "govuk-button--warning"
+}) }}
+
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <a href="" class="govuk-back-link" >Back to all reviews</a>
+      <h1 class="govuk-heading-l">
+        SMA 2020 review
+      </h1>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="upload-review-doc" aria-describedby="external-review-completed">
+                Upload external review document
+              </a>
+
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="" aria-describedby="external-review-completed">
+                Confirm dates of consultation
+              </a>
+
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="" aria-describedby="external-review-completed">
+                Confirm stakeholders to be notified
+              </a>
+
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="" aria-describedby="external-review-completed">
+                Open consultation
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Post-consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="" style="width: 50%">
+                Documents and recommendation
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <button class="govuk-button govuk-button--warning" data-module="govuk-button" style="margin: -20px 0 0 0;">
+              Cancel review
+      </button>
+    </div>
+  </div>
+
+{% endblock %}

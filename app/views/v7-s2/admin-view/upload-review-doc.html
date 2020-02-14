@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="sma-1" class="govuk-back-link" >Back</a>
+    <h2 class="govuk-heading-l">Upload the external review for consultation</h2>
+          <div class="govuk-form-group">
+
+              <label class="govuk-label--m" for="file-upload-1" >
+              Upload a file
+            </label>
+            </br>
+            </br>
+             <div class="govuk-form-group">
+              <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+            </div>
+          </div>
+
+
+          <a href="sma-10" role="button" class="govuk-button">Save and continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,130 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+        UK NSC internal system
+      </h1>
+      <p class="govuk-body">
+       This platform is to update stakeholders on conditions under review. All changes made will be reflected on the <a href="http://localhost:3000/v6-s1/public-view/homepage" target="_blank">UK NSC public website</a>.
+      </p>
+      <h2 class="govuk-heading-m">
+        Your products in progress
+      </h2>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col" style="width: 180px;">Name</th>
+            <th class="govuk-table__header" scope="col">Type of product</th>
+            <th class="govuk-table__header" scope="col" style="width: 180px;">Status</th>
+            <th class="govuk-table__header" scope="col">Conditions</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell "><a href="">Diabetes review 2018-2019</a></td>
+              <td class="govuk-table__cell">Evidence summary</td>
+            <td class="govuk-table__cell">Consultation</td>
+            <td class="govuk-table__cell ">
+              <ul>
+                <li>Diabetes</li>
+              </ul>
+            </td>
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell "><a href="">Amino acid metabolism disorders review 2018-2019</a></td>
+            <td class="govuk-table__cell">Evidence map</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell ">
+              <ul>
+                <li>Argininosuccinate lyase deficiency</li>
+                <li>Citrullinaemia</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="govuk-body"><a href="products-in-progress">View all products in progress.</a></p>
+</br>
+      <h2 class="govuk-heading-m">
+        View all conditions
+      </h2>
+
+      <p class="govuk-body">
+        Use this to start a new review or edit general information about a condition
+      </p>
+      <div class="link-menu" style="margin-bottom: 30px;">
+      <a href="/v6-s1/admin-view/reviews" class="govuk-link" style="font-size: 19px; ">
+        View all conditions
+      </a>
+      </div>
+
+      <h2 class="govuk-heading-m">
+        Stakeholders
+      </h2>
+      <p class="govuk-body">
+        You can use this to add and edit stakeholders
+      </p>
+      <div class="link-menu" style="margin-bottom: 30px;">
+      <a href="/v6-s1/admin-view/stakeholder-index" class="govuk-link" style="font-size: 19px; ">
+        View stakeholder contacts
+      </a>
+      </div>
+
+      <h2 class="govuk-heading-m">
+        Reviews scheduled to start this year
+      </h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col">Condition</th>
+            <th class="govuk-table__header" scope="col">Due</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell ">Autism</td>
+            <td class="govuk-table__cell ">Overdue</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell ">Galactosaemia</td>
+            <td class="govuk-table__cell ">1 month</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell ">Genital Herpes</td>
+            <td class="govuk-table__cell ">2 months</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell ">Haemochromatosis</td>
+            <td class="govuk-table__cell ">6 months</td>
+          </tr>
+        </tbody>
+      </table>
+
+<!--
+      <h2 class="govuk-heading-m">
+        Policy pages
+      </h2>
+      <p class="govuk-body">
+        Use this section to:
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Edit policy pages</li>
+          <li>Add a new policy page</li>
+          <li>Deactivate a policy page</li>
+        </ul>
+      </p>
+      <div class="link-menu" style="margin-bottom: 30px;">
+      <a href="/v5-s0/admin-view/policy-index" class="govuk-link" style="font-size: 19px; ">
+        View policy pages
+      </a>
+      </div>
+      !-->
+
+    </div>
+  </div>
+
+{% endblock %}

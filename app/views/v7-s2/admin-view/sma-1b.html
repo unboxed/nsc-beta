@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <div style="padding: 10px; margin: 10px 0; background-color: #85994B; font-family: 'nta'; src: url('/assets/fonts/light-2c037cf7e1-v1.eot');">
+    Emailed 10 stakeholder contacts and updated the public condition page to open for consultation
+  </div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="" class="govuk-back-link" >Back to all reviews</a>
+        <h1 class="govuk-heading-l">
+        SMA 2020 review - In open consultation
+        </h1>
+
+      <ol class="app-task-list">
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="upload-review-doc" aria-describedby="external-review-completed">
+                Upload external review document
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="start-consultation" aria-describedby="external-review-completed">
+                Confirm dates of consultation
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="confirm-stakeholders" aria-describedby="external-review-completed">
+                Confirm stakeholders to be notified
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="open-consultation" aria-describedby="external-review-completed">
+                Open consultation
+              </a>
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Post-consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="post-consultation" style="width: 50%">
+                Documents and recommendation
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ol>
+        <a href=""  class="govuk-link">Cancel review</a>
+    </div>
+  </div>
+
+{% endblock %}
