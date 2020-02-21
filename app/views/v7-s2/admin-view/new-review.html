@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+English summary{% extends "layout.html" %}
 
 {% from "components/button/macro.njk" import govukButton %}
 
@@ -19,6 +19,11 @@
         SMA 2020 review
       </h1>
 
+
+            <strong class="govuk-tag " style="margin-top:-70px; float: right;">
+              In review
+            </strong>
+
       <ol class="app-task-list">
         <li>
           <h2 class="app-task-list__section">
@@ -29,14 +34,20 @@
               <a class="app-task-list__task-name" href="upload-review-doc" aria-describedby="external-review-completed">
                 Upload external review document
               </a>
-
             </li>
+
             <li class="app-task-list__item">
               <a class="app-task-list__task-name" href="" aria-describedby="external-review-completed">
                 Confirm dates of consultation
               </a>
-
             </li>
+
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="" aria-describedby="external-review-completed">
+                Notify communications department
+              </a>
+            </li>
+
             <li class="app-task-list__item">
               <a class="app-task-list__task-name" href="" aria-describedby="external-review-completed">
                 Confirm stakeholders to be notified
@@ -56,8 +67,18 @@
           </h2>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
-              <a class="app-task-list__task-name" href="" style="width: 50%">
-                Documents and recommendation
+              <a class="app-task-list__task-name" href="post-consultation-step-1" style="width: 50%">
+                Upload supporting documents
+              </a>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="post-consultation-step-2" style="width: 50%">
+                Upload plain English summary
+              </a>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="post-consultation-step-3" style="width: 50%">
+                Submit recommendation
               </a>
             </li>
           </ul>

@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="sma-10-dates-set" class="govuk-back-link" >Back</a>
+
+        <h1 class="govuk-heading-1">Confirm communication bodies to notify about consultation opening</h1>
+          <div class="govuk-form-group">
+
+
+            <span id="email-hint" class="govuk-hint">
+              Deselect any stakeholders that are not to be notified
+            </span>
+
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="nationality-1" name="nationality" type="checkbox" value="british" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="nationality-1">
+                  PHE Communications
+                </label>
+              </div>
+              <br>
+
+          <a class="govuk-link" href="add-stakeholder" style="font-size: 20px;">Add a stakeholder to notify</a></br></br></br>
+          <a href="sma-10-comms-notified" role="button" class="govuk-button">Save and continue</a>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

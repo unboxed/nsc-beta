@@ -1,10 +1,23 @@
 {% extends "layout.html" %}
+{% from "character-count/macro.njk" import govukCharacterCount %}
+
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 1000,
+  label: {
+    text: "Displayed under current recommendation"
+  },
+  hint: {
+    text: ""
+  }
+}) }}
 
 {% block content %}
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <a href="policy-index" class="govuk-back-link" >Back to policy</a>
+      <a href="reviews" class="govuk-back-link" >Back to policy</a>
       </br></br>
       <h1 class="govuk-heading-xl">
         Alcohol Misuse
@@ -34,8 +47,9 @@
 
       <div class="important-downloads">
         <h3>Supporting documents for downloads</h3>
-        <p>Recommendation statement<br>
-        <a href="#">Recommendation statement - Jan 2017</a></p>
+        <ul class="govuk-list govuk-list--bullet">
+        <li>Recommendation statement <a href="#">Recommendation statement - Jan 2017</a></li>
+        </ul>
         <div class="form-group" style="margin: 0 20px;">
           <label class="govuk-label" for="file-upload-1" >
             Replace file
@@ -44,8 +58,13 @@
           </div>
         </div>
         <br>
-        <p>Previous evidence review<br>
-        <a href="#">Last external review - Review of screening for Alcohol Misuse Jan 2017</a></p>
+        <ul class="govuk-list govuk-list--bullet">
+        <li>Previous evidence review -
+          <a href="#">
+            Last external review - Review of screening for Alcohol Misuse Jan 2017
+          </a>
+        </li>
+        </ul>
         <div class="form-group" style="margin: 0 20px;">
           <label class="govuk-label" for="file-upload-1" >
             Replace file
@@ -53,28 +72,61 @@
           <input type="file" id="file-input">
           </div>
           <br>
-        <p>Previous evidence review summary<br>
-        <a href="#">Last evidence review summary</a></p>
-        <div class="form-group" style="margin: 0 20px;">
-          <label class="govuk-label" for="file-upload-1" >
-            Replace file
-          </label>
-          <input type="file" id="file-input">
+
+
+          <div class="govuk-date-input" id="dob">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-date-input__label" for="dob-year">
+                  Upload another document
+                </label>
+                <input class="govuk-input govuk-date-input__input govuk-input--width-9" value="Document name">
+                          <input type="file" id="file-input" style="margin-top: 10px;">
+              </div>
+            </div>
           </div>
-<br>
+
+
+        <div class="govuk-form-group">
+          <h3>Plain English summary</h3>
+          <label class="govuk-label" for="with-hint">
+            Displayed under current recommendation
+          </label>
+          <span id="with-hint-hint" class="govuk-hint">
+          </span>
+          <textarea class="govuk-textarea js-character-count" rows="10" aria-describedby="more-detail-hint" id="with-hint" name="with-hint" rows="5" >
+            ##Key findings
+
+          -  the most common tests for alcohol misuse are questionnaires which are unsuitable when used
+          within a whole population screening programme.
+          - different people can safely drink different amounts of alcohol, depending on factors such as their
+          age, sex and ethnicity. For a screening test to be reliable it will have to consider these factors by
+          defining test ‘cut-off levels’.
+          - the review did not find any research that showed a whole population screening programme would help
+          to reduce the harms from alcohol misuse in the long term
+
+          [Read more about the evidence for alcohol misuse through the evidence review](https://www.gov.uk/nsc/alcohol-misuse/evidence-review/)
+          </textarea>
+          <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+            You can enter up to 1000 characters
+          </span>
+        </div>
 
 
       <div class="govuk-form-group">
         <h3>General Information</h3>
-        <span id="email-hint" class="govuk-hint">
+        <label class="govuk-label" for="with-hint">
           Displayed at the top of the policy page
-        </span>
+        </label>
         <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="10" aria-describedby="more-detail-hint">##More about Alcohol Misuse
 
 Drinking a moderate amount of alcohol will not do you any physical or psychological harm. However, for some people, social drinking can lead to heavier drinking, which can cause serious health problems.
 
 [Read more about alcohol misuse on NHS Choices](https://www.nhs.uk/conditions/alcohol-misuse/)
         </textarea>
+        <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+          You can enter up to 2000 characters
+        </span>
       </div>
 
 
@@ -104,6 +156,7 @@ Drinking a moderate amount of alcohol will not do you any physical or psychologi
           <li><a href="#">Royal College of Physicians of Edinburgh</a></li>
           <li><a href="#">Royal College of Psychiatrists</a></li>
         </ul>
+        <a class="govuk-link" href="add-stakeholder" style="font-size: 20px;">Add a stakeholder to notify</a></br></br></br>
       </div>
 
 

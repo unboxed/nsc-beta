@@ -3,6 +3,10 @@
 {% from "radios/macro.njk" import govukRadios %}
 {% from "button/macro.njk" import govukButton %}
 
+{% block head %}
+  {{ super() }}
+  <link href="/public/stylesheets/uk-nsc-beta.css"  rel="stylesheet" type="text/css">
+{% endblock %}
 
 {% block content %}
 
@@ -17,7 +21,7 @@
       <div class="govuk-grid-column-one-third">
         <div class="start-review" style="margin-top: 60px; float: right;">
         <a href="new-review-start" role="button" class="govuk-button">
-          Create a new review
+          Create a new product
         </a>
         </div>
         </div>
@@ -130,78 +134,78 @@
             <tr class="govuk-table__row">
                 <td class="govuk-table__cell"><a href="sma">Abdominal Aortic Aneurysm</a></td>
                 <td class="govuk-table__cell">Adults</td>
-                <td class="govuk-table__cell"><div class="recommended">Recommended</div></td>
+                <td class="govuk-table__cell"><div class="recommended"><span class="label--green">Recommended</span></div></td>
               </tr>
-    <tr class="govuk-table__row">
+  <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="policy-view">Alcohol Misuse</a></td>
     <td class="govuk-table__cell">Adult</td>
-    <td class="govuk-table__cell"><div class="not-recommended">Not recommended</div></td>
-    </tr>
-    <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Amino acid metabolism disorders</a></td>
     <td class="govuk-table__cell">Adult</td>
-    <td class="govuk-table__cell"><div class="not-recommended">Not recommended</div></td>
-    </tr>
-    <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Anaemia</a></td>
     <td class="govuk-table__cell">Newborn</td>
-    <td class="govuk-table__cell"><div class="not-recommended">Not recommended</div></td>
-    </tr>
-    <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Asymptomatic bacteriuria</a></td>
     <td class="govuk-table__cell">Antenatal</td>
-    <td class="govuk-table__cell"><div class="not-recommended">Not recommended</div></td>
-    </tr>
-    <tr class="govuk-table__row">
-    <td class="govuk-table__cell"><a href="">Atrial Fibrillation</a></td>
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="af-in-consultation">Atrial Fibrillation</a></td>
     <td class="govuk-table__cell">Antenatal</td>
-    <td class="govuk-table__cell"><div class="not-recommended">Not recommended</div></td>
-    </tr>
-    <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Autism</a></td>
     <td class="govuk-table__cell">Adult</td>
-    <td class="govuk-table__cell"><div class="not-recommended">Not recommended</div></td>
-    </tr>
-    <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Bacterial vaginosis</a></td>
     <td class="govuk-table__cell">Child</td>
-    <td class="govuk-table__cell"><div class="not-recommended">Not recommended</div></td>
-    </tr>
-    <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Biliary atresia</a></td>
     <td class="govuk-table__cell">Antenatal</td>
-    <td class="govuk-table__cell"><div class="not-recommended">Not recommended</div></td>
-    </tr>
-    <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Biotinidase deficiency</a></td>
     <td class="govuk-table__cell">Newborn</td>
-    <td class="govuk-table__cell"><div class="not-recommended">Not recommended</div></td>
-    </tr>
-    <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Bladder Cancer</a></td>
     <td class="govuk-table__cell">Newborn</td>
-    <td class="govuk-table__cell"><div class="not-recommended">Not recommended</div></td>
-    </tr>
-    <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Blood group & RhD status and red cell alloantibodies</a></td>
     <td class="govuk-table__cell">Adult</td>
-    <td class="govuk-table__cell"><div class="not-recommended">Recommended</div></td>
-    </tr>
-    <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--green">Recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Bowel Cancer</a></td>
     <td class="govuk-table__cell">Antenatal</td>
-    <td class="govuk-table__cell"><div class="not-recommended">Recommended</div></td>
-    </tr>
-    <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--green">Recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Breast Cancer</a></td>
     <td class="govuk-table__cell">Adult</td>
-    <td class="govuk-table__cell"><div class="not-recommended">Recommended</div></td>
-    </tr>
-    <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--green">Recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Cervical Cancer</a></td>
     <td class="govuk-table__cell">Adult</td>
-    <td class="govuk-table__cell"><div class="not-recommended">Not recommended</div></td>
-    </tr>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
 
 
         </tbody>
@@ -215,13 +219,13 @@
           <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
           <li class="pagination__item"><a class="pagination__link" href="#0" aria-current="true" aria-label="Page 3, current page">3</a></li>
           <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
-          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 5">5</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="reviews-p5" aria-label="Page 5">5</a></li>
           <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
         </ul>
       </nav>
 
       </div>
-    </div>
+  </div>
 
 
 
