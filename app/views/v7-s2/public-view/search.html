@@ -37,7 +37,29 @@
                    value="{{ term }}" style="width: 80%">
           </fieldset>
         </div>
-
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Public comments
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Open
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Closed
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -95,29 +117,7 @@
               </div>
             </fieldset>
           </div>
-              <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                    <h1 class="govuk-fieldset__heading">
-                      Consultation status
-                    </h1>
-                  </legend>
-                  <div class="govuk-radios govuk-radios--small">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
-                      <label class="govuk-label govuk-radios__label" for="changed-name">
-                        In public consultation
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
-                      <label class="govuk-label govuk-radios__label" for="changed-name">
-                        Closed from public consultation
-                      </label>
-                    </div>
-            </div>
-          </fieldset>
-        </div>
+
         <button type="submit" class="govuk-button search-b-button">
           Search
         </button>
@@ -134,85 +134,88 @@
           <tr class="govuk-table__row">
             <th class="govuk-table__header" scope="col" style="width: 280px;">Condition</th>
             <th class="govuk-table__header" scope="col">Who it affects</th>
-            <th class="govuk-table__header" scope="col">Recommended</th>
+            <th class="govuk-table__header" scope="col">Recommendation</th>
+            <th class="govuk-table__header" scope="col">Public comments</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
                 <td class="govuk-table__cell"><a href="sma">Abdominal Aortic Aneurysm</a></td>
                 <td class="govuk-table__cell">Adults</td>
-                <td class="govuk-table__cell"><div class="recommended"><span class="label--green">Recommended</span></div></td>
+                <td class="govuk-table__cell">Screening recommended</td>
+                <td class="govuk-table__cell"><div class="recommended"><span class="label--red">CLOSED</span></div></td>
               </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Alcohol Misuse</a></td>
     <td class="govuk-table__cell">Adult</td>
-    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+    <td class="govuk-table__cell">No screening recommended</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">CLOSED</span></div></td>
   </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Amino acid metabolism disorders</a></td>
     <td class="govuk-table__cell">Adult</td>
-    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
-  </tr>
+    <td class="govuk-table__cell">No screening recommended</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">CLOSED</span></div></td>  </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Anaemia</a></td>
     <td class="govuk-table__cell">Newborn</td>
-    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
-  </tr>
+    <td class="govuk-table__cell">No screening recommended</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">CLOSED</span></div></td>  </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Asymptomatic bacteriuria</a></td>
     <td class="govuk-table__cell">Antenatal</td>
-    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
-  </tr>
+    <td class="govuk-table__cell">No screening recommended</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">CLOSED</span></div></td>  </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="af-in-consultation">Atrial Fibrillation</a></td>
     <td class="govuk-table__cell">Antenatal</td>
-    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
-  </tr>
+    <td class="govuk-table__cell">No screening recommended</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--green">OPEN</span></div></td>  </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Autism</a></td>
     <td class="govuk-table__cell">Adult</td>
-    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
-  </tr>
+    <td class="govuk-table__cell">No screening recommended</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">CLOSED</span></div></td>  </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Bacterial vaginosis</a></td>
     <td class="govuk-table__cell">Child</td>
-    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
-  </tr>
+    <td class="govuk-table__cell">No screening recommended</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">CLOSED</span></div></td>  </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Biliary atresia</a></td>
     <td class="govuk-table__cell">Antenatal</td>
-    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
-  </tr>
+    <td class="govuk-table__cell">No screening recommended</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">CLOSED</span></div></td>  </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Biotinidase deficiency</a></td>
     <td class="govuk-table__cell">Newborn</td>
-    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">Not recommended</span></div></td>
-  </tr>
+    <td class="govuk-table__cell">No screening recommended</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">CLOSED</span></div></td>  </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Bladder Cancer</a></td>
-    <td class="govuk-table__cell">Newborn</td>
-    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">Not recommended</span></div></td>
-  </tr>
+    <td class="govuk-table__cell">Adult</td>
+    <td class="govuk-table__cell">No screening recommended</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--green">OPEN</span></div></td>  </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Blood group & RhD status and red cell alloantibodies</a></td>
     <td class="govuk-table__cell">Adult</td>
-    <td class="govuk-table__cell"><div class="recommended"><span class="label--green">Recommended</span></div></td>
-  </tr>
+    <td class="govuk-table__cell">No screening recommended</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">CLOSED</span></div></td>  </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Bowel Cancer</a></td>
     <td class="govuk-table__cell">Antenatal</td>
-    <td class="govuk-table__cell"><div class="recommended"><span class="label--green">Recommended</span></div></td>
-  </tr>
+    <td class="govuk-table__cell">Recommended</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">CLOSED</span></div></td>  </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Breast Cancer</a></td>
     <td class="govuk-table__cell">Adult</td>
-    <td class="govuk-table__cell"><div class="recommended"><span class="label--green">Recommended</span></div></td>
-  </tr>
+    <td class="govuk-table__cell">Recommended</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">CLOSED</span></div></td>  </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Cervical Cancer</a></td>
     <td class="govuk-table__cell">Adult</td>
-    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">Not recommended</span></div></td>
-  </tr>
+    <td class="govuk-table__cell">Recommended</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">CLOSED</span></div></td>  </tr>
 
 
         </tbody>
