@@ -3,6 +3,11 @@
 {% block head %}
   <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
   <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+
+  {{ super() }}
+  <link href="/public/stylesheets/uk-nsc-beta.css"  rel="stylesheet" type="text/css">
+
+
 {% endblock %}
 
 {% block content %}
@@ -14,30 +19,16 @@
         Atrial Fibrillation
     </h1>
 
-        <div class="govuk-warning-text">
-          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+
+
+        <div class="govuk-warning-text" style="border: 3px solid #005EA5; padding: 15px 15px 0 15px;">
+          <span class="govuk-warning-text__icon" style="margin-left:15px; margin-top: -35px;" aria-hidden="true">!</span>
           <p class="govuk-warning-text__text">
             <strong>
             <span class="govuk-warning-text__assistive">Warning</span>
-            This condition is currently in public consultation.<br><a class="govuk-link" href="consultation">Take part in the consultation</a></strong>
-            <br>Closing date: 14th August 2019.</p>
+            This condition is currently open to receive public comments.<br><a class="govuk-link" href="consultation">Take part in the consultation</a></strong>
+            <br>Closing date: 14th August 2020.</p>
         </div>
-        <h2 class="govuk-heading-m" style="margin-bottom: 0px;">Recommendation</h2>
-        <p class="govuk-body govuk-!-font-weight-bold recommendation-badge">
-          <span id="not-recommended">Screening is not currently recommended for this condition</span>
-        </p>
-
-        <p class="govuk-body">
-          Key findings supporting the UK NSC recommendation:
-        </p>
-
-        <ul class="govuk-list govuk-list--bullet">
-         <li>the review completed in 2014 found that it is not clear that those identified as at risk through screening would benefit from early diagnosis</li>
-         <li>the evidence review also highlighted concerns over the available test and the quality of current treatment pathways for AF</li>
-         <li>the Committee identified a need to improve clinical management and standardise the treatment services currently available to those with diagnosed AF</li>
-        </ul>
-
-        <h2 class="govuk-heading-m">Atrial Fibrillation</h2>
         <p class="govuk-body">
           Atrial Fibrillation causes a fast and erratic heart beat. It is a complication of various diseases. Medication can slow the heart rate back to normal, and ease symptoms. In some cases, treatment can restore the heart back to a normal rhythm.
         </p>
@@ -46,17 +37,44 @@
           <a href="https://www.nhs.uk/conditions/atrial-fibrillation/" class="govuk-link">Read more on NHS UK</a>
         </p>
 
-        <h2 class="govuk-heading-m">Supporting documents</h2>
-            <a class="govuk-link" href="#" style="font-size: 20px;">Previous evidence review</a>
+
+        <h2 class="govuk-heading-m" style="margin-bottom: 0px;">UK NSC's screening recommendation</h2>
+          <span class="govuk-caption-m">The last UK NSC review of this condition occurred in September 2014. </span>
+
+        <p class="govuk-body govuk-!-font-weight-bold recommendation-badge">
+          <span id="not-recommended">Screening is not currently recommended for this condition</span>
+        </p>
+
+        <p class="govuk-body">
+          Key findings supporting the UK NSC recommendation from 2014:
+        </p>
+
+        <ul class="govuk-list govuk-list--bullet">
+         <li>the review completed in 2014 found that it is not clear that those identified as at risk through screening would benefit from early diagnosis</li>
+         <li>the evidence review also highlighted concerns over the available test and the quality of current treatment pathways for AF</li>
+         <li>the Committee identified a need to improve clinical management and standardise the treatment services currently available to those with diagnosed AF</li>
+        </ul>
+
+
+
+        <h3 class="govuk-heading-s">2014 supporting documents</h3>
+            <a class="govuk-link" href="#" style="font-size: 20px;">Evidence summary</a>
             <p class="govuk-body-m">
             This is the previous evidence review conducted to investigate whether the condition should be screened or not
           </p>
 
 
-            <a class="govuk-link" href="#" style="font-size: 20px;">Previous evidence review summary</a>
+            <a class="govuk-link" href="#" style="font-size: 20px;">UK NSC coversheet & public comments</a>
             <br>
             <p class="govuk-body-m">This is the most recent evidence review plus consultation responses
           </p>
+
+          <h2 class="govuk-heading-m">Review cycle</h2>
+          <p class="govuk-body">This condition is currently in review</p>
+          <p class="govuk-body">Last review completed: 2014</p>
+          <p class="govuk-body">Next review estimated to be completed: 2023 to 2024</p>
+          <p class="govuk-body">To see previous evidence reviews, visit the <a class="govuk-link" href="#">UK NSC archive.</a></p>
+
 
 
         <h2 class="govuk-heading-m">Organisations interested in Atrial Fibrillation</h2>
@@ -64,8 +82,8 @@
           These organisations have expressed interest in this recommendation and may submit responses to evidence reviews.
         </p>
 
-      <h3 class="govuk-heading-s">
-      List of organisation</h3>
+      <h2 class="govuk-heading-s">
+      List of organisation</h2>
 
     <ul class="govuk-list">
       <li>
@@ -90,7 +108,7 @@
         <a class="govuk-link" href="#">Education for Health</a>
       </li>
       <li>
-        <a class="govuk-link" href="#">Faculty of Public Health/a>
+        <a class="govuk-link" href="#">Faculty of Public Health</a>
       </li>
       <li>
         <a class="govuk-link" href="#">Heart Rhythm UK</a>

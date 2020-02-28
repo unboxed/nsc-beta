@@ -41,8 +41,17 @@
     @include label(#00823B, #00823B)
 }
 
+.label--grey {
+    @include label(#6f777b, #6f777b)
+}
+
 @media (max-width: 641px) {
   .label, .label--white, .label--blue, .label--red {
     font-size: .85rem;
   }
+}
+
+.govuk-warning-text__icon{
+  background: #005EA5;
+  border: #005EA5;
 }
