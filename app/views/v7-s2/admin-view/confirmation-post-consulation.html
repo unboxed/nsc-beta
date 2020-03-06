@@ -7,39 +7,39 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
+<div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
-
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-            What is the recommendation decision?
-            </h1>
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+            <h2 class="govuk-heading-l">
+              Confirm you want to submit the recommendation decision as Recommended?
+            </h2>
           </legend>
+          <span id="changed-name-hint" class="govuk-hint">
+            This will publish the recommendation decision, plain text summary and supporting documents on the public Spinal Muscular Atrophy page
+          </span>
           <div class="govuk-radios govuk-radios--inline">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
               <label class="govuk-label govuk-radios__label" for="changed-name">
-                Recommended
+                Yes
               </label>
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
               <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                Not recommended
+                No
               </label>
             </div>
           </div>
         </fieldset>
       </div>
 
-
-      <p class="govuk-body"> The next review for this condition will be due to start in the financial year, 2023 to 2024.
-    </p>
-
-      <a href="confirmation-post-consulation" role="button" class="govuk-button">Save and continue</a>
+          <a href="sma-5" role="button" class="govuk-button">Continue and set recommendation decision</a>
+        </div>
+      </div>
     </div>
   </div>
+
 {% endblock %}

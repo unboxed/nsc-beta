@@ -190,22 +190,45 @@
 </div>
 </br>
 
+
           <div class="govuk-form-group">
-            <label class="govuk-label" for="sort">
-              <h2 class="govuk-heading-m">UK NSC meeting date</h2>
-            </label>
-
-            <span id="email-hint" class="govuk-hint">
-              Select the date of the UK NSC meeting when this consultation will be discussed.
-            </span>
-
+      <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            UK NSC meeting date
+          </h1>
+        </legend>
+        <span id="passport-issued-hint" class="govuk-hint">
+        Select the date of the UK NSC meeting when this consultation will be discussed. View <a href="">spreadsheet of meeting dates</a> for reference.
+        </span>
+        <div class="govuk-date-input" id="passport-issued">
+          <div class="govuk-date-input__item">
             <div class="govuk-form-group">
-              <select class="govuk-select" id="sort" name="sort">
-                <option value="published" selected>27th September 2020</option>
-                <option value="updated">6th March 2020</option>
-              </select>
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                Day
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
             </div>
           </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                Month
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+          <div class="govuk-date-input__item">
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                Year
+              </label>
+              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
           <br>
               <br>
 

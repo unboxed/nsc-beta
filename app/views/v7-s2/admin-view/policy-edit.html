@@ -17,8 +17,9 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <a href="reviews" class="govuk-back-link" >Back to policy</a>
+      <a href="policy-view" class="govuk-back-link" >Back to policy</a>
       </br></br>
+      <span class="govuk-caption-xl">  Edit policy page</span>
       <h1 class="govuk-heading-xl">
         Alcohol Misuse
       </h1>
@@ -47,33 +48,17 @@
 
       <div class="important-downloads">
         <h3>Supporting documents for downloads</h3>
-        <ul class="govuk-list govuk-list--bullet">
-        <li>Recommendation statement <a href="#">Recommendation statement - Jan 2017</a></li>
-        </ul>
-        <div class="form-group" style="margin: 0 20px;">
-          <label class="govuk-label" for="file-upload-1" >
-            Replace file
-          </label>
-          <input type="file" id="file-input">
-          </div>
+        <p class="govuk-body" style="color: black; margin-bottom: 10px;">Recommendation statement - <a href="#">Recommendation statement - Jan 2017</a></p>
+        <a class="govuk-link" href="" style="font-weight: bold; color: red; margin-top: 0px; padding-bottom: 20px;">Delete or replace file</a>
+</br></br></br>
+        <p class="govuk-body" style="color: black; margin-bottom: 10px;">Previous evidence review - <a href="#">  Last external review - Review of screening for Alcohol Misuse Jan 2017</a></p>
+        <a class="govuk-link" href="" style="font-weight: bold; color: red; margin-top: 0px;">Delete or replace file</a>
+
         </div>
         <br>
-        <ul class="govuk-list govuk-list--bullet">
-        <li>Previous evidence review -
-          <a href="#">
-            Last external review - Review of screening for Alcohol Misuse Jan 2017
-          </a>
-        </li>
-        </ul>
-        <div class="form-group" style="margin: 0 20px;">
-          <label class="govuk-label" for="file-upload-1" >
-            Replace file
-          </label>
-          <input type="file" id="file-input">
-          </div>
-          <br>
 
 
+<!--
           <div class="govuk-date-input" id="dob" style="margin-top: 20px;">
             <div class="govuk-date-input__item">
               <div class="govuk-form-group">
@@ -85,7 +70,7 @@
               </div>
             </div>
           </div>
-
+!-->
 
         <div class="govuk-form-group">
           <h3>Plain English summary</h3>
@@ -158,15 +143,15 @@ Drinking a moderate amount of alcohol will not do you any physical or psychologi
         </ul>
         <a class="govuk-link" href="add-stakeholder" style="font-size: 20px;">Add a stakeholder to notify</a></br></br></br>
       </div>
-
-
-    <a href="policy-preview" role="button" class="govuk-button">
-      Preview
-    </a>
-
     </div>
 
+          <div class="govuk-grid-column-one-third">
+          <a href="policy-preview" role="button" class="govuk-button" style="margin-top: 110px; float: right;">
+            Preview
+          </a>
+</div>
 
+</div>
 
 
 {% endblock %}
