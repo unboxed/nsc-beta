@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <a href="index" class="govuk-back-link" >Back</a>
+      <h1 class="govuk-heading-l">
+        All products in progress
+      </h1>
+
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col" style="width: 180px;">Name</th>
+            <th class="govuk-table__header" scope="col">Product type</th>
+            <th class="govuk-table__header" scope="col" style="width: 180px;">Status</th>
+            <th class="govuk-table__header" scope="col">Conditions</th>
+            <th class="govuk-table__header" scope="col">Evidence review manager</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell "><a href="">Diabetes review 2018-2019</a></td>
+              <td class="govuk-table__cell">Evidence summary</td>
+            <td class="govuk-table__cell">In review</td>
+            <td class="govuk-table__cell ">
+              <ul>
+                <li>Diabetes</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">Helen Smith</td>
+
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell "><a href="">Amino acid metabolism disorders review 2018-2019</a></td>
+            <td class="govuk-table__cell">Evidence map</td>
+            <td class="govuk-table__cell">Open consultation</td>
+            <td class="govuk-table__cell ">
+              <ul>
+                <li>Argininosuccinate lyase deficiency</li>
+                <li>Citrullinaemia</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">Helen Smith</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell "><a href="sma-1c-closed">SMA 2020 Review</a></td>
+            <td class="govuk-table__cell">Evidence map</td>
+            <td class="govuk-table__cell">Post-consultation</td>
+            <td class="govuk-table__cell ">
+              <ul>
+                <li>SMA</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">Name Surname</td>
+              </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell "><a href="">Condition 4</a></td>
+              <td class="govuk-table__cell">Cost-effective model</td>
+              <td class="govuk-table__cell">Open consultation</td>
+              <td class="govuk-table__cell ">
+                <ul>
+                  <li>Condition 2</li>
+                  <li>Condition 3</li>
+                </ul>
+              </td>
+              <td class="govuk-table__cell">Name Surname</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell "><a href="">Condition 5</a></td>
+            <td class="govuk-table__cell">Systematic review</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell ">
+              <ul>
+                <li>Condition 2</li>
+                <li>Condition 3</li>
+              </ul>
+            </td>
+            <td class="govuk-table__cell">Name Surname</td>
+        </tr>
+        </tbody>
+      </table>
+
+
+{% endblock %}

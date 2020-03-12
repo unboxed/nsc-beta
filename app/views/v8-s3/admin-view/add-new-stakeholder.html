@@ -1,0 +1,91 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+
+{% block content %}
+
+<form action="check-stakeholders" method="post" novalidate>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <a href="stakeholder-index" class="govuk-back-link" >Back</a>
+
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+        <h1 class="govuk-fieldset__heading">
+          New stakeholder details
+        </h1>
+      </legend>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-line-1">
+          Name
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-line-1" name="address-line-1" type="text">
+      </div>
+
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-town">
+          Organisation
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-county">
+          Type of organisation
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+      </div>
+
+      <div class="govuk-form-group" style="margin-bottom:10px;">
+  <label class="govuk-label" for="sort">
+    Condition interested in:
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">Condition number 1</option>
+    <option value="updated" selected>Condition number 2</option>
+    <option value="views">Condition number 3</option>
+    <option value="comments">Condition number 4</option>
+  </select>
+</div>
+<a href="govuk-link">add another condition</a>
+</br></br>
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-county">
+          Email address
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="address-postcode">
+          Phone number
+        </label>
+        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+      </div>
+
+      <div class="govuk-form-group" style="margin-bottom:10px;">
+        <label class="govuk-label" for="address-county">
+          Name of contact
+        </label>
+        <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text">
+      </div>
+      <a href="govuk-link" style="margin-top: 0px;">add another name of contact</a>
+</br></br></br>
+    </fieldset>
+    <button class="govuk-button" data-module="govuk-button">
+      Save and continue
+    </button>
+
+    </div>
+
+
+
+
+    </div>
+</form>
+
+{% endblock %}

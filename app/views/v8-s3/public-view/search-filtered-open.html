@@ -1,0 +1,187 @@
+{% extends "layout.html" %}
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+{% block head %}
+  {{ super() }}
+  <link href="/public/stylesheets/uk-nsc-beta.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <a href="homepage" class="govuk-back-link">Back</a>
+      <h1 class="govuk-heading-l pink">
+      UK NSC recommendations
+      </h1>
+      <p>This list summarises whether population screening is currently recommended for a condition or not, and if it is open to public comments at this time.</p>
+
+      <p>Recommendations are reviewed regularly, usually every 3 years. Use the filters to read the details of the findings and supporting documents from the most recent review.</p>
+
+      </div>
+      </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+<div class="filter-box">
+      <form>
+        <h2 class="govuk-heading-m">
+          Filter conditions by:
+        </h2>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <label for="term">
+              <h3 class="govuk-fieldset__heading">
+                Condition name
+              </h3>
+              </label>
+            </legend>
+
+            <input class="govuk-input" id="term" name="term" type="text"
+                   value="{{ term }}" style="width: 80%">
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Public comments
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month" checked>
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Open
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Closed
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Who the condition affects
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Antenatal
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  Newborn
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Child
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Adult
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Screening recommended
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  No
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+        <button type="submit" class="govuk-button search-b-button">
+          Search
+        </button>
+        <a href="search" style="color: red; font-weight: bold; margin-left: 20px; font-size: 18px;">
+                Clear search</a>
+
+
+      </div>
+
+
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col" style="width: 280px;">Condition</th>
+            <th class="govuk-table__header" scope="col">Who it affects</th>
+            <th class="govuk-table__header" scope="col">Screening recommended</th>
+            <th class="govuk-table__header" scope="col">Public comments</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="af-in-consultation">Atrial Fibrillation</a></td>
+    <td class="govuk-table__cell">Antenatal</td>
+    <td class="govuk-table__cell">No</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--blue">OPEN</span></div></td>  </tr>
+
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="">Bladder Cancer</a></td>
+    <td class="govuk-table__cell">Adult</td>
+    <td class="govuk-table__cell">No</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--blue">OPEN</span></div></td>  </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell"><a href="">Bladder Cancer</a></td>
+      <td class="govuk-table__cell">Adult</td>
+      <td class="govuk-table__cell">No</td>
+      <td class="govuk-table__cell"><div class="recommended"><span class="label--blue">OPEN</span></div></td>  </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a href="">Syphilis</a></td>
+        <td class="govuk-table__cell">Adult</td>
+        <td class="govuk-table__cell">Yes</td>
+        <td class="govuk-table__cell"><div class="recommended"><span class="label--blue">OPEN</span></div></td>  </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell"><a href="">Tyrosinaemia</a></td>
+          <td class="govuk-table__cell">Newborn</td>
+          <td class="govuk-table__cell">No</td>
+          <td class="govuk-table__cell"><div class="recommended"><span class="label--blue">OPEN</span></div></td>  </tr>
+
+
+        </tbody>
+      </table>
+
+      <nav role="navigation" aria-label="Pagination">
+        <div class="pagination__summary">Showing 1 &ndash; 5 of 5 results</div>
+
+      </nav>
+
+      </div>
+  </div>
+
+{% endblock %}

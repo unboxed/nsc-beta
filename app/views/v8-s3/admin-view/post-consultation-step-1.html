@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <a href="sma-1b" class="govuk-back-link" >Back</a>
+        <h1 class="govuk-heading-l">Update recommendation for SMA 2020 review</h1>
+      <h2 class="govuk-heading-m">
+        Upload supporting documents
+      </h2>
+
+      <p class="govuk-body"><strong>Evidence review</strong></p>
+      <div class="govuk-form-group">
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+
+      <p class="govuk-body"><strong>Cover sheet</strong></p>
+      <div class="govuk-form-group">
+        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+      </div>
+
+
+
+      <a href="sma-3" role="button" class="govuk-button">Save and continue</a>
+    </div>
+  </div>
+{% endblock %}

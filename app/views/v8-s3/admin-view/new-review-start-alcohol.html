@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <form action="new-review-pv" method="post" class="form">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+  <a href="reviews" class="govuk-back-link" >Back</a>
+      <h1 class="govuk-heading-l">
+        Create a new product
+      </h1>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="event-name">
+            Enter condition under review
+          </label>
+          <input class="govuk-input" id="event-name" name="event-name" type="text" placeholder="Alcohol misuse"></br></br>
+        <a href="#" class="govuk-link" style="font-size:19px;">Add another condition</a>
+        <br>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="review_name">
+          <h2 class="govuk-heading-m">Internal product name</h2>
+        </label>
+
+        <span id="email-hint" class="govuk-hint">
+          This will be produced automatically unless filled in specifically
+        </span>
+
+        <input class="govuk-input" id="review_name" name="review_name" type="text" aria-describedby="email-hint" placeholder="">
+      </div>
+<!--
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Expected consultation start date
+      </h1>
+    </legend>
+    <span id="passport-issued-hint" class="govuk-hint">
+      For example, 12 11 2007
+    </span>
+    <div class="govuk-date-input" id="passport-issued">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="number" pattern="[0-9]*">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+!-->
+</br>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        What type of product is this?
+      </h1>
+    </legend>
+    <span id="waste-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Evidence review
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Evidence map
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Cost-effective model
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-4">
+          Systematic review
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+
+<p class="govuk-body">By submitting this, the public will be able to see that this condition is in review</p>
+<button class="govuk-button" data-module="govuk-button">
+  Save and continue
+</button>
+    </div>
+  </div>
+  </form>
+
+{% endblock %}

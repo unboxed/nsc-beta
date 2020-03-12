@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <a href="reviews" class="govuk-back-link" >Back to all conditions</a>
+    <h1 class="govuk-heading-l">
+      SMA 2020 review
+    </h1>
+    <strong class="govuk-tag " style="margin-top:-70px; float: right;">
+      Review complete
+    </strong>
+    <div style="color: white; padding: 10px 30px; margin: 0px 0 30px 0; background-color: #f3f2f1; font-family: 'nta'; src: url('/assets/fonts/light-2c037cf7e1-v1.eot');">
+    <span id="email-hint" class="govuk-hint">
+      <strong>Status update:</strong>
+      <ul>
+        <li>
+          The Spinal Muscular Atrophy 2020 review is complete.
+        </li>
+        <li>
+          View the published changes on the <a href="/topup/sma">Spinal Muscular Atrophy condition page</a>.
+        </li>
+      </ul>
+    </span>
+    </div>
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+                Upload external review document
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+                Notify communications department
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+            Confirm stakeholders to be notified
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+                Confirm dates of consultation
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Post-consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="post-consultation-step-1" style="width: 50%">
+                Upload supporting documents
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="post-consultation-step-2" style="width: 50%">
+                Upload plain English summary
+              <strong class="govuk-tag app-task-list__task-completed" id="conditions-and-dates-completed">
+                ✓
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="post-consultation-step-3" style="width: 50%">
+                Submit recommendation
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+{% endblock %}

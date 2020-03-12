@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <div class="govuk-form-group">
+
+      <h2 class="govuk-heading-l" >
+        Upload plain English summary
+      </h2>
+      <span id="plain-text" class="govuk-hint">
+    This must be in the format of ..
+  </span>
+
+    <textarea class="govuk-textarea" id="plain-text" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+  </div>
+
+
+
+
+      <a href="sma-4" role="button" class="govuk-button">Save and continue</a>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,237 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/stylesheets/uk-nsc-beta.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <a href="index" class="govuk-back-link" >Back</a>
+      <h1 class="govuk-heading-l" style="margin-bottom: 0px;">
+        All conditions
+      </h1>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <div class="start-review" style="margin-top: 60px; float: right;">
+        <a href="new-review-start" role="button" class="govuk-button">
+          Create a new product
+        </a>
+        </div>
+        </div>
+        </div>
+
+
+      <br>
+      <br>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+    <div class="filter-box">
+      <form>
+        <h2 class="govuk-heading-m">
+          Filter by:
+        </h2>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <label for="term">
+              <h3 class="govuk-fieldset__heading">
+                Condition name
+              </h3>
+              </label>
+            </legend>
+
+            <input class="govuk-input" id="term" name="term" type="text"
+                   value="{{ term }}" style="width: 80%">
+          </fieldset>
+        </div>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Review status
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Due to be reviewed
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  In review
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  In consultation
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Post consultation
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Current recommendation
+              </h1>
+            </legend>
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Recommended
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Not recommended
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button type="submit" class="govuk-button search-b-button">
+          Search
+        </button>
+        <a href="" class="govuk-link govuk-link--no-visited-state" style="padding-left: 10px; font-size: 18px;">Clear search</a>
+      </form>
+
+      </div>
+
+
+    </div>
+
+    <div class="govuk-grid-column-two-thirds">
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col" style="width: 280px;">Condition</th>
+            <th class="govuk-table__header" scope="col">Who it affects</th>
+            <th class="govuk-table__header" scope="col">Recommended</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><a href="partner-violence">Partner violence</a></td>
+                <td class="govuk-table__cell">Adults</td>
+                <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+              </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="partner-violence-pregnancy">Partner violence in pregnancy</a></td>
+    <td class="govuk-table__cell">Adult</td>
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="">Parvovirus</a></td>
+    <td class="govuk-table__cell">Adult</td>
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--green">Rcommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="">Phenylketonuria (PKU)</a></td>
+    <td class="govuk-table__cell">Newborn</td>
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="">Placenta praevia</a></td>
+    <td class="govuk-table__cell">Antenatal</td>
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="af-in-consultation">Postnatal depression</a></td>
+    <td class="govuk-table__cell">Antenatal</td>
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="">Preterm labour</a></td>
+    <td class="govuk-table__cell">Adult</td>
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="">Prostate Cancer</a></td>
+    <td class="govuk-table__cell">Child</td>
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="">Psychiatric illness</a></td>
+    <td class="govuk-table__cell">Antenatal</td>
+    <td class="govuk-table__cell"><div class="not-recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="">Rubella susceptibility</a></td>
+    <td class="govuk-table__cell">Newborn</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="">Severe combined immunodeficiency (SCID)</a></td>
+    <td class="govuk-table__cell">Newborn</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="">Scoliosis	Child</a></td>
+    <td class="govuk-table__cell">Adult</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--green">Recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="">Sickle cell and Thalassaemia	Antenatal</a></td>
+    <td class="govuk-table__cell">Antenatal</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--green">Recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="">Sickle Cell Disease</a></td>
+    <td class="govuk-table__cell">Newborn</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--green">Recommended</span></div></td>
+  </tr>
+  <tr class="govuk-table__row">
+    <td class="govuk-table__cell"><a href="sma-1c-closed">Spinal muscular atrophy (SMA)	</a></td>
+    <td class="govuk-table__cell">Antenatal and newborn</td>
+    <td class="govuk-table__cell"><div class="recommended"><span class="label--red">Not recommended</span></div></td>
+  </tr>
+
+
+        </tbody>
+      </table>
+
+      <nav role="navigation" aria-label="Pagination">
+        <div class="pagination__summary">Showing 1 &ndash; 20 of 126 results</div>
+        <ul class="pagination">
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 1">1</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-current="true" aria-label="Page 3, current page">3</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
+          <li class="pagination__item"><a class="pagination__link current" href="#0" aria-label="Page 5">5</a></li>
+          <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+        </ul>
+      </nav>
+
+      </div>
+  </div>
+
+
+
+
+    </div>
+
+
+  </div>
+{% endblock %}
