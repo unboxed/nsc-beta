@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+{% from "character-count/macro.njk" import govukCharacterCount %}
+
+{% from "character-count/macro.njk" import govukCharacterCount %}
+
+{{ govukCharacterCount({
+  name: "with-hint",
+  id: "with-hint",
+  maxlength: 20000,
+  label: {
+    text: "If your comments relate to specific review sections or page numbers, please indicate this in the text. e.g [page 3, paragraph 2] ...
+"
+  },
+  hint: {
+    text: ""
+  }
+}) }}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+  <a href="homepage" class="govuk-back-link">Back</a>
+
+  <h1 class="govuk-heading-l">Contact the UK National Screening Committee
+    </h1>
+
+      <h2 class="govuk-heading-s">Before you get in contact</h2>
+
+      <p class="govuk-body">The helpdesk and national programmes do not have access to or provide screening results. If you are a parent and have a query about your baby's results please contact your health visitor. If you are a health professional please contact the screening laboratory or the local child health records department</p>
+  <p class="govuk-body">The helpdesk cannot provide contact details of individual members of staff</p>
+  <p class="govuk-body">The helpdesk can only answer queries relating to screening in England</p>
+
+  <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    Please do not send or provide any sensitive, confidential or patient identifiable information to the helpdesk.
+  </strong>
+</div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="name">
+          Name
+        </label>
+        <input class="govuk-input" id="name" name="email" type="text" aria-describedby="email-hint">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="email">
+          Subject
+        </label>
+        <input class="govuk-input" id="email" name="email" type="text" aria-describedby="email-hint">
+      </div>
+
+      <div class="govuk-character-count" data-module="character-count" data-maxlength="2000">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="with-hint">
+            Message
+          </label>
+
+
+      <span id="with-hint-hint" class="govuk-hint">
+      </span>
+      <textarea class="govuk-textarea js-character-count " id="with-hint" name="with-hint" rows="5" aria-describedby="with-hint-hint"></textarea>
+    </div>
+
+    <span id="with-hint-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+      You can enter up to 20,00 characters
+    </span>
+  </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="role">
+          Email
+        </label>
+        <input class="govuk-input" id="role" name="email" type="text" aria-describedby="email-hint">
+      </div>
+
+
+        <p class="govuk-body">Please fill these additional fields in if you're contacting the helpdesk in a professional capacity to help us deal with your query as quickly as possible</p>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="role">
+            UK Telephone number (optional)
+          </label>
+          <input class="govuk-input" id="role" name="email" type="text" aria-describedby="email-hint">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="sort">
+            Region (optional)
+          </label>
+          <select class="govuk-select" id="sort" name="sort">
+            <option value="published" selected>Please select one</option>
+            <option value="updated">North west</option>
+            <option value="updated">North east</option>
+            <option value="updated">Yorkshire</option>
+            <option value="updated">London</option>
+          </select>
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="role">
+            Your role (optional)
+          </label>
+          <input class="govuk-input" id="role" name="email" type="text" aria-describedby="email-hint">
+        </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <label class="govuk-label" for="role">
+            Oranisation type?
+          </label>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-1" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name-1">
+                National screening programme
+              </label> </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no" checked>
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  Other
+                </label> </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+
+
+
+  <a href="form-submitted" role="button" class="govuk-button">Submit helpdesk form</a>
+
+
+{% endblock %}
