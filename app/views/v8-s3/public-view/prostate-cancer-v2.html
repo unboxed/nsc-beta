@@ -1,0 +1,171 @@
+{% extends "layout.html" %}
+
+{% block head %}
+
+    <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+
+    {{ super() }}
+    <link href="/public/stylesheets/uk-nsc-beta.css"  rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <a href="search" class="govuk-back-link">Back</a>
+            <h1 class="govuk-heading-xl" style="margin-bottom: 30px;">
+                <span class="govuk-caption-l">Adult screening programme</span>
+                Prostate cancer
+            </h1>
+
+            <p class="govuk-body">
+                The prostate is a small gland found in men. It is located in the pelvis between the penis and the
+                bladder. The main function of the prostate is to help in the production of semen. Prostate cancer
+                is the most common cancer in men and usually affects men over the age of 65.
+            </p>
+
+            <p class="govuk-body">
+                <a href="http://www.nhs.uk/conditions/cancer-of-the-prostate" class="govuk-link">Read more on NHS UK</a>
+            </p>
+
+            <h2 class="govuk-heading-m" style="margin-bottom: 0px;">UK NSC screening recommendation</h2>
+            <span class="govuk-caption-m">The last UK NSC review of this condition occurred in September 2017.</span>
+
+            <p class="govuk-body govuk-!-font-weight-bold recommendation-badge">
+                <span id="not-recommended">Screening is not currently recommended for this condition</span>
+            </p>
+
+            <p class="govuk-body">
+                Screening for prostate cancer is currently not recommended in the UK. This is because:
+            </p>
+
+            <h3 class="govuk-heading-s">The Test</h3>
+
+            <p class="govuk-body">
+                The PSA test is not accurate enough to detect prostate cancer that needs treatment. It can falsely
+                find men who do not have prostate cancer. It can also miss some cancers. This means that many men might
+                have to undergo unnecessary and often unpleasant tests and/or unnecessary treatment. 
+            </p>
+            <p class="govuk-body">
+                It is still unclear if other tests such as an MRI scan, with or without PSA, are accurate enough.
+                Research is also currently looking at whether a method for predicting prostate cancer risk using a
+                combination of a blood test and other information about a man could be more accurate. But more studies
+                are necessary to confirm the early results.
+            </p>
+
+            <h3 class="govuk-heading-s">The Intervention</h3>
+
+            <p class="govuk-body">
+                At present, there is no single treatment that is definitely better for patients with early-stage
+                prostate cancer, as treatments’ effectiveness needs to be weighed up against their side effects.
+            </p>
+
+            <h3 class="govuk-heading-s">The screening programme</h3>
+
+            <p class="govuk-body">
+                It is unclear how PSA screening impacts deaths due to prostate cancer.
+            </p>
+            <p class="govuk-body">
+                A PSA-based screening programme could harm men as some of them would be diagnosed with a cancer
+                that would not have caused them problems during their life. This would lead to additional tests and
+                treatments which can also have harmful side effects.
+            </p>
+
+            <h3 class="govuk-heading-s">Supporting documents from the 2017 review</h3>
+
+            <a class="govuk-link" href="#" style="font-size: 20px;">Evidence review</a>
+            <p class="govuk-body-m">
+                This is the previous evidence review conducted to investigate whether the condition should be screened
+                or not
+            </p>
+
+            <a class="govuk-link" href="#" style="font-size: 20px;">
+                Recommendation overview and consultation responses
+            </a>
+            <p class="govuk-body-m">
+                These are the outcomes of the review process including the public consultation comments
+            </p>
+
+            <h2 class="govuk-heading-m">Review cycle</h2>
+            <p class="govuk-body">Last review completed: 2017</p>
+            <p class="govuk-body">Next review estimated to be completed: 2020 to 2021</p>
+            <p class="govuk-body">
+                To see previous evidence reviews, visit the <a class="govuk-link" href="#">UK NSC archive.</a>
+            </p>
+
+            <h2 class="govuk-heading-m">Organisations interested in prostate cancer</h2>
+            <p class="govuk-body">
+                These organisations have expressed interest in this recommendation and may submit responses to
+                evidence reviews.
+            </p>
+
+            <ul class="govuk-list">
+                <li>
+                    <a class="govuk-link" href="#">AF Association</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">AntiCoagulation Europe</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">Arrhythmia Alliance</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">British Cardiovascular Society</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">British Heart Foundation</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">Central & East London Comprehensive Local Research Network</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">Education for Health</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">Faculty of Public Health</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">Heart Rhythm UK</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">HEART UK</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">NHS Improvement</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">Royal College of General Practitioners</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">Royal College of Nursing</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">Royal College of Physicians</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">Royal College of Physicians and Surgeons of Glasgow</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">Royal College of Physicians of Edinburgh</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">Royal College of Surgeons</a>
+                </li>
+                <li>
+                    <a class="govuk-link" href="#">Stroke Association</a>
+                </li>
+            </ul>
+
+            <p class="govuk-body">
+                If you think your organisation should be added, please <a class="govuk-link" href="#">contact us</a>.
+                More information for organisations can be found in appendix C of the
+                <a class="govuk-link" href="#">UK NSC evidence review process</a>.
+            </p>
+
+        </div>
+    </div>
+
+{% endblock %}
