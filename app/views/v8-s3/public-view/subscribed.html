@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+{% block head %}
+    {{ super() }}
+    <link href="/public/stylesheets/uk-nsc-beta.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                  You've subscribed<br>successfully
+                </h1>
+            </div>
+
+            <p class="govuk-body">
+                You'll get an email when the UK NSC starts or ends a public consultation on the following
+                condition(s):
+            </p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Anaemia</li>
+                <li>Bladder cancer</li>
+                <li>Dementia</li>
+                <li>Fetal anomalies</li>
+                <li>Prostate cancer</li>
+            </ul>
+
+            <p class="govuk-body">
+                You can <a class="govuk-link" href="subscribe-manage">manage and update your subscriptions</a> whenever you want to.
+            </p>
+        </div>
+    </div>
+{% endblock %}
