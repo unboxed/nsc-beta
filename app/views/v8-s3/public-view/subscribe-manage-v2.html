@@ -1,0 +1,331 @@
+{% extends "layout.html" %}
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+{% block head %}
+    {{ super() }}
+    <link href="/public/stylesheets/uk-nsc-beta.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="homepage" class="govuk-back-link">Back</a>
+            <h1 class="govuk-heading-l pink">
+                Manage your UK NSC updates
+            </h1>
+            <p class="govuk-body">
+                Change the condition(s) you are interested in from the list below. Tick the box in the top left corner
+                of the list if you want to choose all the conditions.
+            </p>
+            <p class="govuk-body">
+                Click on 'unsubscribe from everything' if you no longer want to receive any updates.
+            </p>
+        </div>
+    </div>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-third">
+            <div class="filter-box">
+                <form>
+                    <h2 class="govuk-heading-m">
+                        Filter conditions by:
+                    </h2>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                <label for="term">
+                                    <h3 class="govuk-fieldset__heading">
+                                        Condition name
+                                    </h3>
+                                </label>
+                            </legend>
+                            <input class="govuk-input" id="term" name="term" type="text" value="{{ term }}" style="width: 80%">
+                        </fieldset>
+                    </div>
+                    <div class="govuk-form-group">
+                        <fieldset class="govuk-fieldset">
+                            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                <h1 class="govuk-fieldset__heading">
+                                    Who the condition affects
+                                </h1>
+                            </legend>
+                            <div class="govuk-radios govuk-radios--small">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="condition-affects" name="condition-affects" type="radio" value="month">
+                                    <label class="govuk-label govuk-radios__label" for="condition-affects">
+                                        Antenatal
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="condition-affects-2" name="condition-affects" type="radio" value="year">
+                                    <label class="govuk-label govuk-radios__label" for="condition-affects-2">
+                                        Newborn
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="condition-affects-3" name="condition-affects" type="radio" value="month">
+                                    <label class="govuk-label govuk-radios__label" for="condition-affects-3">
+                                        Child
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="condition-affects-4" name="condition-affects" type="radio" value="month">
+                                    <label class="govuk-label govuk-radios__label" for="condition-affects-4">
+                                        Adult
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <button type="submit" class="govuk-button search-b-button">
+                        Search
+                    </button>
+                    <a href="#" style="color: red; font-weight: bold; margin-left: 20px; font-size: 18px;">Clear search</a>
+                </form>
+            </div>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <form action="subscribe-updated-v2" method="post">
+                <table class="govuk-table" style="margin-bottom: 0px">
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th class="govuk-table__header" scope="col" style="padding-top: 0px; padding-bottom: 0px; border-bottom: 2px solid #0b0c0c" width="75%">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="select-all" name="select-all" type="checkbox" value="all">
+                                        <label class="govuk-label govuk-checkboxes__label" for="select-all" style="font-weight: 700">
+                                            Condition
+                                        </label>
+                                    </div>
+                                </div>
+                            </th>
+                            <th class="govuk-table__header" scope="col" style="padding-top: 0px; padding-bottom: 0px; border-bottom: 2px solid #0b0c0c">Who it affects</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" width="77%" style="padding-top: 2px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-aaa" name="conditions[]" type="checkbox" value="aaa">
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-aaa">
+                                            Abdominal Aortic Aneurysm
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 2px; padding-bottom: 0px">Adult</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-alcohol" name="conditions[]" type="checkbox" value="alcohol">
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-alcohol">
+                                            Alcohol Misuse
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">Adult</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-amino" name="conditions[]" type="checkbox" value="amino">
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-amino">
+                                            Amino acid metabolism disorders
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">Adult</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-anaemia" name="conditions[]" type="checkbox" value="anaemia" checked>
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-anaemia">
+                                            Anaemia
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">Newborn</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-ab" name="conditions[]" type="checkbox" value="ab">
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-ab">
+                                            Asymptomatic bacteriuria
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">Antenatal</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-af" name="conditions[]" type="checkbox" value="af">
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-af">
+                                            Atrial Fibrillation
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">Antenatal</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-autism" name="conditions[]" type="checkbox" value="autism">
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-autism">
+                                            Autism
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">Adult</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-bacterial" name="conditions[]" type="checkbox" value="bacterial">
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-bacterial">
+                                            Bacterial vaginosis
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">Child</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-ba" name="conditions[]" type="checkbox" value="ba">
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-ba">
+                                            Biliary atresia
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">Antenatal</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-bd" name="conditions[]" type="checkbox" value="bd">
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-bd">
+                                            Biotinidase deficiency
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">Newborn</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-bladder-cancer" name="conditions[]" type="checkbox" value="bladder-cancer" checked>
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-bladder-cancer">
+                                            Bladder Cancer
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">Adult</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-blood-group" name="conditions[]" type="checkbox" value="blood-group">
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-blood-group">
+                                            Blood group &amp; RhD status and grey cell alloantibodies
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">Adult</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-bowel-cancer" name="conditions[]" type="checkbox" value="bowel-cancer">
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-bowel-cancer">
+                                            Bowel Cancer
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">Antenatal</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-breast-cancer" name="conditions[]" type="checkbox" value="breast-cancer">
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-breast-cancer">
+                                            Breast Cancer
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">Adult</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">
+                                <div class="govuk-checkboxes govuk-checkboxes--small">
+                                    <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="condition-cervical-cancer" name="conditions[]" type="checkbox" value="cervical-cancer">
+                                        <label class="govuk-label govuk-checkboxes__label" for="condition-cervical-cancer">
+                                            Cervical Cancer
+                                        </label>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell" style="padding-top: 0px; padding-bottom: 0px">Adult</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <nav role="navigation" aria-label="Pagination">
+                    <div class="pagination__summary">Showing 1 &ndash; 15 of 126 results</div>
+                    <ul class="pagination">
+                        <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Previous page"><span aria-hidden="true" role="presentation">&laquo;</span> Previous</a></li>
+                        <li class="pagination__item"><a class="pagination__link current" href="#0" aria-label="Page 1">1</a></li>
+                        <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 2">2</a></li>
+                        <li class="pagination__item"><a class="pagination__link" href="#0" aria-current="true" aria-label="Page 3, current page">3</a></li>
+                        <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 4">4</a></li>
+                        <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Page 5">5</a></li>
+                        <li class="pagination__item"><a class="pagination__link" href="#0" aria-label="Next page">Next <span aria-hidden="true" role="presentation">&raquo;</span></a></li>
+                    </ul>
+                </nav>
+
+                <div class="govuk-grid-row">
+                    <div class="govuk-grid-column-one-third">
+                        <button type="submit" class="govuk-button">
+                            Continue
+                        </button>
+                    </div>
+                    <div class="govuk-grid-column-two-thirds">
+                        <a class="ukgov-link" href="unsubscribe-v2">Unsubscribe from everything</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
