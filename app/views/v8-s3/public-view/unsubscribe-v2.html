@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+{% block head %}
+    {{ super() }}
+    <link href="/public/stylesheets/uk-nsc-beta.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                  You've unsubscribed from UK NSC updates
+                </h1>
+            </div>
+
+            <p class="govuk-body">
+                You will no longer receive emails relating to any UK NSC recommendations.
+            </p>
+
+            <p class="govuk-body">
+                You can <a class="govuk-link" href="subscribe-start-v2">subscribe again</a> in the future if
+                you want to.
+            </p>
+        </div>
+    </div>
+{% endblock %}
