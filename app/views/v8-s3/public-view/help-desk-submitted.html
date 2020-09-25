@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="govuk-phase-banner">
+        <p class="govuk-phase-banner__content">
+            <strong class="govuk-tag govuk-phase-banner__content__tag">
+                alpha
+            </strong>
+            <span class="govuk-phase-banner__text">
+                This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+            </span>
+        </p>
+    </div>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="homepage" class="govuk-back-link">Back</a>
+
+            <h1 class="govuk-heading-l">Contact the UK National Screening Committee</h1>
+
+            <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                    Your message<br>has been sent
+                </h1>
+                <div class="govuk-panel__body">
+                    We will respond to your query as soon as we can
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
