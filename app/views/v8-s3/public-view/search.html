@@ -119,8 +119,26 @@
                   No
                 </label>
               </div>
-            </fieldset>
-          </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              <h1 class="govuk-fieldset__heading">
+                Archived recommendations
+              </h1>
+            </legend>
+            <div class="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="archived" name="archived" type="checkbox" value="archived">
+                <label class="govuk-label govuk-checkboxes__label" for="archived" style="padding-top: 0; padding-bottom: 0">
+                  Display archived recommendations
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
 
         <button type="submit" class="govuk-button search-b-button">
           Search
@@ -185,7 +203,7 @@
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Bacterial vaginosis</a></td>
     <td class="govuk-table__cell">Child</td>
-    <td class="govuk-table__cell">No</td>
+    <td class="govuk-table__cell"><span class="govuk-error-message" style="margin-bottom: 0">Archived</span></td>
     <td class="govuk-table__cell"></td>  </tr>
   <tr class="govuk-table__row">
     <td class="govuk-table__cell"><a href="">Biliary atresia</a></td>
