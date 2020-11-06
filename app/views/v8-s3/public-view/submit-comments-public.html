@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="consultation" class="govuk-back-link">Back</a>
+            <h1 class="govuk-heading-l">
+                <span class="govuk-caption-l">Atrial Fibrillation</span>
+                Submit your comments as a member of the public
+            </h1>
+
+            <p class="govuk-body">
+                Members of the public, such as patients and family who have experienced the condition, are welcome
+                to submit comments. These will be reviewed by the UK NSC along with the scientific evidence and
+                comments from stakeholders, charities and researchers.
+            </p>
+            <p class="govuk-body">
+                While we welcome all comments, we would prefer to get your individual thoughts rather than standard
+                text provided by someone else.
+            </p>
+            <p class="govuk-body">
+                We suggest reading the short <a class="govuk-link" href="#">plain English summary of the UK NSC review</a>,
+                and also our <a class="govuk-link" href="#">explanation of screening</a>, before submitting this form.
+            </p>
+
+            <form action="submit-comments-public-v2" method="post">
+                <h3 class="govuk-heading-s">About you</h3>
+
+                <div class="govuk-form-group">
+                    <label for="name" class="govuk-label">Name</label>
+                    <input name="name" class="govuk-input" id="name" type="text">
+                </div>
+                <div class="govuk-form-group">
+                    <label for="email" class="govuk-label">Email</label>
+                    <input name="email" class="govuk-input" id="email" type="text">
+                </div>
+
+                <h3 class="govuk-heading-s">Consultation comments</h3>
+
+                <p class="govuk-body">
+                    Provide your views in the following field. Here are some sample questions to help you:
+                </p>
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>How has this condition affected you or your loved ones life?</li>
+                    <li>Why do you think screening should or should not be recommended?</li>
+                </ul>
+                <textarea class="govuk-textarea" id="comments" name="comments" rows="5"></textarea>
+
+                <button class="govuk-button" type="submit">Send consultation feedback</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}

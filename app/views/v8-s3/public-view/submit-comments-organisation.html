@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% from "character-count/macro.njk" import govukCharacterCount %}
+
+{{ govukCharacterCount({
+  name: "comments",
+  id: "comments",
+  maxlength: 20000,
+  label: {
+    text: "If your comments relate to specific review sections or page numbers, please indicate this in the text. e.g [page 3, paragraph 2] ..."
+  },
+  hint: {
+    text: ""
+  }
+}) }}
+
+{% block head %}
+    <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="consultation" class="govuk-back-link">Back</a>
+            <h1 class="govuk-heading-l">
+                <span class="govuk-caption-l">Atrial Fibrillation</span>
+                Submit your consultation comments
+            </h1>
+
+            <form action="comments-submitted" method="post">
+                <h3 class="govuk-heading-s">About you</h3>
+
+                <div class="govuk-form-group">
+                    <label for="name" class="govuk-label">Name</label>
+                    <input name="name" class="govuk-input" id="name" type="text">
+                </div>
+                <div class="govuk-form-group">
+                    <label for="email" class="govuk-label">Email</label>
+                    <input name="email" class="govuk-input" id="email" type="text">
+                </div>
+                <div class="govuk-form-group">
+                    <label for="organisation" class="govuk-label">Organisation (if appropriate)</label>
+                    <input name="organisation" class="govuk-input" id="organisation" type="text">
+                </div>
+                <div class="govuk-form-group">
+                    <label for="role" class="govuk-label">Role (if appropriate)</label>
+                    <input name="role" class="govuk-input" id="role" type="text">
+                </div>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <label class="govuk-label">
+                            Do you consent to your name being published on the UK NSC website alongside your response?
+                        </label>
+                        <div class="govuk-radios govuk-radios--inline">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="consent-name-yes" name="consent-name" type="radio" value="yes">
+                                <label class="govuk-label govuk-radios__label" for="consent-name-yes">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="consent-name-no" name="consent-name" type="radio" value="no" checked>
+                                <label class="govuk-label govuk-radios__label" for="consent-name-no">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="govuk-form-group">
+                    <label for="evidence-summary" class="govuk-label">Which evidence summary is your feedback for?</label>
+                    <select class="govuk-select" id="evidence-summary" name="evidence-summary">
+                        <option value="adults-45">Screening in adults up to age 45</option>
+                    </select>
+                </div>
+
+                <h3 class="govuk-heading-s">Consultation comments</h3>
+
+                <p class="govuk-body">
+                    Provide your views in the following field. Alternatively, download and complete the
+                    <a class="govuk-link" href="#">response form</a>, and email it to
+                    <a class="govuk-link" href="mailto:screening.evidence@nhs.net">screening.evidence@nhs.net</a>
+                </p>
+                <p class="govuk-body">
+                    If your comments relate to specific review sections or page numbers, please indicate this in the
+                    text, for example [page 3, paragraph 2]
+                </p>
+                <div class="govuk-character-count" data-module="character-count" data-maxlength="20000">
+                    <div class="govuk-form-group">
+                        <textarea class="govuk-textarea js-character-count " id="comments" name="comments" rows="5"></textarea>
+                    </div>
+                    <span id="comments-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                        You have 20000 characters remaining
+                    </span>
+                </div>
+
+                <button class="govuk-button" type="submit">Send consultation feedback</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
