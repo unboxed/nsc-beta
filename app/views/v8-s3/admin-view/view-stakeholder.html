@@ -5,70 +5,74 @@
 
 
 {% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="stakeholder-index" class="govuk-back-link" >Back</a>
+            <h1 class="govuk-heading-l" style="margin-bottom: 0px;">
+                Stakeholder details
+            </h1>
+        </div>
 
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-    <a href="stakeholder-index" class="govuk-back-link" >Back</a>
-      <h1 class="govuk-heading-l" style="margin-bottom: 0px;">
-        Stakeholder name <a href="" style="font-size: 20px; padding-left: 10px;">edit</a>
-      </h1>
-
-      <br>
-      <br>
-
-      <table class="govuk-table">
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th class="govuk-table__header" scope="col" style="width: 280px;">Stakeholder details:</th>
-            <th class="govuk-table__header" scope="col"></th>
-              <th class="govuk-table__header" scope="col"></th>
-
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-        <td class="govuk-table__cell"><strong>Name of organisation</strong></td>
-        <td class="govuk-table__cell">University of Warwick</td>
-        <td class="govuk-table__cell"><a href="">edit</a></td>
-
-              </tr>
-    <tr class="govuk-table__row">
-    <td class="govuk-table__cell"><strong>Type of organisation</strong></td>
-    <td class="govuk-table__cell">Academic institution</td>
-    <td class="govuk-table__cell"><a href="">edit</a></td>
-    </tr>
-    <tr class="govuk-table__row">
-    <td class="govuk-table__cell"><strong>Conditions interested in</strong></td>
-    <td class="govuk-table__cell">This</br>That</td>
-      <td class="govuk-table__cell"><a href="">edit</a></td>
-    </tr>
-    <tr class="govuk-table__row">
-    <td class="govuk-table__cell"><strong>Members names</strong></td>
-    <td class="govuk-table__cell">Name 1</br>Name 2</td>
-      <td class="govuk-table__cell"><a href="">edit</a></td>
-    </tr>
-    <tr class="govuk-table__row">
-    <td class="govuk-table__cell"><strong>Email address</strong></td>
-    <td class="govuk-table__cell">this@that.com</td>
-      <td class="govuk-table__cell"><a href="">edit</a></td>
-    </tr>
-    <tr class="govuk-table__row">
-    <td class="govuk-table__cell"><strong>Phone number</strong></td>
-    <td class="govuk-table__cell">+44 7130 840137</td>
-      <td class="govuk-table__cell"><a href="">edit</a></td>
-    </tr>
-        </tbody>
-      </table>
-
-      </div>
+        <div class="govuk-grid-column-one-third">
+            <div class="start-review" style="margin-top: 60px; float: right;">
+                <a href="edit-stakeholder" role="button" class="govuk-button">
+                    Edit stakeholder
+                </a>
+            </div>
+        </div>
     </div>
-
-
-
-
+    <br><br>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <p class="govuk-body">
+                <strong>Stakeholder name</strong><br>
+                University of Victoria
+            </p>
+            <p class="govuk-body">
+                <strong>Type of stakeholder</strong><br>
+                Academic institution
+            </p>
+            <p class="govuk-body">
+                <strong>Country</strong><br>
+                England, International
+            </p>
+            <p class="govuk-body">
+                <strong>Website</strong><br>
+                www.uvic.ac.uk
+            </p>
+            <p class="govuk-body">
+                <strong>Twitter</strong><br>
+                twitter.com/uvic
+            </p>
+            <p class="govuk-body">
+                <strong>Conditions interested in</strong><br>
+                Atrial fibrillation
+            </p>
+            <p class="govuk-body">
+                <strong>Comments</strong><br>
+                Interested in taking part in any workshops on this topic.
+            </p>
+            <p class="govuk-body">
+                <strong>Do not show this organisation as a stakeholder publicly.</strong>
+            </p>
+            <hr>
+            <br>
+            <p class="govuk-body">
+                <strong>Name of contact (optional)</strong><br>
+                Winona Smith
+            </p>
+            <p class="govuk-body">
+                <strong>Contact's role (optional)</strong><br>
+                Lead research on AF randomised control trial
+            </p>
+            <p class="govuk-body">
+                <strong>Contact's email (optional)</strong><br>
+                winona.smith@uvic.com
+            </p>
+            <p class="govuk-body">
+                <strong>Contact's mobile phone number (optional)</strong><br>
+                07123 456789
+            </p>
+        </div>
     </div>
-
-
-  </div>
 {% endblock %}

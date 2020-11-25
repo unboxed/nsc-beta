@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="stakeholder-index" class="govuk-back-link" >Back</a>
+            <h1 class="govuk-heading-l" style="margin-bottom: 0px;">
+                Export stakeholders
+            </h1>
+        </div>
+    </div>
+    <br><br>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <p class="govuk-body">
+                This allows you to export stakeholders details in spreadsheet format.
+            </p>
+
+            <form action="view-stakeholder" method="post" novalidate>
+                <p class="govuk-body">Select scope of export:</p>
+                <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="scope" name="scope" type="radio" value="all-stakeholders">
+                        <label class="govuk-label govuk-radios__label" for="scope">
+                            All stakeholders
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="scope-2" name="scope" type="radio" value="current-search">
+                        <label class="govuk-label govuk-radios__label" for="scope-2">
+                            Current search filters
+                        </label>
+                    </div>
+                </div>
+                <br>
+                <p class="govuk-body">Select type of export:</p>
+                <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="type" name="type" type="radio" value="conditions">
+                        <label class="govuk-label govuk-radios__label" for="type">
+                            Conditions stakeholders are interested in
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="type-2" name="type" type="radio" value="contact">
+                        <label class="govuk-label govuk-radios__label" for="type-2">
+                            Individual contact details
+                        </label>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <button class="govuk-button" data-module="govuk-button">
+                    Export stakeholder
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
