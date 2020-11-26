@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="policy-view" class="govuk-back-link" >Back to recommendation</a>
+            <span class="govuk-caption-l">Archive recommendation</span>
+            <h1 class="govuk-heading-l" style="margin-bottom: 0px;">
+                Alcohol Misuse
+            </h1>
+        </div>
+    </div>
+    <br><br>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <p class="govuk-body govuk-!-font-size-36">Are you sure you want to archive this recommendation?</p>
+            <p class="govuk-body">
+                Press Continue only if the UK NSC has instructed the removal of this condition from the committee's
+                review list.
+            </p>
+            <p class="govuk-body">
+                <a class="govuk-button" role="button" href="policy-archive-upload">
+                    Continue
+                </a>
+                <span style="position: relative; left: 8px; top: 8px">
+                    or <a class="govuk-link" href="policy-view">cancel</a>
+                </span>
+            </p>
+        </div>
+    </div>
+{% endblock %}
