@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="reviews" class="govuk-back-link" >Back to all conditions</a>
+            <h1 class="govuk-heading-l" style="margin-bottom: 0px;">
+                Alcohol Misuse
+            </h1>
+        </div>
+    </div>
+    <br><br>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h3 class="govuk-heading-s" style="margin-bottom: 0">Recommendation status</h3>
+            <p class="recommendation-status-preview">Recommendation archived</p>
+
+            <div class="govuk-panel govuk-panel--confirmation">
+                <h1 class="govuk-panel__title">
+                    The UK NSC recommendation for this condition has been archived
+                </h1>
+            </div>
+        </div>
+    </div>
+{% endblock %}

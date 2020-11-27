@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="policy-view" class="govuk-back-link" >Back to recommendation</a>
+        <span class="govuk-caption-l">Archive recommendation</span>
+        <h1 class="govuk-heading-l" style="margin-bottom: 0px;">
+            Alcohol Misuse
+        </h1>
+    </div>
+</div>
+    <br><br>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form action="policy-archived" method="post" novalidate>
+                <div class="govuk-form-group govuk-form-group--error">
+                    <span id="passport-issued-error" class="govuk-error-message">
+                        <span class="govuk-visually-hidden">Error:</span> You must add a public statement before pressing 'Archive'.
+                    </span>
+                    <label class="govuk-label" for="public-statement">
+                        Why has this recommendation been archived?
+                    </label>
+                    <span id="public-statement-hint" class="govuk-hint">
+                        Write public statement to explain reasons for archiving recommendation (mandatory)<br>
+                        Use markdown to complete text field below
+                    </span>
+                    <textarea class="govuk-textarea js-character-count " id="message" name="message" rows="5">This condition has been archived because:
+* insert text</textarea>
+                </div>
+
+                <br>
+                <p class="govuk-body">
+                    <button class="govuk-button" data-module="govuk-button">
+                        Archive
+                    </button>
+                    <span style="position: relative; left: 8px; top: 8px">
+                        or <a class="govuk-link" href="policy-view">cancel</a>
+                    </span>
+                </p>
+            </form>
+        </div>
+    </div>
+{% endblock %}

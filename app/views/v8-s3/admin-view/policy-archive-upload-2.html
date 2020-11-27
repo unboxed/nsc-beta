@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="policy-archive" class="govuk-back-link" >Back to Archive recommendation page</a>
+            <h1 class="govuk-heading-l" style="margin-bottom: 0px;">
+                Add file attachment to archived recommendation
+            </h1>
+        </div>
+    </div>
+    <br><br>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form action="policy-archive-upload-3" method="post" novalidate>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="title">
+                        Title
+                    </label>
+                    <input class="govuk-input" id="title" name="title" type="text">
+                </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="file-upload-1" >
+                        File
+                    </label>
+                    <span id="file-upload-hint" class="govuk-hint">
+                        You must upload attachments in an <a href="#">open standards format</a>.
+                    </span>
+                    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                </div>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="accessible" name="accessible" type="checkbox" value="yes">
+                                <label class="govuk-label govuk-checkboxes__label" for="accessible">
+                                    Attachment is accessible
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <br>
+                <p class="govuk-body">
+                    <button class="govuk-button" data-module="govuk-button">
+                        Save
+                    </button>
+                    <span style="position: relative; left: 8px; top: 8px">
+                        or <a class="govuk-link" href="policy-view">cancel</a>
+                    </span>
+                </p>
+            </form>
+        </div>
+    </div>
+{% endblock %}

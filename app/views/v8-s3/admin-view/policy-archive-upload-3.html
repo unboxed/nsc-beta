@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="policy-archive" class="govuk-back-link" >Back</a>
+            <h1 class="govuk-heading-l" style="margin-bottom: 0px;">
+                Do you want to add more files?
+            </h1>
+        </div>
+    </div>
+    <br><br>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form action="policy-archive-reason" method="post" novalidate>
+                <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="add-more" name="add-more" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="add-more">
+                            Yes
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="add-more-2" name="add-more" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="add-more-2">
+                            No
+                        </label>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <table class="govuk-table">
+                    <caption class="govuk-table__caption">Files added</caption>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row--no-border">
+                            <td class="govuk-table__cell">Filename - Document type - 2020</th>
+                            <td class="govuk-table__cell">PDF</td>
+                            <td class="govuk-table__cell">
+                                <a class="govuk-link" href="#">
+                                    delete
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br>
+                <p class="govuk-body">
+                    <button class="govuk-button" data-module="govuk-button">
+                        Continue
+                    </button>
+                    <span style="position: relative; left: 8px; top: 8px">
+                        or <a class="govuk-link" href="policy-view">cancel</a>
+                    </span>
+                </p>
+            </form>
+        </div>
+    </div>
+{% endblock %}
