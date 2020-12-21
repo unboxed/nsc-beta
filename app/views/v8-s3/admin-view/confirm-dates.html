@@ -88,9 +88,9 @@
 
 {% block content %}
 
-  <div class="govuk-grid-row">
+ <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <a href="sma-1" class="govuk-back-link" >Back</a>
+        <a href="sma-1" class="govuk-back-link">Back</a>
 
         <h1 class="govuk-heading-1">Confirm dates of consultation</h1>
 
@@ -107,8 +107,8 @@
             </span>
             <div class="govuk-radios govuk-radios--conditional" data-module="radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional-1">
-                <label class="govuk-label govuk-radios__label" >
+                <input class="govuk-radios__input" id="how-contacted-conditional-1" name="how-contacted" type="radio" value="email" aria-controls="conditional-how-contacted-conditional-1" aria-expanded="false">
+                <label class="govuk-label govuk-radios__label">
                   Now - open this consultation and email 10 stakeholders
                 </label> </div>
               <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-1">
@@ -116,7 +116,7 @@
                 </div>
               </div>
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+                <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" aria-controls="conditional-how-contacted-conditional-2" aria-expanded="false">
                 <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
                   Schedule this consultation to automatically open on a later date
                 </label> </div>
@@ -188,7 +188,7 @@
     </div>
   </fieldset>
 </div>
-</br>
+<br>
 
 
           <div class="govuk-form-group">
@@ -199,7 +199,7 @@
           </h1>
         </legend>
         <span id="passport-issued-hint" class="govuk-hint">
-        Select the date of the UK NSC meeting when this consultation will be discussed. View <a href="">spreadsheet of meeting dates</a> for reference.
+        Select the expected date of the UK NSC meeting when this consultation will be discussed. View <a href="">spreadsheet of meeting dates</a> for reference.
         </span>
         <div class="govuk-date-input" id="passport-issued">
           <div class="govuk-date-input__item">
@@ -236,4 +236,6 @@
 
       </div>
 
+
+        </fieldset></div></div></div>
 {% endblock %}
