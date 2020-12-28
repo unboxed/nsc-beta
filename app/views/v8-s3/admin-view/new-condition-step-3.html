@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="new-condition-step-2" class="govuk-back-link" >Back</a>
+            <form action="new-condition-step-4" method="post" novalidate>
+                <div class="govuk-form-group">
+                    <h2 class="govuk-heading-l" >
+                        Upload documents (optional)
+                    </h2>
+                    <span id="file-upload-hint" class="govuk-hint">
+                        If there were any documents, like an evidence map, to prompt this
+                        condition addition, upload them here. Documents added here are not
+                        for public consultation. If you want to add documents for
+                        consultation, ignore this step and create a product.
+                    </span>
+                    <label class="govuk-label" for="file-upload-1">
+                        Upload a file
+                    </label>
+                    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-hint">
+                </div>
+                <button class="govuk-button" data-module="govuk-button">
+                    Save and continue
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

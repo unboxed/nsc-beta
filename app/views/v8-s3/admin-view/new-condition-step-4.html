@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="new-condition-step-3" class="govuk-back-link" >Back</a>
+            <h1 class="govuk-heading-l" style="margin-bottom: 0px;">
+                Is this file correct?
+            </h1>
+
+            <div style="display:inline-block; background-color: #ececec; font-size: 1.9em; color: #868686; padding: 60px 10px; margin-top: 20px">
+                &lt;preview&gt;
+            </div>
+            <p class="govuk-body">
+                <a href="#">Condition name - Document type - 2020</a>
+            </p>
+
+            <form action="new-condition-step-5" method="post" novalidate>
+                <div class="govuk-radios">
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="file-correct" name="file-correct" type="radio" value="yes">
+                        <label class="govuk-label govuk-radios__label" for="file-correct">
+                            Yes, add this file
+                        </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="file-correct-2" name="file-correct" type="radio" value="no">
+                        <label class="govuk-label govuk-radios__label" for="file-correct-2">
+                            No, I want to change this file
+                        </label>
+                    </div>
+                </div>
+                <br><br>
+                <button class="govuk-button" data-module="govuk-button">
+                    Continue
+                </button>
+            </form>
+        </div>
+    </div>
+{% endblock %}
