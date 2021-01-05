@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <a href="new-condition-step-4" class="govuk-back-link" >Back</a>
+
+        <form action="new-condition-confirm" method="post" novalidate>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="decision-hint">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            What is the recommendation decision?
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios govuk-radios--inline">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="decision" name="decision" type="radio" value="yes">
+                            <label class="govuk-label govuk-radios__label" for="decision">
+                                Recommended
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="decision-2" name="decision" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="decision-2">
+                                Not recommended
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="decision-3" name="decision" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="decision-3">
+                                N/A
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <h2 class="govuk-heading-m">Set review year</h2>
+            <div class="govuk-form-group">
+                <span id="review-year-hint" class="govuk-hint">
+                    This will automatically be added for 3 years time. If you want to set
+                    another date, please add below.
+                </span>
+                <label class="govuk-label" for="review-year">
+                    Year
+                </label>
+                <input class="govuk-input govuk-input--width-5" id="review-year" name="review-year" type="text">
+            </div>
+
+            <button class="govuk-button" data-module="govuk-button">
+                Save and continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

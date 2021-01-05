@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="new-condition-start" class="govuk-back-link" >Back</a>
+
+            <form action="new-condition-step-3" method="post" class="form">
+                <div class="govuk-form-group">
+                    <h2 class="govuk-heading-l" >
+                        Upload plain English summary (optional)
+                    </h2>
+                    <span id="more-detail-hint" class="govuk-hint">
+                        This must be in the format of ..
+                    </span>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                </div>
+
+                <div class="govuk-character-count" data-module="character-count" data-maxwords="150">
+                    <div class="govuk-form-group">
+                        <h2 class="govuk-heading-l" >
+                            Condition history (optional)
+                        </h2>
+                        <span id="condition-history-hint" class="govuk-hint">
+                            Here you can add information about where this condition came from.
+                            If this condition is related to an archived condition or has been added
+                            from an Annual Call, include this information here. Please link the
+                            page to archived conditions. Ensure that this is written in plain English
+                            and follows <a href="#">Markdown formatting</a>.
+                        </span>
+                        <textarea class="govuk-textarea" id="condition-history" name="condition-history" rows="5" aria-describedby="condition-history-hint"></textarea>
+                    </div>
+                    <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
+                    </div>
+                </div>
+
+                <button class="govuk-button" data-module="govuk-button">
+                    Save and continue
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <h3 class="govuk-heading-m">More descriptive instructions?</h3>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+            <h4 class="govuk-heading-s">Headings</h4>
+            <p class="govuk-body">
+                ## Section or chapter heading (1, 2, 3 etc.)<br>
+                ### Subheading (1.1, 1.2 etc.)<br>
+                #### Sub-subheading (not numbered)
+            </p>
+            <h4 class="govuk-heading-s">Bullet lists</h4>
+            <p class="govuk-body">
+                * item 1<br>
+                * item 2<br>
+                All bullets must start with a lowercase letter
+            </p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+            <h4 class="govuk-heading-s">Numbered lists</h4>
+            <p class="govuk-body">
+                1. Item 1<br>
+                2. Item 2<br>
+                Numbered lists show an order of steps or priorities
+            </p>
+            <h4 class="govuk-heading-s">Links (external sites)</h4>
+            <p class="govuk-body">
+                [link text](http://www.example.com)
+            </p>
+        </div>
+    </div>
+{% endblock %}
