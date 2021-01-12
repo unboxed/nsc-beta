@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+{% block head %}
+    {{ super() }}
+    <link href="/public/stylesheets/uk-nsc-beta.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="homepage" class="govuk-back-link">Back</a>
+            <h1 class="govuk-heading-l pink">
+                Subscribe to receive updates on UK NSC consultations
+            </h1>
+            <br>
+            <a href="subscribe-start-v2"><button class="govuk-button" type="submit">Subscribe as a member of the public</button></a>
+            <p class="govuk-body">
+                This option is for members of the public with a personal interest in a screening topic.
+            </p>
+            <p class="govuk-body">
+                We will email you when the UK NSC starts a public consultation on the topic(s) you subscribe to.
+            </p>
+            <br><br>
+            <a href="subscribe-organisation"><button class="govuk-button" type="submit">Subscribe as a health professional or organisation</button></a>
+            <p class="govuk-body">
+                This option is for individuals or organisations with a professional interest or involvement in the screening topic(s) subscribed to.
+            </p>
+            <p class="govuk-body">
+                We will email you when the UK NSC starts a public consultation on the topic you subscribe to.
+            </p>
+            <p class="govuk-body">
+                You can have your name or organisation listed as a stakeholder on the page of the topic(s) you subscribe to.
+            </p>
+        </div>
+    </div>
+{% endblock %}
