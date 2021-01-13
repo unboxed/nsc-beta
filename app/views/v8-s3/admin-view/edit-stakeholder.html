@@ -5,9 +5,9 @@
 
 
 {% block content %}
-    <div class="govuk-grid-row">
+     <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            <a href="stakeholder-index" class="govuk-back-link" >Back</a>
+            <a href="stakeholder-index" class="govuk-back-link">Back</a>
             <h1 class="govuk-heading-l" style="margin-bottom: 0px;">
                 Edit stakeholder
             </h1>
@@ -16,7 +16,7 @@
     <br><br>
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
-            <form action="view-stakeholder" method="post" novalidate>
+            <form action="view-stakeholder" method="post" novalidate="">
                 <div class="govuk-grid-row">
                     <div class="govuk-grid-column-one-half">
                         <div class="govuk-form-group">
@@ -35,7 +35,7 @@
                             </label>
                             <select class="govuk-select" id="stakeholder-type" name="stakeholder-type" style="width: 100%">
                                 <option value="Royal College or other professional organisation">Royal College or other professional organisation</option>
-                                <option value="Academic/research organisation" selected>Academic/research organisation</option>
+                                <option value="Academic/research organisation" selected="">Academic/research organisation</option>
                                 <option value="Patient group/voluntary sector ">Patient group/voluntary sector</option>
                                 <option value="Individual">Individual</option>
                                 <option value="Commercial organisation">Commercial organisation</option>
@@ -69,14 +69,7 @@
                             <input class="govuk-input" id="twitter" name="twitter" type="text" value="twitter.com/uvic">
                         </div>
                     </div>
-                    <div class="govuk-grid-column-full">
-                        <div class="govuk-form-group">
-                            <label class="govuk-label" for="comments">
-                                Comments
-                            </label>
-                            <input class="govuk-input" id="comments" name="comments" type="text" value="Interested in taking part in any workshops on this topic.">
-                        </div>
-                    </div>
+                    
                     <div class="govuk-grid-column-one-half">
                         <div class="govuk-form-group" style="margin-bottom:10px;">
                             <label class="govuk-label" for="condition">
@@ -127,7 +120,19 @@
                     </div>
                 </div>
                 <a href="#" class="govuk-link" style="position: relative; top: -19px">add another contact</a>
-                <hr>
+                <div class="govuk-grid-column-full" style="
+    padding: 0;
+" value="Interested in taking part in any workshops on this topic.">
+                        <div class="govuk-form-group" style="
+    padding: 0;
+">
+                            <label class="govuk-label" for="comments">
+                                Additional comments (for internal use only)
+                            </label>
+                            <input class="govuk-input" id="comments" name="comments" type="text" value="Interested in taking part in any workshops on this topic.">
+                        </div>
+                    </div>
+<hr>
                 <br>
                 <p class="govuk-body">Should this organisation be published on the condition pages?</p>
                 <div class="govuk-grid-row">
@@ -140,7 +145,7 @@
                                 </label>
                             </div>
                             <div class="govuk-radios__item">
-                                <input class="govuk-radios__input" id="publish-2" name="publish" type="radio" value="no" checked>
+                                <input class="govuk-radios__input" id="publish-2" name="publish" type="radio" value="no" checked="">
                                 <label class="govuk-label govuk-radios__label" for="publish-2">
                                     No, do not show this organisation as a stakeholder publicly
                                 </label>
@@ -156,4 +161,6 @@
             </form>
         </div>
     </div>
+    
+
 {% endblock %}

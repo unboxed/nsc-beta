@@ -5,9 +5,9 @@
 
 
 {% block content %}
-    <div class="govuk-grid-row">
+      <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-            <a href="stakeholder-index" class="govuk-back-link" >Back</a>
+            <a href="stakeholder-index" class="govuk-back-link">Back</a>
             <h1 class="govuk-heading-l" style="margin-bottom: 0px;">
                 Add a stakeholder
             </h1>
@@ -16,7 +16,7 @@
     <br><br>
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-full">
-            <form action="view-stakeholder" method="post" novalidate>
+            <form action="view-stakeholder" method="post" novalidate="">
                 <div class="govuk-grid-row">
                     <div class="govuk-grid-column-one-half">
                         <div class="govuk-form-group">
@@ -69,14 +69,7 @@
                             <input class="govuk-input" id="twitter" name="twitter" type="text">
                         </div>
                     </div>
-                    <div class="govuk-grid-column-full">
-                        <div class="govuk-form-group">
-                            <label class="govuk-label" for="comments">
-                                Comments
-                            </label>
-                            <input class="govuk-input" id="comments" name="comments" type="text">
-                        </div>
-                    </div>
+                    
                     <div class="govuk-grid-column-one-half">
                         <div class="govuk-form-group" style="margin-bottom:10px;">
                             <label class="govuk-label" for="condition">
@@ -90,7 +83,8 @@
                     </div>
                 </div>
                 <br>
-                <hr>
+<hr>
+                
                 <br>
                 <div class="govuk-grid-row">
                     <div class="govuk-grid-column-one-half">
@@ -127,6 +121,18 @@
                     </div>
                 </div>
                 <a href="#" class="govuk-link" style="position: relative; top: -19px">add another contact</a>
+    
+
+<div class="govuk-grid-column-full" style="
+    padding: 0;
+">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="comments">
+                                Additional comments (for internal use only)
+                            </label>
+                            <input class="govuk-input" id="comments" name="comments" type="text">
+                        </div>
+                    </div>
                 <hr>
                 <br>
                 <p class="govuk-body">Should this organisation be published on the condition pages?</p>
