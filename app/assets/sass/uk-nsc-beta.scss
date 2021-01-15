@@ -37,11 +37,14 @@
 }
 
 .label--red {
-    @include label(#B10E1E, #B10E1E)
+    @include label(#ffffff, #ffffff)
+    color: black;
+    font-weight: 500;
 }
 
 .label--green {
-    @include label(#00823B, #00823B)
+    @include label(#ffffff, #ffffff)
+    color: black;
 }
 
 .label--grey {
