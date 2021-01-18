@@ -3,18 +3,41 @@
 {% block content %}
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <a href="reviews" class="govuk-back-link" >Back to all conditions</a>
+        <a href="reviews" class="govuk-back-link">Back to all conditions</a>
         <h1 class="govuk-heading-l">
             Create a new condition
         </h1>
 
         <form action="new-condition-step-2" method="post" class="form">
-            <div class="govuk-form-group">
+    <div class="govuk-form-group">
                 <label class="govuk-label" for="condition-name">
                     Enter condition name
                 </label>
                 <input class="govuk-input" id="condition-name" name="condition-name" type="text">
             </div>
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <label class="govuk-label" for="description">
+            <h2 class="govuk-heading-m">
+            What type of condition is this?
+            </h2>
+          </label>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                General Population
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                Targeted
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
 
             <div class="govuk-character-count" data-module="character-count" data-maxwords="100">
                 <div class="govuk-form-group">
@@ -23,20 +46,58 @@
                     </label>
 
                     <span id="description-hint" class="govuk-hint">
-                        Insert the condition description here and add a link to the NHS website as well.
-                        Ensure that this is written in plain English and follows
+                        Insert the condition description here. Ensure that this is written in plain English and follows
                         <a href="#">Markdown formatting</a>.
                     </span>
 
-                    <textarea class="govuk-textarea js-character-count " id="description" name="description" rows="5"></textarea>
+                    <textarea class="govuk-textarea js-character-count" id="description" name="description" rows="5" aria-describedby="null description-info"></textarea><span id="description-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 100 words remaining</span>
                 </div>
                 <div id="word-count-info" class="govuk-hint govuk-character-count__message" aria-live="polite">
                 </div>
             </div>
 
             <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Who does this condition affect?
+      </h1>
+    </legend>
+    <span id="waste-hint" class="govuk-hint">
+      Select all that apply.
+    </span>
+    <div class="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+        <label class="govuk-label govuk-checkboxes__label" for="waste">
+          Adult
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+          Child
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+          Newborn
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">
+        <label class="govuk-label govuk-checkboxes__label" for="waste-4">
+          Antenatal
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+    <div class="govuk-form-group">
                 <label class="govuk-label" for="weblink">
-                    Weblink to NHS.UK
+                    Weblink to condition on NHS.UK
                 </label>
                 <input class="govuk-input" id="weblink" name="weblink" type="text">
             </div>
@@ -47,4 +108,5 @@
         </form>
     </div>
 </div>
+
 {% endblock %}
