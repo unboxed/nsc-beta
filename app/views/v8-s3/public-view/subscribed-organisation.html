@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% from "radios/macro.njk" import govukRadios %}
+{% from "button/macro.njk" import govukButton %}
+
+{% block head %}
+    {{ super() }}
+    <link href="/public/stylesheets/uk-nsc-beta.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+              Thank you
+            </h1>
+        </div>
+        <p class="govuk-body" style="
+margin-top: 50px;
+">
+           Your request to receive UK National Screening Committee (UK NSC) updates has been submitted.
+        </p>
+<p class="govuk-body" style="margin-bottom:100px;">
+           A member of the UK NSC Secretariat will contact you within 3 working days.
+        </p>
+    </div>
+</div>
+    </main>
+  </div>
+{% endblock %}

@@ -16,9 +16,7 @@
             </h1>
 
             <p class="govuk-body">
-                Members of the public, such as patients and family who have experienced the condition, are welcome
-                to submit comments. These will be reviewed by the UK NSC along with the scientific evidence and
-                comments from stakeholders, charities and researchers.
+              Members of the public, including patients and family who have experienced the condition, are welcome to submit comments. The UK NSC will review these, along with the scientific evidence and comments from professional organisations, charities and researchers.
             </p>
             <p class="govuk-body">
                 While we welcome all comments, we would prefer to get your individual thoughts rather than standard
@@ -41,6 +39,30 @@
                     <input name="email" class="govuk-input" id="email" type="text">
                 </div>
 
+                <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <label class="govuk-label" for="description">
+            <p>
+            Would you like to be updated when the UK NSC has reviewed the condition?
+            </p>
+          </label>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+               Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
                 <h3 class="govuk-heading-s">Consultation comments</h3>
 
                 <p class="govuk-body">
@@ -48,34 +70,40 @@
                 </p>
                 <div class="govuk-form-group">
                     <label for="comments-1" class="govuk-label">
-                        How has this condition affected you or your family?
+                      Please tell us if this condition has affected you, your family or friends?
                     </label>
                     <input name="comments-1" class="govuk-input" id="comments-1" type="text">
                 </div>
                 <div class="govuk-form-group">
                     <label for="comments-2" class="govuk-label">
-                        Do you have any comments on the questions considered by the UK NSC in the review?
+                      Do you have any comments on the evidence considered by the UK NSC in the review? For instance, was any important evidence missed?
                     </label>
                     <input name="comments-2" class="govuk-input" id="comments-2" type="text">
                 </div>
                 <div class="govuk-form-group">
                     <label for="comments-3" class="govuk-label">
-                        Do you have any comments on the evidence considered by the UK NSC in the review?
+                      Do you have any comments on the discussion, conclusion or recommendation in the review?
                     </label>
                     <input name="comments-3" class="govuk-input" id="comments-3" type="text">
                 </div>
                 <div class="govuk-form-group">
                     <label for="comments-4" class="govuk-label">
-                        Do you think screening should or should not be recommended? Why?
+                      Do you think screening should or should not be recommended? Why?
                     </label>
                     <input name="comments-4" class="govuk-input" id="comments-4" type="text">
                 </div>
                 <div class="govuk-form-group">
                     <label for="comments-5" class="govuk-label">
-                        There could be many alternatives to a screening programme. How else do you think the NHS or
-                        government could help?
+                      There could be many alternatives to a screening programme. How else do you think the NHS or government could help people with the condition?
                     </label>
                     <input name="comments-5" class="govuk-input" id="comments-5" type="text">
+                </div>
+
+                <div class="govuk-form-group">
+                    <label for="comments-6" class="govuk-label">
+                      Do you have any other comments?
+                    </label>
+                    <input name="comments-6" class="govuk-input" id="comments-6" type="text">
                 </div>
 
                 <button class="govuk-button" type="submit">Send consultation feedback</button>

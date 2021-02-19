@@ -12,25 +12,64 @@
         <div class="govuk-grid-column-two-thirds">
             <a href="subscribe-filter" class="govuk-back-link">Back</a>
             <h1 class="govuk-heading-l pink">
-                Enter your email address
+                Subscribe
             </h1>
             <p class="govuk-body">
-                You're subscribing to get email notifications about:
-                UK National Screening Committee recommendations.
+              Thank you for subscribing to receive updates on UK National Screening Committee (UK NSC) consultations. Please provide your email address below.
             </p>
             <p class="govuk-body">
-                You'll get an email when the UK NSC starts or ends a public consultation on the condition(s).
+              A member of the UK Secretariat will contact you within 3 working days.
             </p>
 
-            <form action="subscribed" method="post">
+            <form action="subscribed-organisation" method="post">
+                <div class="govuk-grid-column-one-third" style="padding-left: 0;">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="country">
+                                Title
+                            </label>
+                            <select class="govuk-select" id="country" name="country" style="width: 100%">
+                                <option value=""></option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="govuk-grid-column-one-third">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="country">
+                                First Name
+                            </label>
+                            <input class="govuk-input" id="country" name="country" style="width: 100%">
+                                <option value=""></option>
+
+                        </div>
+                    </div>
+
+                    <div class="govuk-grid-column-one-third" style="padding-right:0;">
+                        <div class="govuk-form-group">
+                            <label class="govuk-label" for="country">
+                                Surname
+                            </label>
+                            <input class="govuk-input" id="country" name="country" style="width: 100%">
+                                <option value=""></option>
+
+                        </div>
+                    </div>
+
                 <div class="govuk-form-group">
-                    <label for="email-address" class="govuk-label">What's your email address?</label>
+                    <label for="organisation" class="govuk-label">Organisation</label>
+                    <input name="organisation" class="govuk-input" id="organisation" type="text">
+                </div>
+
+                    <div class="govuk-form-group">
+                    <label for="email-address" class="govuk-label">Enter your email address</label>
                     <input name="email-address" class="govuk-input" id="email-address" type="text">
                 </div>
                 <div class="govuk-form-group">
-                    <label for="confirm-email-address" class="govuk-label">Please confirm your email address</label>
+                    <label for="confirm-email-address" class="govuk-label">Re-enter your email address</label>
                     <input name="confirm-email-address" class="govuk-input" id="confirm-email-address" type="text">
                 </div>
+
+
                 <button class="govuk-button" type="submit">Continue</button>
             </form>
 

@@ -29,6 +29,13 @@
                 Submit your consultation comments
             </h1>
 
+            <p class="govuk-body">
+You can either submit a consultation response using the form below or by downloading the <a href=#>response form (Open Document Format, ODF)</a> and emailing it to <a href='mailto:screening.evidence@nhs.net'>screening.evidence@nhs.net</a> by 4 August 2019.
+</p>
+<p class="govuk-body">
+Please read the <a href=#>evidence summary</a> and <a href=#>explanation of screening</a> before making your submission.
+</p>
+
             <form action="comments-submitted" method="post">
                 <h3 class="govuk-heading-s">About you</h3>
 
@@ -52,6 +59,27 @@
                     <fieldset class="govuk-fieldset">
                         <label class="govuk-label">
                             Do you consent to your name being published on the UK NSC website alongside your response?
+                        </label>
+                        <div class="govuk-radios govuk-radios--inline">
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="consent-name-yes" name="consent-name" type="radio" value="yes">
+                                <label class="govuk-label govuk-radios__label" for="consent-name-yes">
+                                    Yes
+                                </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="consent-name-no" name="consent-name" type="radio" value="no" checked>
+                                <label class="govuk-label govuk-radios__label" for="consent-name-no">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset">
+                        <label class="govuk-label">
+                          Is your submission an official response on behalf of your organisation?
                         </label>
                         <div class="govuk-radios govuk-radios--inline">
                             <div class="govuk-radios__item">
