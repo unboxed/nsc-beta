@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block head %}
+    <link href="/public/stylesheets/unbranded.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="/public/stylesheets/phe-nsc-alpha.css" media="screen" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <a href="consultation" class="govuk-back-link">Back</a>
+            <h1 class="govuk-heading-l">
+                <span class="govuk-caption-l">Atrial Fibrillation</span>
+                Submit your comments as a member of the public
+            </h1>
+
+            <p class="govuk-body">
+            Members of the public, including patients and family who have experienced the condition, are welcome to submit comments. The UK NSC will review these, along with the scientific evidence and comments from professional organisations, charities and researchers.
+            </p>
+            <p class="govuk-body">
+                While we welcome all comments, we would prefer to get your individual thoughts rather than standard
+                text provided by someone else.
+            </p>
+            <p class="govuk-body">
+                We suggest reading the short <a class="govuk-link" href="#">plain English summary of the UK NSC review</a>,
+                and also our <a class="govuk-link" href="#">explanation of screening</a>, before submitting this form.
+            </p>
+
+            <form action="comments-submitted" method="post">
+                <h2 class="govuk-heading-m">About you</h2>
+
+                <div class="govuk-form-group">
+                    <label for="name" class="govuk-label">Name</label>
+                    <input name="name" class="govuk-input" id="name" type="text">
+                </div>
+                <div class="govuk-form-group">
+                    <label for="email" class="govuk-label">Email</label>
+                    <input name="email" class="govuk-input" id="email" type="text">
+                </div>
+
+                <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <label class="govuk-label" for="description">
+            <p>
+            Would you like to be updated when the UK NSC has reviewed the condition?
+            </p>
+          </label>
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+               Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+                <h2 class="govuk-heading-m">Consultation comments</h2>
+
+                <p class="govuk-body">
+                    Please provide your views in the following fields. You do not have to enter something in every field.
+                </p>
+
+  <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+<div class="govuk-form-group ">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <label for="id_comment_affected" class="govuk-label" style="font-weight: bold;">
+      Please tell us if this condition has affected you, your family or your fiends?
+    </label>
+  </legend>
+    <textarea name="comment_affected" class="govuk-textarea govuk-js-character-count" id="id_comment_affected" cols="40" rows="10"></textarea><span id="id_comment_affected-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 500 words remaining</span>
+</div>
+  </div>
+  <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+<div class="govuk-form-group ">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <label for="id_comment_evidence" class="govuk-label" style="font-weight: bold;">
+      Do you have any comments on the evidence considered by the UK NSC in the review? For instance, was any important evidence missed?
+    </label>
+  </legend>
+    <textarea name="comment_evidence" class="govuk-textarea govuk-js-character-count" id="id_comment_evidence" cols="40" rows="10"></textarea><span id="id_comment_evidence-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 500 words remaining</span>
+</div>
+  </div>
+  <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+<div class="govuk-form-group ">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <label for="id_comment_discussion" class="govuk-label" style="font-weight: bold;">
+      Do you have any comments on the discussion, conclusion or recommendation in the review?
+    </label>
+  </legend>
+    <textarea name="comment_discussion" class="govuk-textarea govuk-js-character-count" id="id_comment_discussion" cols="40" rows="10"></textarea><span id="id_comment_discussion-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 500 words remaining</span>
+</div>
+  </div>
+  <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+<div class="govuk-form-group ">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <label for="id_comment_recommendation" class="govuk-label" style="font-weight: bold;">
+      Do you think screening should or should not be recommended? Why?
+    </label>
+  </legend>
+    <textarea name="comment_recommendation" class="govuk-textarea govuk-js-character-count" id="id_comment_recommendation" cols="40" rows="10"></textarea><span id="id_comment_recommendation-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 500 words remaining</span>
+</div>
+  </div>
+  <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+<div class="govuk-form-group ">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <label for="id_comment_alternatives" class="govuk-label" style="font-weight: bold;">
+      There could be many alternatives to a screening programme. How else do you think the NHS or the government could help people with the condition?
+    </label>
+  </legend>
+    <textarea name="comment_alternatives" class="govuk-textarea govuk-js-character-count" id="id_comment_alternatives" cols="40" rows="10"></textarea><span id="id_comment_alternatives-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 500 words remaining</span>
+</div>
+  </div>
+  <div class="govuk-character-count" data-module="govuk-character-count" data-maxwords="500">
+<div class="govuk-form-group ">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <label for="id_comment_other" class="govuk-label" style="font-weight: bold;">
+      Do you have any other recommendations?
+    </label>
+  </legend>
+    <textarea name="comment_other" class="govuk-textarea govuk-js-character-count" id="id_comment_other" cols="40" rows="10"></textarea><span id="id_comment_other-info" class="govuk-hint govuk-character-count__message" aria-live="polite">You have 500 words remaining</span>
+</div>
+  </div>
+
+                <button class="govuk-button" type="submit">Send consultation feedback</button>
+            </form>
+        </div>
+    </div>
+
+{% endblock %}
